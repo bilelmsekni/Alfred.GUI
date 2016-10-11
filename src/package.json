@@ -1,0 +1,24 @@
+{
+  "name": "alfred.gui",
+  "version": "1.0.0",
+  "description": "This is alfred's ui using angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "run-test"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Bilel Msekni <msekni.bilel@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "connect-livereload": "^0.5.4",
+    "gulp": "^3.9.1",
+    "gulp-express": "^0.3.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bower": "^1.7.9",
+    "express": "^4.14.0"
+  }
+}
