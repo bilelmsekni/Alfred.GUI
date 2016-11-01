@@ -1,11 +1,18 @@
 {
-    "files": [
-        "app/**/*.ts",
-        "app/main.ts"
-    ],
+    // "files": [
+    //     "app/**/*.ts",
+    //     "app/main.ts"
+    // ],
     "compilerOptions": {
         "noImplicitAny": true,
         "target": "es5",
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "typeRoots": [
+            "../node_modules/@types"
+        ],
+        "types": [
+            "core-js"
+        ]
     }
 }

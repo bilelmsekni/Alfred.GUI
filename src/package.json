@@ -12,11 +12,11 @@
   "author": "Bilel Msekni <msekni.bilel@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/core-js": "^0.9.34",
     "browser-sync": "^2.17.5",
     "browserify": "^13.1.1",
-    "connect-livereload": "^0.5.4",
     "gulp": "^3.9.1",
-    "gulp-express": "^0.3.5",
+    "gulp-dest-clean": "^0.5.0",
     "gulp-sourcemaps": "^2.2.0",
     "gulp-typescript": "^3.1.2",
     "gulp-uglify": "^2.0.0",
@@ -24,8 +24,7 @@
     "tsify": "^2.0.2",
     "typescript": "^2.0.6",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.7.0"
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
