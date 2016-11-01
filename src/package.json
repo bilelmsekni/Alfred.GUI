@@ -2,7 +2,7 @@
   "name": "alfred.gui",
   "version": "1.0.0",
   "description": "This is alfred's ui using angular",
-  "main": "index.js",
+  "main": "./dist/main.js",
   "scripts": {
     "test": "run-test"
   },
@@ -12,13 +12,23 @@
   "author": "Bilel Msekni <msekni.bilel@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "browserify": "^13.1.1",
     "connect-livereload": "^0.5.4",
     "gulp": "^3.9.1",
-    "gulp-express": "^0.3.5"
+    "gulp-express": "^0.3.5",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-typescript": "^3.1.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "tsify": "^2.0.2",
+    "typescript": "^2.0.6",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
-    "bower": "^1.7.9",
     "express": "^4.14.0"
   }
 }

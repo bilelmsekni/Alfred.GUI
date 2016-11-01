@@ -1,0 +1,11 @@
+{
+    "files": [
+        "app/**/*.ts",
+        "app/main.ts"
+    ],
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "es5",
+        "experimentalDecorators": true
+    }
+}

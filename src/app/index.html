@@ -1,22 +1,15 @@
 <html>
 
 <head>
-	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-	<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/sb-admin-2.css" rel="stylesheet">
+	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 </head>
 
 <body>
 	<title> Welcome to Alfred </title>
-	<div class="col-lg-12">
-		<div class="Jumbotron">
-			<h1>Hello {{user}}</h1>
-		</div>
-	</div>
-	<div class="col-lg-12">
-		<h1 class="page-header">Dashboard</h1>
-	</div>
+	<p id="greeting">Loading ...</p>
 	<div class="col-lg-3 col-md-6">
 		<div class="panel panel-primary">
 			<div class="panel-heading">
@@ -83,32 +76,33 @@
 			</a>
 		</div>
 	</div>
-    <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-yellow">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-graduation-cap fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
-                                    <div>Communities</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">View Details</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>	
-	<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="../vendor/jquery/jquery.min.js"></script>
-	<script src="../dist/js/sb-admin-2.js"></script>
-	<script src="../vendor/metisMenu/metisMenu.min.js"></script>
+	<div class="col-lg-3 col-md-6">
+		<div class="panel panel-yellow">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-xs-3">
+						<i class="fa fa-graduation-cap fa-5x"></i>
+					</div>
+					<div class="col-xs-9 text-right">
+						<div class="huge">124</div>
+						<div>Communities</div>
+					</div>
+				</div>
+			</div>
+			<a href="#">
+				<div class="panel-footer">
+					<span class="pull-left">View Details</span>
+					<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+					<div class="clearfix"></div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<script src="js/bundle.min.js"></script>
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/sb-admin-2.js"></script>
+	<script src="vendor/metisMenu/metisMenu.min.js"></script>
 </body>
 
 </html>
