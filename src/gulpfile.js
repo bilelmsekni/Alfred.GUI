@@ -159,7 +159,7 @@ gulp.task('refresh', ['copy-html', 'build', 'bundle']);
 gulp.task('watch', ['refresh'], function () {
     browserSync.init({
         server: 'dist/.'
-    });
-    gulp.watch(['app/**/*.ts', 'app/main.ts'], ['refresh']);
+    });    
+    gulp.watch(['app/**/*.ts', 'app/**/*.html'], ['refresh']);
     gulp.watch('dist/**/*.js').on('change', browserSync.reload);
 });
