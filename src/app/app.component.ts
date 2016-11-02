@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'al-app',
-    template: `<al-dashboard></al-dashboard>`
+    template: `<router-outlet></router-outlet>
+    <a routerLink="/communities">Heroes</a>`
+   
 })
-export class AppComponent {    
+export class AppComponent {
 }
