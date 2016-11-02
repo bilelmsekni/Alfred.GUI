@@ -20,25 +20,22 @@ var source = require('vinyl-source-stream');
 var tsify = require('tsify');
 var buffer = require('vinyl-buffer');
 var browserSync = require('browser-sync').create();
-var paths = {
-    pages: ['app/*.html']
-}
 
 //******************************************************************************
 //* CLEAN-DIST: Clean dist folder 
 //******************************************************************************
 
-gulp.task('clean-dist', function(){
+gulp.task('clean', function () {
     return gulp.src('dist')
-    .pipe(cleanDest('dist'));
+        .pipe(cleanDest('dist'));
 });
 
 //******************************************************************************
 //* COPY-HTML: Copy HTML to dist 
 //******************************************************************************
 
-gulp.task('copy-html', ['clean-dist'],function () {
-    return gulp.src(paths.pages)
+gulp.task('copy-html', function () {
+    return gulp.src(['app/*.html', 'app/**/*.html'])
         .pipe(gulp.dest('dist'));
 });
 
@@ -46,17 +43,9 @@ gulp.task('copy-html', ['clean-dist'],function () {
 //* MINIFY-CSS: Compile less to css + move to dist + Minify CSS
 //******************************************************************************
 
-// Compile LESS files from /less into /css
-gulp.task('less', ['clean-dist'], function () {
+gulp.task('minify-css', ['clean'], function () {
     return gulp.src('assets/less/sb-admin-2.less')
         .pipe(less())
-        //.pipe(header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('dist/css'))
-});
-
-// Minify compiled CSS
-gulp.task('minify-css', ['less'], function () {
-    return gulp.src('dist/css/sb-admin-2.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist/css'))
@@ -66,16 +55,8 @@ gulp.task('minify-css', ['less'], function () {
 //* MINIFY-JS: Copy JS to dist + Minify JS
 //******************************************************************************
 
-// Copy JS to dist
-gulp.task('js',['clean-dist'], function () {
-    return gulp.src(['assets/js/sb-admin-2.js'])
-        //.pipe(header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('dist/js'))
-})
-
-// Minify JS
-gulp.task('minify-js', ['js'], function () {
-    return gulp.src('dist/js/sb-admin-2.js')
+gulp.task('minify-js', ['clean'], function () {
+    return gulp.src('assets/js/sb-admin-2.js')
         .pipe(uglify())
         //.pipe(header(banner, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
@@ -86,7 +67,7 @@ gulp.task('minify-js', ['js'], function () {
 //* COPY-VENDOR: Copy vendor libraries from /node_modules into /vendor
 //******************************************************************************
 
-gulp.task('copy-vendor', ['clean-dist'], function () {
+gulp.task('copy-vendor', ['clean'], function () {
     gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
         .pipe(gulp.dest('dist/vendor/bootstrap'))
 
@@ -123,6 +104,15 @@ gulp.task('copy-vendor', ['clean-dist'], function () {
     gulp.src(['node_modules/raphael/raphael.js', 'node_modules/raphael/raphael.min.js'])
         .pipe(gulp.dest('dist/vendor/raphael'))
 
+    gulp.src(['node_modules/core-js/client/shim.min.js'])
+        .pipe(gulp.dest('dist/vendor/core-js'))
+
+    gulp.src(['node_modules/zone.js/dist/zone.js'])
+        .pipe(gulp.dest('dist/vendor/zone.js'))
+
+    gulp.src(['node_modules/reflect-metadata/Reflect.js'])
+        .pipe(gulp.dest('dist/vendor/reflect-metadata'))
+
 });
 
 //******************************************************************************
@@ -130,24 +120,23 @@ gulp.task('copy-vendor', ['clean-dist'], function () {
 //******************************************************************************
 var tsProject = tsc.createProject("tsconfig.json");
 
-gulp.task("build", ['clean-dist'],function () {
+gulp.task("build", ['copy-html'], function () {
     return gulp.src([
-        "app/main.ts",
-        "app/**/**.ts"
+        "app/**/*.ts"
     ])
         .pipe(tsProject())
         .on("error", function (err) {
             process.exit(1);
         })
-        .js.pipe(gulp.dest("dist/js"));
+        .js.pipe(gulp.dest("dist"));
 });
 
 //******************************************************************************
 //* BUNDLE
 //******************************************************************************
-gulp.task('bundle', ['build'],function bundle() {
+gulp.task('bundle', ['build'], function bundle() {
     return browserify({
-        basedir: 'dist/js/.',
+        basedir: 'dist/.',
         debug: true,
         entries: ['main.js'],
         cache: {},
@@ -164,12 +153,13 @@ gulp.task('bundle', ['build'],function bundle() {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['clean-dist','copy-html', 'copy-vendor', 'minify-css', 'minify-js', 'build', 'bundle']);
-
-gulp.task('watch', ['default'], function () {
+gulp.task('prepare', ['copy-vendor', 'minify-css', 'minify-js'])
+gulp.task('default', ['prepare', 'refresh']);
+gulp.task('refresh', ['copy-html', 'build', 'bundle']);
+gulp.task('watch', ['refresh'], function () {
     browserSync.init({
         server: 'dist/.'
     });
-    gulp.watch(['app/**/*.ts', 'app/main.ts'], ['default']);
+    gulp.watch(['app/**/*.ts', 'app/main.ts'], ['refresh']);
     gulp.watch('dist/**/*.js').on('change', browserSync.reload);
 });

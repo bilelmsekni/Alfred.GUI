@@ -1,9 +1,5 @@
-function hello(compiler: string) {
-     return `Hello from ${compiler}`;
-}
-function showHello(divName: string, name: string) {
-    const elt = document.getElementById(divName);
-    elt.innerText = hello(name);
-}
+import { platformBrowserDynamic  } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app.module';
 
-showHello("greeting", "TypeScript");
+const platform = platformBrowserDynamic();
+platform.bootstrapModule(AppModule);

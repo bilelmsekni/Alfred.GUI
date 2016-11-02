@@ -1,11 +1,11 @@
-import { Component } from 'angular2/core';
+import { Component } from '@angular/core';
 
 @Component(
     {
-        selector: 'pm-dashboard',
-        templateUrl: 'app/dashboard/dashboard.component.html'
+        selector: 'al-dashboard',
+        templateUrl: './dashboard/dashboard.component.html'
     }
 )
-export class Dashboard {
+export class DashboardComponent {
     userName: string = "Bilel";
 }
