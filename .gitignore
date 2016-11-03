@@ -37,6 +37,6 @@ jspm_packages
 .node_repl_history
 
 # Build directory
-src/assets
+src/assets/pages
 src/dist
 src/node_modules
