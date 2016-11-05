@@ -7,10 +7,14 @@ import { CommunityService } from './community.service';
     providers:[CommunityService]
 })
 export class CommunityComponent implements OnInit {
-    communities: ICommunity[];
+    communities: ICommunity[]= [{
+        "name":"StarTech .Net",
+        "email": "startechdotnet@soft.fr",
+        "members":[],
+        "tasks":[]
+    }];
     errorMessage: string;
     constructor(private _communityService: CommunityService) {
-
     }
 
     ngOnInit() {

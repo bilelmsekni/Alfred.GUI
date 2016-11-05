@@ -30,11 +30,21 @@ gulp.task('clean', function () {
         .pipe(cleanDest('dist'));
 });
 
+
+//******************************************************************************
+//* COPY-DATA: Copy fake data to dist 
+//******************************************************************************
+
+gulp.task('copy-data', function () {
+    return gulp.src(['api/*.json'])
+        .pipe(gulp.dest('dist/api'));
+});
+
 //******************************************************************************
 //* COPY-HTML: Copy HTML to dist 
 //******************************************************************************
 
-gulp.task('copy-html', function () {
+gulp.task('copy-html',['copy-data'], function () {
     return gulp.src(['app/*.html', 'app/**/*.html'])
         .pipe(gulp.dest('dist'));
 });
