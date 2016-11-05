@@ -1,0 +1,20 @@
+[
+    {
+        "name":"StarTech .Net",
+        "email": "startechdotnet@soft.fr",
+        "members":"[]",
+        "tasks":"[]"
+    },
+        {
+        "name":"StarTech Java",
+        "email": "startechjava@soft.fr",
+        "members":"[]",
+        "tasks":"[]"
+    },
+        {
+        "name":"StarTech Agile",
+        "email": "startechagile@soft.fr",
+        "members":"[]",
+        "tasks":"[]"
+    }
+]

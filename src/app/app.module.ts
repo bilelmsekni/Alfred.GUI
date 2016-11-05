@@ -32,7 +32,7 @@ import { CommunityComponent } from './community/community.component';
         TaskboardComponent,
         CommunityboardComponent,
         DoneboardComponent,
-        CommunityComponent],
+        CommunityComponent],        
     bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,26 @@
+[
+    {
+        "id":"1",
+        "email":"paul.moto@soft.fr",
+        "firstName":"paul",
+        "lastName":"moto",
+        "role":"Member",
+        "tasks":"[]"
+    },
+        {
+        "id":"2",
+        "email":"matt.popo@soft.fr",
+        "firstName":"matt",
+        "lastName":"popo",
+        "role":"Leader",
+        "tasks":"[]"
+    },
+        {
+        "id":"3",
+        "email":"karen.dodo@soft.fr",
+        "firstName":"karen",
+        "lastName":"dodo",
+        "role":"Manager",
+        "tasks":"[]"
+    }
+]
