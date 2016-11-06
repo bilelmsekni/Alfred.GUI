@@ -9,6 +9,8 @@ import 'rxjs/Rx';
             <h1>Hello {{userName}}</h1>
         </div>
     </div>
+    <a routerLink="/communities">communities</a>
+    <a routerLink="/dashboard">dashboard</a>    
     <router-outlet></router-outlet>`
    
 })

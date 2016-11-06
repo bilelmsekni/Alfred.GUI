@@ -20,6 +20,7 @@ var source = require('vinyl-source-stream');
 var tsify = require('tsify');
 var buffer = require('vinyl-buffer');
 var browserSync = require('browser-sync').create();
+var historyApiFallback = require('connect-history-api-fallback');
 
 //******************************************************************************
 //* CLEAN-DIST: Clean dist folder 
@@ -44,7 +45,7 @@ gulp.task('copy-data', function () {
 //* COPY-HTML: Copy HTML to dist 
 //******************************************************************************
 
-gulp.task('copy-html',['copy-data'], function () {
+gulp.task('copy-html', ['copy-data'], function () {
     return gulp.src(['app/*.html', 'app/**/*.html'])
         .pipe(gulp.dest('dist'));
 });
@@ -168,8 +169,12 @@ gulp.task('default', ['prepare', 'refresh']);
 gulp.task('refresh', ['copy-html', 'build', 'bundle']);
 gulp.task('watch', ['refresh'], function () {
     browserSync.init({
-        server: 'dist/.'
-    });    
+        //server: 'dist/.',
+        server: {
+            baseDir: "dist",
+            middleware: [historyApiFallback()]
+        }
+    });
     gulp.watch(['app/**/*.ts', 'app/**/*.html'], ['refresh']);
     gulp.watch('dist/**/*.js').on('change', browserSync.reload);
 });
