@@ -26,9 +26,9 @@
 						<tr *ngFor='let community of (communities | communityFilter: listFilter)'>
 							<td>{{community.name}}</td>
 							<td>{{community.email}}</td>
-							<td>{{community.leader}}</td>
-							<td>{{community.tasks}}</td>
-							<td>{{community.members}}</td>
+							<td>{{community.members | leaderFilter}}</td>
+							<td>{{community.tasks.length}}</td>
+							<td>{{community.members.length}}</td>
 						</tr>
 					</tbody>
 				</table>

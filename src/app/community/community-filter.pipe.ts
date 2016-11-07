@@ -4,8 +4,8 @@ import { ICommunity } from './community';
 @Pipe({ name: 'communityFilter' })
 export class CommunityFilterPipe implements PipeTransform {
 
-    transform(value: ICommunity[], args: string[]): ICommunity[] {
-        let filter: string = args[0]? args[0].toLocaleLowerCase():null;
+    transform(value: ICommunity[], arg: string): ICommunity[] {
+        let filter: string = arg ? arg.toLocaleLowerCase() : null;
         return filter ? value.filter((community: ICommunity) =>
             community.name.toLocaleLowerCase().indexOf(filter) != -1) : value;
     }

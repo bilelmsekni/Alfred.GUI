@@ -8,12 +8,7 @@ import { CommunityService } from './community.service';
 })
 export class CommunityComponent implements OnInit {
     listFilter: string='';
-    communities: ICommunity[]= [{
-        "name":"StarTech .Net",
-        "email": "startechdotnet@soft.fr",
-        "members":[],
-        "tasks":[]
-    }];
+    communities: ICommunity[]= [];
     errorMessage: string;
     constructor(private _communityService: CommunityService) {
     }

@@ -12,6 +12,8 @@ import { DoneboardComponent } from './dashboard/doneboard.component';
 import { CommunityComponent } from './community/community.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CommunityFilterPipe} from './community/community-filter.pipe';
+import { LeaderFilterPipe } from './member/leader-filter.pipe';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -27,7 +29,8 @@ import { CommunityFilterPipe} from './community/community-filter.pipe';
         CommunityboardComponent,
         DoneboardComponent,
         CommunityComponent,
-        CommunityFilterPipe],        
+        CommunityFilterPipe,
+        LeaderFilterPipe],        
     bootstrap: [AppComponent]
 })
 export class AppModule { }
