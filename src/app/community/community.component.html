@@ -5,12 +5,13 @@
 				Communities
 			</div>
 			<!-- /.panel-heading -->
-			<div class="row">
-				<div class="col-sm-6">
-					<div id="dataTables-example_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="dataTables-example"></label></div>
-				</div>
-			</div>
 			<div class="panel-body">
+				<div class="row">
+					<div class="col-sm-6">
+						<div id="dataTables-example_filter" class="dataTables_filter"><label>Search:<input type="search" [(ngModel)]='listFilter' class="form-control input-sm" placeholder="" aria-controls="dataTables-example"></label></div>
+					</div>
+				</div>
+
 				<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
 					<thead>
 						<tr>
@@ -22,13 +23,13 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr *ngFor='let community of communities'>
-							<td>{{community.name}}</td>							
+						<tr *ngFor='let community of (communities | communityFilter: listFilter)'>
+							<td>{{community.name}}</td>
 							<td>{{community.email}}</td>
 							<td>{{community.leader}}</td>
 							<td>{{community.tasks}}</td>
 							<td>{{community.members}}</td>
-						</tr>					
+						</tr>
 					</tbody>
 				</table>
 			</div>

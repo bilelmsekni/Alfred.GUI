@@ -4,9 +4,10 @@ import { CommunityService } from './community.service';
 
 @Component({
     templateUrl: './community/community.component.html',
-    providers:[CommunityService]
+    providers:[CommunityService]    
 })
 export class CommunityComponent implements OnInit {
+    listFilter: string='';
     communities: ICommunity[]= [{
         "name":"StarTech .Net",
         "email": "startechdotnet@soft.fr",

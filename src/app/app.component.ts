@@ -8,9 +8,7 @@ import 'rxjs/Rx';
         <div class="Jumbotron">
             <h1>Hello {{userName}}</h1>
         </div>
-    </div>
-    <a routerLink="/communities">communities</a>
-    <a routerLink="/dashboard">dashboard</a>    
+    </div> 
     <router-outlet></router-outlet>`
    
 })
