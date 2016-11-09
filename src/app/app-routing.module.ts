@@ -3,6 +3,8 @@ import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CommunityComponent } from './community/community.component';
 import { MemberComponent } from './member/member.component';
+import { TaskComponent } from './task/task.component';
+
 @NgModule({
     imports: [
         RouterModule.forRoot([
@@ -22,7 +24,12 @@ import { MemberComponent } from './member/member.component';
             {
                 path: 'members',
                 component: MemberComponent
+            },
+            {
+                path:'tasks',
+                component: TaskComponent
             }
+
         ])
     ],
     exports: [

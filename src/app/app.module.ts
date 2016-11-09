@@ -11,10 +11,12 @@ import { CommunityboardComponent } from './dashboard/communityboard.component';
 import { DoneboardComponent } from './dashboard/doneboard.component';
 import { CommunityComponent } from './community/community.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CommunityFilterPipe} from './community/community-filter.pipe';
+import { CommunityFilterPipe } from './community/community-filter.pipe';
 import { LeaderFilterPipe } from './member/leader-filter.pipe';
-import { MemberComponent} from './member/member.component';
-import {MemberFilter} from './member/member-filter.pipe';
+import { MemberComponent } from './member/member.component';
+import { MemberFilterPipe } from './member/member-filter.pipe';
+import { TaskComponent } from './task/task.component';
+import {TaskFilterPipe} from './task/task-filter.pipe';
 @NgModule({
     imports: [
         BrowserModule,
@@ -32,8 +34,10 @@ import {MemberFilter} from './member/member-filter.pipe';
         CommunityComponent,
         CommunityFilterPipe,
         LeaderFilterPipe,
-        MemberFilter,
-        MemberComponent],       
+        MemberFilterPipe,
+        MemberComponent,
+        TaskComponent,
+        TaskFilterPipe],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

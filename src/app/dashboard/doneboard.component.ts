@@ -8,5 +8,5 @@ export class DoneboardComponent {
     label: string = 'Tasks done';
     icon: string = 'fa-check ';
     panelColor: string = 'panel-green';
-
+    boardLink: string = '/tasks';
 }

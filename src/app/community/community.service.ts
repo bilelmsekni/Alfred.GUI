@@ -1,7 +1,7 @@
 import { Http, Response } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import {ICommunity} from './community';
+import { ICommunity } from './community';
 
 @Injectable()
 export class CommunityService {
@@ -9,14 +9,13 @@ export class CommunityService {
     constructor(private _http: Http) {
     }
 
-    getCommunities(): Observable<ICommunity[]> {        
+    getCommunities(): Observable<ICommunity[]> {
         return this._http.get(this._communitiesUrl)
-            .map((res: Response) => res.json() as ICommunity[])            
+            .map((res: Response) => res.json() as ICommunity[])
             .catch(this.handleError);
     }
 
     handleError(error: Response) {
-        console.error(error);
         return Observable.throw(error.json().error || 'Server error');
     }
 }

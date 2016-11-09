@@ -158,7 +158,7 @@ gulp.task('bundle', ['build'], function bundle() {
         .pipe(source('alfred.bundle.js'))
         .pipe(buffer())
         .pipe(sourcemaps.init({ loadMaps: true }))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('dist'));

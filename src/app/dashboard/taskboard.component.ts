@@ -8,4 +8,5 @@ export class TaskboardComponent {
     label: string = 'Tasks in progress';
     icon: string = 'fa-tasks';
     panelColor: string = 'panel-red';
+    boardLink: string = '/tasks';
 }

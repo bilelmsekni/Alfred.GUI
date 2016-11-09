@@ -1,21 +1,21 @@
 [
     {
         "title":"scrum presentation",
-        "Reward":500,
+        "reward":500,
         "type":"Lvl1Formation",
         "status":"InProgress",
         "bonus":"0"
     },
         {
         "title":"Java article",
-        "Reward":100,
+        "reward":100,
         "type":"Lvl1Article",
         "status":"Done",
         "bonus":"0"
     },
         {
         "title":"webapi session",
-        "Reward":200,
+        "reward":200,
         "type":"Twelve2Thirteen",
         "status":"ToDo",
         "bonus":"50"
