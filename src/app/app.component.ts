@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import 'rxjs/Rx';
 
 @Component({
     selector: 'al-app',

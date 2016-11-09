@@ -1,23 +1,27 @@
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CommunityComponent } from './community/community.component';
-
+import { MemberComponent } from './member/member.component';
 @NgModule({
     imports: [
-         RouterModule.forRoot([
+        RouterModule.forRoot([
             {
                 path: '',
-                redirectTo:'/dashboard',
-                pathMatch:'full'
+                redirectTo: '/dashboard',
+                pathMatch: 'full'
             },
             {
-                path: 'dashboard',                
+                path: 'dashboard',
                 component: DashboardComponent
-            }, 
+            },
             {
                 path: 'communities',
                 component: CommunityComponent
+            },
+            {
+                path: 'members',
+                component: MemberComponent
             }
         ])
     ],
@@ -25,4 +29,4 @@ import { CommunityComponent } from './community/community.component';
         RouterModule
     ]
 })
-export class AppRoutingModule{}
+export class AppRoutingModule { }

@@ -13,7 +13,8 @@ import { CommunityComponent } from './community/community.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CommunityFilterPipe} from './community/community-filter.pipe';
 import { LeaderFilterPipe } from './member/leader-filter.pipe';
-
+import { MemberComponent} from './member/member.component';
+import {MemberFilter} from './member/member-filter.pipe';
 @NgModule({
     imports: [
         BrowserModule,
@@ -30,7 +31,9 @@ import { LeaderFilterPipe } from './member/leader-filter.pipe';
         DoneboardComponent,
         CommunityComponent,
         CommunityFilterPipe,
-        LeaderFilterPipe],        
+        LeaderFilterPipe,
+        MemberFilter,
+        MemberComponent],       
     bootstrap: [AppComponent]
 })
 export class AppModule { }

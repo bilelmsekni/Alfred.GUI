@@ -5,7 +5,8 @@
         "firstName":"paul",
         "lastName":"moto",
         "role":"Member",
-        "tasks":"[]"
+        "tasks":[],
+        "communities":[]
     },
         {
         "id":"2",
@@ -13,7 +14,8 @@
         "firstName":"matt",
         "lastName":"popo",
         "role":"Leader",
-        "tasks":"[]"
+        "tasks":[],
+        "communities":[]
     },
         {
         "id":"3",
@@ -21,6 +23,7 @@
         "firstName":"karen",
         "lastName":"dodo",
         "role":"Manager",
-        "tasks":"[]"
+        "tasks":[],
+        "communities":[]        
     }
 ]

@@ -4,12 +4,12 @@ import { CommunityService } from './community.service';
 
 @Component({
     templateUrl: './community/community.component.html',
-    providers:[CommunityService]    
+    providers: [CommunityService]
 })
 export class CommunityComponent implements OnInit {
-    listFilter: string='';
-    communities: ICommunity[]= [];
-    errorMessage: string;
+    listFilter: string = '';
+    communities: ICommunity[] = [];
+    errorMessage: string = '';
     constructor(private _communityService: CommunityService) {
     }
 
