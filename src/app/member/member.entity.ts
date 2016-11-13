@@ -1,11 +1,11 @@
 import { IArtifact } from '../artifact/artifact.entity';
-import { Role } from './role.enum';
+import { CommunityRole } from './community-role.enum';
 
 export interface IMember {
     id: number,
     email: string,
     firstName: string,
     lastName: string,
-    role: Role,
-    artifacts: IArtifact[],
+    role: CommunityRole,
+    artifacts: IArtifact[]
 }
