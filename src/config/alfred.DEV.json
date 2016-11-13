@@ -1,6 +1,6 @@
 {
     "appSettings":
     {
-        "apiUrl":"http://localhost:50405/"
+        "apiUrl":"http://localhost:50405/{resource}"
     }
 }

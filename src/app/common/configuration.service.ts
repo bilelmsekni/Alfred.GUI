@@ -17,7 +17,7 @@ export class ConfigurationService {
         this.loadSettings();
     }
 
-    loadSettings() {
+    private loadSettings() {
         this._http.get(this._envConfigUrl)
             .map((res: Response) => res.json())
             .catch(this.handleError)
@@ -30,7 +30,7 @@ export class ConfigurationService {
             });
     }
 
-    handleError(error: Response) {
+    private handleError(error: Response) {
         console.error(error);
         return Observable.throw(error.json().error || 'Server error');
     }

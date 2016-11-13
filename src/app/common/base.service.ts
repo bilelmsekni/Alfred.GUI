@@ -10,7 +10,7 @@ export class BaseService {
     }
 
     private createApiUrl(urlFragment: string): string {
-        return 'http://localhost:50405/' + urlFragment;//this._appSettings.apiUrl + urlFragment;
+        return this._appSettings.apiUrl.replace('{resource}', urlFragment);
     }
 
     public getData<T>(urlFragment: string): Observable<T[]> {
