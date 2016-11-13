@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { APP_INITIALIZER } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ScoreboardComponent } from './dashboard/scoreboard.component';
@@ -41,6 +42,9 @@ import { ConfigurationService } from './common/configuration.service';
         ArtifactComponent,
         ArtifactFilterPipe],
     bootstrap: [AppComponent],
-    providers: [ConfigurationService]
+    providers: [
+        ConfigurationService,
+    { provide: APP_INITIALIZER, useFactory: (config: ConfigurationService) => () => config.loadSettings(), deps: [ConfigurationService], multi: true }
+    ]
 })
 export class AppModule { }

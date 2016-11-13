@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Rx';
 import { IAppSettings } from './configuration';
 
 @Injectable()
@@ -14,10 +14,9 @@ export class ConfigurationService {
     }
 
     constructor(protected _http: Http) {
-        this.loadSettings();
     }
 
-    private loadSettings() {
+    loadSettings() {
         this._http.get(this._envConfigUrl)
             .map((res: Response) => res.json())
             .catch(this.handleError)
