@@ -33,20 +33,15 @@ gulp.task('clean', function () {
 
 
 //******************************************************************************
-//* COPY-DATA: Copy fake data to dist 
+//* COPY-DATA: Copy html and json data to dist 
 //******************************************************************************
 
 gulp.task('copy-data', function () {
-    return gulp.src(['api/*.json'])
+        gulp.src(['api/*.json'])
         .pipe(gulp.dest('dist/api'));
-});
-
-//******************************************************************************
-//* COPY-HTML: Copy HTML to dist 
-//******************************************************************************
-
-gulp.task('copy-html', ['copy-data'], function () {
-    return gulp.src(['app/*.html', 'app/**/*.html'])
+        gulp.src(['config/*.json'])
+        .pipe(gulp.dest('dist/config'));
+        gulp.src(['app/*.html', 'app/**/*.html'])
         .pipe(gulp.dest('dist'));
 });
 
@@ -131,7 +126,7 @@ gulp.task('copy-vendor', ['clean'], function () {
 //******************************************************************************
 var tsProject = tsc.createProject("tsconfig.json");
 
-gulp.task("build", ['copy-html'], function () {
+gulp.task("build", ['copy-data'], function () {
     return gulp.src([
         "app/**/*.ts"
     ])
@@ -166,10 +161,9 @@ gulp.task('bundle', ['build'], function bundle() {
 
 gulp.task('prepare', ['copy-vendor', 'minify-css', 'minify-js'])
 gulp.task('default', ['prepare', 'refresh']);
-gulp.task('refresh', ['copy-html', 'build', 'bundle']);
+gulp.task('refresh', ['copy-data', 'build', 'bundle']);
 gulp.task('watch', ['refresh'], function () {
     browserSync.init({
-        //server: 'dist/.',
         server: {
             baseDir: "dist",
             middleware: [historyApiFallback()]

@@ -1,4 +1,4 @@
-import { ITask } from '../task/task';
+import { IArtifact } from '../artifact/artifact.entity';
 import { Role } from './role.enum';
 
 export interface IMember {
@@ -7,5 +7,5 @@ export interface IMember {
     firstName: string,
     lastName: string,
     role: Role,
-    tasks: ITask[],
+    artifacts: IArtifact[],
 }

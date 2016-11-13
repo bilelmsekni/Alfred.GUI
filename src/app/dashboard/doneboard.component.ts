@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
 })
 export class DoneboardComponent {
     total: number = 126;
-    label: string = 'Tasks done';
+    label: string = 'Artifacts done';
     icon: string = 'fa-check ';
     panelColor: string = 'panel-green';
-    boardLink: string = '/tasks';
+    boardLink: string = '/artifacts';
 }

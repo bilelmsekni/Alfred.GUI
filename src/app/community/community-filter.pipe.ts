@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ICommunity } from './community';
+import { ICommunity } from './community.entity';
 
 @Pipe({ name: 'communityFilter' })
 export class CommunityFilterPipe implements PipeTransform {

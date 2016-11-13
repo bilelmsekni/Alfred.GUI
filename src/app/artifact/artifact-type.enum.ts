@@ -1,4 +1,4 @@
-export enum TaskType {
+export enum ArtifactType {
     Lvl1Formation = <any>'Lvl1Formation',
     Lvl2Formation = <any>'Lvl2Formation',
     Twelve2Thirteen = <any>'Twelve2Thirteen',

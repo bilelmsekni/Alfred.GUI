@@ -1,0 +1,6 @@
+{
+    "appSettings":
+    {
+        "apiUrl":"http://localhost:50405/"
+    }
+}

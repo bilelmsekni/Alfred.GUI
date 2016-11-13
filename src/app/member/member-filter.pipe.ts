@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IMember } from './member';
+import { IMember } from './member.entity';
 
 @Pipe({ name: 'memberFilter' })
 export class MemberFilterPipe implements PipeTransform {

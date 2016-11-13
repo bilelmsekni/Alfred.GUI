@@ -1,0 +1,6 @@
+{
+    "appSettings":
+    {
+        "apiUrl":"./api/communities.fake.json"
+    }
+}

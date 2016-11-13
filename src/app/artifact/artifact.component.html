@@ -2,7 +2,7 @@
 	<div class="col-lg-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				Tasks
+				Artifacts
 			</div>
 			<!-- /.panel-heading -->
 			<div class="panel-body">
@@ -23,12 +23,12 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr *ngFor='let task of (model.tasks | taskFilter: listFilter)'>
-							<td>{{task.title}}</td>
-							<td>{{task.type}}</td>
-							<td>{{task.status}}</td>
-							<td>{{task.reward}}</td>
-							<td>{{task.bonus}}</td>
+						<tr *ngFor='let artifact of (model.artifacts | artifactFilter: listFilter)'>
+							<td>{{artifact.title}}</td>
+							<td>{{artifact.type}}</td>
+							<td>{{artifact.status}}</td>
+							<td>{{artifact.reward}}</td>
+							<td>{{artifact.bonus}}</td>
 						</tr>
 					</tbody>
 				</table>

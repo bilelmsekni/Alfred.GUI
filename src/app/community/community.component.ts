@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ICommunity } from './community';
+import { ICommunity } from './community.entity';
 import { CommunityService } from './community.service';
+import { CommunityModel } from './community.model';
 
 @Component({
     templateUrl: './community/community.component.html',
@@ -8,13 +9,14 @@ import { CommunityService } from './community.service';
 })
 export class CommunityComponent implements OnInit {
     listFilter: string = '';
-    communities: ICommunity[] = [];
-    errorMessage: string = '';
+    model: CommunityModel;
+
     constructor(private _communityService: CommunityService) {
+        this.model = new CommunityModel();
     }
 
     ngOnInit() {
         this._communityService.getCommunities()
-            .subscribe(communities => this.communities = communities, error => this.errorMessage = <any>error);
+            .subscribe(res => this.model.communities = res, error => this.model.errorMessage = <any>error);
     }
 }

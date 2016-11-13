@@ -19,16 +19,16 @@
                             <th>Last Name</th>
 							<th>Email</th>
 							<th>Communities</th>
-							<th>Tasks</th>							
+							<th>Artifacts</th>							
 						</tr>
 					</thead>
 					<tbody>
-						<tr *ngFor='let member of (members | memberFilter: listFilter)'>
+						<tr *ngFor='let member of (model.members | memberFilter: listFilter)'>
 							<td>{{member.firstName}}</td>
 							<td>{{member.lastName}}</td>
 							<td>{{member.email}}</td>
 							<td>{{member.communities.length}}</td>
-							<td>{{member.tasks.length}}</td>
+							<td>{{member.artifacts.length}}</td>
 						</tr>
 					</tbody>
 				</table>

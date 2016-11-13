@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CommunityComponent } from './community/community.component';
 import { MemberComponent } from './member/member.component';
-import { TaskComponent } from './task/task.component';
+import { ArtifactComponent } from './artifact/artifact.component';
 
 @NgModule({
     imports: [
@@ -26,8 +26,8 @@ import { TaskComponent } from './task/task.component';
                 component: MemberComponent
             },
             {
-                path:'tasks',
-                component: TaskComponent
+                path:'artifacts',
+                component: ArtifactComponent
             }
 
         ])

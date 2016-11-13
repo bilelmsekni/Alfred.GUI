@@ -5,7 +5,7 @@
         "firstName":"paul",
         "lastName":"moto",
         "role":"Member",
-        "tasks":[],
+        "artifacts":[],
         "communities":[]
     },
         {
@@ -14,7 +14,7 @@
         "firstName":"matt",
         "lastName":"popo",
         "role":"Leader",
-        "tasks":[],
+        "artifacts":[],
         "communities":[]
     },
         {
@@ -23,7 +23,7 @@
         "firstName":"karen",
         "lastName":"dodo",
         "role":"Manager",
-        "tasks":[],
+        "artifacts":[],
         "communities":[]        
     }
 ]

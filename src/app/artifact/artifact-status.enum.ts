@@ -1,4 +1,4 @@
-export enum TaskStatus {
+export enum ArtifactStatus {
     ToDo = <any>'ToDo',
     InProgress = <any>'InProgress',
     Done = <any>'Done',

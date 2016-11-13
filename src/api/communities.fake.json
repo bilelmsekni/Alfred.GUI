@@ -1,53 +1,67 @@
 [
     {
-        "name": "StarTech .Net",
-        "email": "startechdotnet@soft.fr",
-        "members": [],
-        "tasks": [
-            {
-                "title": "Java article",
-                "Reward": 100,
-                "type": "Lvl1Article",
-                "status": "Done",
-                "bonus": "0"
-            }
-        ]
-    },
-    {
-        "name": "StarTech Java",
-        "email": "startechjava@soft.fr",
-        "members": [],
-        "tasks": [
-            {
-                "title": "webapi session",
-                "Reward": 200,
-                "type": "Twelve2Thirteen",
-                "status": "ToDo",
-                "bonus": "50"
-            }
-        ]
-    },
-    {
-        "name": "StarTech Agile",
-        "email": "startechagile@soft.fr",
+        "id": 1,
+        "name": "StarTech",
+        "email": "StarTech@superheros.com",
         "members": [
             {
-                "id": "1",
-                "email": "paul.moto@soft.fr",
-                "firstName": "paul",
-                "lastName": "moto",
-                "role": "Member",
-                "tasks": "[]"
+                "id": 2,
+                "email": "HitGirl@SuperHeros.com",
+                "firstName": "Hit",
+                "lastName": "Girl",
+                "role": 1,
+                "artifacts": [
+                    {
+                        "id": 3,
+                        "title": "Formation Agile",
+                        "reward": 520,
+                        "type": 1,
+                        "status": 2,
+                        "bonus": 0
+                    }
+                ]
             },
             {
-                "id": "2",
-                "email": "matt.popo@soft.fr",
-                "firstName": "matt",
-                "lastName": "popo",
-                "role": "Leader",
-                "tasks": "[]"
+                "id": 3,
+                "email": "BigDaddy@SuperHeros.com",
+                "firstName": "Super",
+                "lastName": "Heros",
+                "role": 2,
+                "artifacts": []
             }
         ],
-        "tasks": []
+        "artifacts": [
+            {
+                "id": 1,
+                "title": "Clean Code Support",
+                "reward": 200,
+                "type": 0,
+                "status": 1,
+                "bonus": 0
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "StarOne",
+        "email": "StarOne@superheros.com",
+        "members": [
+            {
+                "id": 3,
+                "email": "BigDaddy@SuperHeros.com",
+                "firstName": "Super",
+                "lastName": "Heros",
+                "role": 2,
+                "artifacts": []
+            }
+        ],
+        "artifacts": []
+    },
+    {
+        "id": 3,
+        "name": "ArgentDawn",
+        "email": "ArgentDawn@superheros.com",
+        "members": [],
+        "artifacts": []
     }
 ]

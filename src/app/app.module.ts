@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ScoreboardComponent } from './dashboard/scoreboard.component';
-import { TaskboardComponent } from './dashboard/taskboard.component';
+import { ArtifactboardComponent } from './dashboard/artifactboard.component';
 import { CommunityboardComponent } from './dashboard/communityboard.component';
 import { DoneboardComponent } from './dashboard/doneboard.component';
 import { CommunityComponent } from './community/community.component';
@@ -15,8 +15,10 @@ import { CommunityFilterPipe } from './community/community-filter.pipe';
 import { LeaderFilterPipe } from './member/leader-filter.pipe';
 import { MemberComponent } from './member/member.component';
 import { MemberFilterPipe } from './member/member-filter.pipe';
-import { TaskComponent } from './task/task.component';
-import {TaskFilterPipe} from './task/task-filter.pipe';
+import { ArtifactComponent } from './artifact/artifact.component';
+import { ArtifactFilterPipe } from './artifact/artifact-filter.pipe';
+import { ConfigurationService } from './common/configuration.service';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -28,7 +30,7 @@ import {TaskFilterPipe} from './task/task-filter.pipe';
         AppComponent,
         DashboardComponent,
         ScoreboardComponent,
-        TaskboardComponent,
+        ArtifactboardComponent,
         CommunityboardComponent,
         DoneboardComponent,
         CommunityComponent,
@@ -36,8 +38,9 @@ import {TaskFilterPipe} from './task/task-filter.pipe';
         LeaderFilterPipe,
         MemberFilterPipe,
         MemberComponent,
-        TaskComponent,
-        TaskFilterPipe],
-    bootstrap: [AppComponent]
+        ArtifactComponent,
+        ArtifactFilterPipe],
+    bootstrap: [AppComponent],
+    providers: [ConfigurationService]
 })
 export class AppModule { }

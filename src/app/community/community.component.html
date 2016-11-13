@@ -18,16 +18,16 @@
 							<th>Name</th>
 							<th>Email</th>
 							<th>Leader</th>
-							<th>Tasks</th>
+							<th>Artifacts</th>
 							<th>Members</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr *ngFor='let community of (communities | communityFilter: listFilter)'>
+						<tr *ngFor='let community of (model.communities | communityFilter: listFilter)'>
 							<td>{{community.name}}</td>
 							<td>{{community.email}}</td>
 							<td>{{community.members | leaderFilter}}</td>
-							<td>{{community.tasks.length}}</td>
+							<td>{{community.artifacts.length}}</td>
 							<td>{{community.members.length}}</td>
 						</tr>
 					</tbody>
