@@ -19,6 +19,7 @@ import { MemberFilterPipe } from './member/member-filter.pipe';
 import { ArtifactComponent } from './artifact/artifact.component';
 import { ArtifactFilterPipe } from './artifact/artifact-filter.pipe';
 import { ConfigurationService } from './common/configuration.service';
+import { APP_CONFIG_ENV, CONFIG_ENV } from './config/env.config';
 
 @NgModule({
     imports: [
@@ -44,7 +45,7 @@ import { ConfigurationService } from './common/configuration.service';
     bootstrap: [AppComponent],
     providers: [
         ConfigurationService,
-    { provide: APP_INITIALIZER, useFactory: (config: ConfigurationService) => () => config.loadSettings(), deps: [ConfigurationService], multi: true }
+        { provide: APP_CONFIG_ENV, useValue: CONFIG_ENV }
     ]
 })
 export class AppModule { }

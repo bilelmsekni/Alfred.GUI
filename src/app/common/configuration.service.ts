@@ -1,36 +1,18 @@
 import { Inject, Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs/Rx';
-import { IAppSettings } from './configuration';
+import { IAppSettings } from './app.settings';
+import { APP_CONFIG_ENV } from '../config/env.config';
+import { devSettings, fakeSettings } from '../config/alfred.settings';
 
 @Injectable()
 export class ConfigurationService {
-    private _envConfigUrl: string = './config/env.json';
-    private _configUrl: string = './config/alfred.ENV.json';
-    private _configEnv: string = '';
+
     private _appSettings: IAppSettings;
     get appSettings(): IAppSettings {
         return this._appSettings;
     }
 
-    constructor(protected _http: Http) {
-    }
-
-    loadSettings() {
-        this._http.get(this._envConfigUrl)
-            .map((res: Response) => res.json())
-            .catch(this.handleError)
-            .subscribe(data => {
-                this._configEnv = data.configEnv;
-                this._http.get(this._configUrl.replace('ENV', this._configEnv))
-                    .map((res: Response) => res.json().appSettings as IAppSettings)
-                    .catch(this.handleError)
-                    .subscribe((settings: IAppSettings) => this._appSettings = settings);
-            });
-    }
-
-    private handleError(error: Response) {
-        console.error(error);
-        return Observable.throw(error.json().error || 'Server error');
+    constructor(@Inject(APP_CONFIG_ENV) configEnv: string) {
+        if (configEnv == 'DEV') this._appSettings = devSettings;
+        else this._appSettings = fakeSettings;
     }
 }

@@ -1,6 +1,0 @@
-{
-    "appSettings":
-    {
-        "apiUrl":"./api/{resource}.fake.json"
-    }
-}
