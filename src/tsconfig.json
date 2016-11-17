@@ -1,18 +1,25 @@
 {
-    // "files": [
-    //     "app/**/*.ts",
-    //     "app/main.ts"
-    // ],
     "compilerOptions": {
-        "noImplicitAny": true,
         "target": "es5",
+        "types": [
+            "core-js",
+            "mocha"
+        ],
+        "sourceMap": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "isolatedModules": false,
+        "jsx": "react",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
+        "declaration": false,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "noLib": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true,
         "typeRoots": [
             "../node_modules/@types"
-        ],
-        "types": [
-            "core-js"
         ]
     }
 }

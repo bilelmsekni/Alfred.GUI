@@ -1,8 +1,12 @@
 language: node_js
+sudo: false
 node_js:
-  - "6.9.1"
+  - "6.9.1" 
 install:
   - cd src && npm install
 before_script:
-  - npm install -g gulp
+  - npm install -g gulp  
 script: gulp
+after_script:
+  - npm install -g codeclimate-test-reporter
+  - codeclimate-test-reporter < lcov.info

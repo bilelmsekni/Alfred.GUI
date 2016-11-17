@@ -13,8 +13,10 @@ var gutil = require('gulp-util');
 var rename = require("gulp-rename");
 var less = require('gulp-less');
 var cleanCSS = require('gulp-clean-css');
-var tsc = require("gulp-typescript");
-
+var tsc = require('gulp-typescript');
+var tslint = require("gulp-tslint");
+var istanbul = require('gulp-istanbul');
+var mocha = require('gulp-mocha');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var tsify = require('tsify');
@@ -37,11 +39,11 @@ gulp.task('clean', function () {
 //******************************************************************************
 
 gulp.task('copy-data', function () {
-        gulp.src(['api/*.json'])
+    gulp.src(['api/*.json'])
         .pipe(gulp.dest('dist/api'));
-        gulp.src(['config/*.json'])
+    gulp.src(['config/*.json'])
         .pipe(gulp.dest('dist/config'));
-        gulp.src(['app/*.html', 'app/**/*.html'])
+    gulp.src(['app/*.html', 'app/**/*.html'])
         .pipe(gulp.dest('dist'));
 });
 
@@ -124,7 +126,18 @@ gulp.task('copy-vendor', ['clean'], function () {
 //******************************************************************************
 //* BUILD
 //******************************************************************************
-var tsProject = tsc.createProject("tsconfig.json");
+gulp.task('lint', function () {
+    return gulp.src([
+        'app/**/**.ts',
+        'test/**/**.test.ts'
+    ])
+        .pipe(tslint({
+            formatter: 'verbose'
+        }))
+        .pipe(tslint.report());
+});
+
+var tsProject = tsc.createProject('tsconfig.json');
 
 gulp.task("build", ['copy-data'], function () {
     return gulp.src([
@@ -171,4 +184,37 @@ gulp.task('watch', ['refresh'], function () {
     });
     gulp.watch(['app/**/*.ts', 'app/**/*.html'], ['refresh']);
     gulp.watch('dist/**/*.js').on('change', browserSync.reload);
+});
+
+//******************************************************************************
+//* TEST
+//******************************************************************************
+
+var tsTestProject = tsc.createProject('tsconfig.json');
+gulp.task('test-clean', function () {
+    return gulp.src('test/dist')
+        .pipe(cleanDest('test/dist'));
+});
+
+gulp.task('test-build', ['test-clean'],function () {
+    return gulp.src([
+        'test/**/*.ts'
+    ])
+        .pipe(tsTestProject())
+        .on("error", function (err) {
+            process.exit(1);
+        })
+        .js.pipe(gulp.dest('test/dist/'));
+});
+
+gulp.task('istanbul:hook', ['test-build'], function () {
+    // return gulp.src(['dist/**/*.js'])
+    //     .pipe(istanbul())
+    //     .pipe(istanbul.hookRequire());
+});
+
+gulp.task('test', ['istanbul:hook'], function () {
+    return gulp.src('test/dist/**/*.test.js')
+        .pipe(mocha({ ui: 'bdd' }))
+        .pipe(istanbul.writeReports());
 });
