@@ -1,5 +1,6 @@
 import { expect } from "chai";
-import { ConfigurationService } from "../../app/common/configuration.service";
+import "mocha";
+import { ConfigurationService } from "../common/configuration.service";
 
 describe("simple configuration test", () => {
     it("should set msg when an instance is created", () => {

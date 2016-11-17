@@ -5,7 +5,7 @@
 //******************************************************************************
 
 var gulp = require('gulp');
-
+require("reflect-metadata")
 var uglify = require('gulp-uglify');
 var cleanDest = require('gulp-dest-clean');
 var sourcemaps = require('gulp-sourcemaps');
@@ -191,30 +191,26 @@ gulp.task('watch', ['refresh'], function () {
 //******************************************************************************
 
 var tsTestProject = tsc.createProject('tsconfig.json');
-gulp.task('test-clean', function () {
-    return gulp.src('test/dist')
-        .pipe(cleanDest('test/dist'));
-});
 
-gulp.task('test-build', ['test-clean'],function () {
+gulp.task('test-build', ['clean'],function () {
     return gulp.src([
-        'test/**/*.ts'
+        'app/**/*.ts'
     ])
         .pipe(tsTestProject())
         .on("error", function (err) {
             process.exit(1);
         })
-        .js.pipe(gulp.dest('test/dist/'));
+        .js.pipe(gulp.dest('dist'));
 });
 
 gulp.task('istanbul:hook', ['test-build'], function () {
-    // return gulp.src(['dist/**/*.js'])
-    //     .pipe(istanbul())
-    //     .pipe(istanbul.hookRequire());
+    return gulp.src(['dist/**/*.js'])
+        .pipe(istanbul())
+        .pipe(istanbul.hookRequire());
 });
 
 gulp.task('test', ['istanbul:hook'], function () {
-    return gulp.src('test/dist/**/*.test.js')
+    return gulp.src('dist/test/*.test.js')
         .pipe(mocha({ ui: 'bdd' }))
         .pipe(istanbul.writeReports());
 });

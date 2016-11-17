@@ -34,6 +34,7 @@
     "tsify": "^2.0.2",
     "tslint": "^3.15.1",
     "typescript": "^2.0.10",
+    "reflect-metadata": "^0.1.8",    
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
@@ -59,7 +60,6 @@
     "metismenu": "^2.5.2",
     "morris.js": "^0.5.0",
     "raphael": "^2.2.7",
-    "reflect-metadata": "^0.1.8",
     "rxjs": "^5.0.0-beta.12",
     "zone.js": "^0.6.26"
   }
