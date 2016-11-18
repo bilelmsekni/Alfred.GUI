@@ -203,9 +203,9 @@ gulp.task('test-build', ['clean'], function () {
 });
 
 gulp.task('istanbul:hook', ['test-build'], function () {
-    return gulp.src(['dist/**/*.js'])
-        .pipe(istanbul({includeUntested: true}))
-        .pipe(istanbul.hookRequire());
+    return gulp.src(['dist/**/*.js', '!*.json', '!*.html', '!*.module.ts', '!*.md', '!*LICENCE', '!*gulp.js'])
+        .pipe(istanbul({includeUntested: true}));
+        //.pipe(istanbul.hookRequire());
 });
 
 gulp.task('test', ['istanbul:hook'], function () {
