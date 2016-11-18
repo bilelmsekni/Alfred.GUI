@@ -1,5 +1,4 @@
 import { expect } from "chai";
-import "mocha";
 import { ConfigurationService } from "../common/configuration.service";
 
 describe("configuration settings loding test", () => {

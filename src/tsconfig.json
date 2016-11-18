@@ -2,8 +2,8 @@
     "compilerOptions": {
         "target": "es5",
         "types": [
-            "core-js"//,
-            //"mocha"
+            "core-js",
+            "mocha"
         ],
         "sourceMap": true,
         "module": "commonjs",
