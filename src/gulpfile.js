@@ -3,9 +3,8 @@
 //******************************************************************************
 //* DEPENDENCIES
 //******************************************************************************
-
-var gulp = require('gulp');
 require("reflect-metadata")
+var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var cleanDest = require('gulp-dest-clean');
 var sourcemaps = require('gulp-sourcemaps');
@@ -192,7 +191,7 @@ gulp.task('watch', ['refresh'], function () {
 
 var tsTestProject = tsc.createProject('tsconfig.json');
 
-gulp.task('test-build', ['clean'],function () {
+gulp.task('test-build', ['clean'], function () {
     return gulp.src([
         'app/**/*.ts'
     ])
@@ -212,5 +211,11 @@ gulp.task('istanbul:hook', ['test-build'], function () {
 gulp.task('test', ['istanbul:hook'], function () {
     return gulp.src('dist/test/*.test.js')
         .pipe(mocha({ ui: 'bdd' }))
-        .pipe(istanbul.writeReports());
+        .pipe(istanbul.writeReports(
+            {
+                dir: 'dist/unit-test-coverage',
+                reporters: ['lcov'],
+                reportOpts: { dir: 'dist/unit-test-coverage' }
+            }
+        ));
 });
