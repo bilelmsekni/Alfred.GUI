@@ -1,13 +1,10 @@
-languages:
-  Ruby: true
+languages:  
   JavaScript: true
-  PHP: true
-  Python: true
 exclude_paths:
-- "src/gulpfile.js"
-- "src/assets/*"
 - "README.md"
 - "LICENSE"
+- "src/gulpfile.js"
 - "src/package.json"
 - "src/tsconfig.json"
 - "src/tslint.json"
+- "src/assets/*"
