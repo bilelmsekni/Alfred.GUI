@@ -144,7 +144,7 @@ gulp.task("build", ['copy-data'], function () {
     ])
         .pipe(tsProject())
         .on("error", function (err) {
-            process.exit(1);
+            throw 'build failed:' + err;
         })
         .js.pipe(gulp.dest("dist"));
 });
@@ -197,7 +197,7 @@ gulp.task('test-build', ['clean'], function () {
     ])
         .pipe(tsTestProject())
         .on("error", function (err) {
-            process.exit(1);
+            throw 'test-build failed:' + err;
         })
         .js.pipe(gulp.dest('dist'));
 });
