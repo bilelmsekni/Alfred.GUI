@@ -1,6 +1,14 @@
-languages:  
-  JavaScript: true
+engines:
+  tslint:
+    enabled: true
+    config: tslint.json
+ratings:
+  paths:
+    - "**.ts"
+
 exclude_paths:
+- node_modules/**/*
+- typings/**/*
 - "README.md"
 - "LICENSE"
 - "src/gulpfile.js"
