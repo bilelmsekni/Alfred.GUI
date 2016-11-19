@@ -65,7 +65,6 @@ gulp.task('minify-css', ['clean'], function () {
 gulp.task('minify-js', ['clean'], function () {
     return gulp.src('assets/js/sb-admin-2.js')
         .pipe(uglify())
-        //.pipe(header(banner, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist/js'))
 });
@@ -165,15 +164,15 @@ gulp.task('bundle', ['build'], function bundle() {
         .pipe(source('alfred.bundle.js'))
         .pipe(buffer())
         .pipe(sourcemaps.init({ loadMaps: true }))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('default', ['prepare', 'build', 'lint']);
 gulp.task('prepare', ['copy-vendor', 'minify-css', 'minify-js'])
-gulp.task('default', ['prepare', 'refresh']);
-gulp.task('refresh', ['copy-data', 'build', 'bundle']);
+gulp.task('refresh', ['copy-data','bundle']);
 gulp.task('watch', ['refresh'], function () {
     browserSync.init({
         server: {
