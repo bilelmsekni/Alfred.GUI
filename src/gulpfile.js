@@ -170,7 +170,7 @@ gulp.task('bundle', ['build'], function bundle() {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['prepare', 'build', 'lint']);
+gulp.task('default', ['prepare', 'build']);
 gulp.task('prepare', ['copy-vendor', 'minify-css', 'minify-js'])
 gulp.task('refresh', ['copy-data','bundle']);
 gulp.task('watch', ['refresh'], function () {
