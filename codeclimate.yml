@@ -1,0 +1,9 @@
+engines:
+  tslint:
+    enabled: true
+ratings:
+  paths:
+    - "**.ts"
+exclude_paths:
+- node_modules/**/*
+- "src/assets/**/*"
