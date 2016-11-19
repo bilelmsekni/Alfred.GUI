@@ -1,7 +1,3 @@
-engines:
-  tslint:
-    enabled: true
-    config: tslint.json
 ratings:
   paths:
     - "**.ts"
