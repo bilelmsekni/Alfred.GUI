@@ -1,4 +1,4 @@
-import { IArtifact } from '../artifact/artifact.entity';
+import { Artifact } from '../artifact/artifact.entity';
 import { CommunityRole } from './community-role.enum';
 
 export interface IMember {
@@ -7,5 +7,5 @@ export interface IMember {
     firstName: string,
     lastName: string,
     role: CommunityRole,
-    artifacts: IArtifact[]
+    artifacts: Artifact[]
 }

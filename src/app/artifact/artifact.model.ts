@@ -1,6 +1,6 @@
-import { IArtifact } from './artifact.entity';
+import { Artifact } from "./artifact.entity";
 
 export class ArtifactModel {
-    artifacts: IArtifact[] = [];
-    errorMessage: string='';
+    public artifacts: Artifact[] = [];
+    public errorMessage: string = "";
 }

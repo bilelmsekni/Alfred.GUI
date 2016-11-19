@@ -1,11 +1,11 @@
-import { ArtifactType } from './artifact-type.enum'
-import { ArtifactStatus } from './artifact-status.enum'
+import { ArtifactType } from "./artifact-type.enum";
+import { ArtifactStatus } from "./artifact-status.enum";
 
-export interface IArtifact {
-    id: number,
-    title: string;
-    reward: number;
-    type: ArtifactType;
-    status: ArtifactStatus;
-    bonus: number;
+export class Artifact {
+    public id: number;
+    public title: string;
+    public reward: number;
+    public type: ArtifactType;
+    public status: ArtifactStatus;
+    public bonus: number;
 }

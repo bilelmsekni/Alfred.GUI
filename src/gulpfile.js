@@ -32,12 +32,11 @@ gulp.task('clean', function () {
         .pipe(cleanDest('dist'));
 });
 
-
 //******************************************************************************
 //* COPY-DATA: Copy html and json data to dist 
 //******************************************************************************
 
-gulp.task('copy-data', function () {
+gulp.task('copy-data', ['clean'], function () {
     gulp.src(['api/*.json'])
         .pipe(gulp.dest('dist/api'));
     gulp.src(['config/*.json'])
@@ -47,33 +46,22 @@ gulp.task('copy-data', function () {
 });
 
 //******************************************************************************
-//* MINIFY-CSS: Compile less to css + move to dist + Minify CSS
+//* BUILD-VENDOR: Copy vendor libraries from /node_modules into /vendor
 //******************************************************************************
 
-gulp.task('minify-css', ['clean'], function () {
-    return gulp.src('assets/less/sb-admin-2.less')
+gulp.task('build-vendor', ['copy-data'], function () {
+
+    gulp.src('assets/less/sb-admin-2.less')
         .pipe(less())
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist/css'))
-});
 
-//******************************************************************************
-//* MINIFY-JS: Copy JS to dist + Minify JS
-//******************************************************************************
-
-gulp.task('minify-js', ['clean'], function () {
-    return gulp.src('assets/js/sb-admin-2.js')
+    gulp.src('assets/js/sb-admin-2.js')
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist/js'))
-});
 
-//******************************************************************************
-//* COPY-VENDOR: Copy vendor libraries from /node_modules into /vendor
-//******************************************************************************
-
-gulp.task('copy-vendor', ['clean'], function () {
     gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
         .pipe(gulp.dest('dist/vendor/bootstrap'))
 
@@ -124,6 +112,7 @@ gulp.task('copy-vendor', ['clean'], function () {
 //******************************************************************************
 //* BUILD
 //******************************************************************************
+
 gulp.task('lint', function () {
     return gulp.src([
         'app/**/**.ts',
@@ -151,6 +140,7 @@ gulp.task("build", ['copy-data'], function () {
 //******************************************************************************
 //* BUNDLE
 //******************************************************************************
+
 gulp.task('bundle', ['build'], function bundle() {
     return browserify({
         basedir: 'dist/.',
@@ -170,17 +160,15 @@ gulp.task('bundle', ['build'], function bundle() {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['prepare', 'build']);
-gulp.task('prepare', ['copy-vendor', 'minify-css', 'minify-js'])
-gulp.task('refresh', ['copy-data','bundle']);
-gulp.task('watch', ['refresh'], function () {
+gulp.task('default', ['build']);
+gulp.task('watch', ['build-vendor', 'bundle'], function () {
     browserSync.init({
         server: {
             baseDir: "dist",
             middleware: [historyApiFallback()]
         }
     });
-    gulp.watch(['app/**/*.ts', 'app/**/*.html'], ['refresh']);
+    gulp.watch(['app/**/*.ts', 'app/**/*.html'], ['bundle']);
     gulp.watch('dist/**/*.js').on('change', browserSync.reload);
 });
 
@@ -203,7 +191,7 @@ gulp.task('test-build', ['clean'], function () {
 
 gulp.task('istanbul:hook', ['test-build'], function () {
     return gulp.src(['dist/**/*.js'])
-        .pipe(istanbul({includeUntested: true}));
+        .pipe(istanbul({ includeUntested: true }));
 });
 
 gulp.task('test', ['istanbul:hook'], function () {
