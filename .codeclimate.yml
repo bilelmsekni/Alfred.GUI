@@ -6,12 +6,5 @@ ratings:
   paths:
     - "**.ts"
 exclude_paths:
-- node_modules/**/*
-- typings/**/*
-- "README.md"
-- "LICENSE"
-- "src/gulpfile.js"
-- "src/package.json"
-- "src/tsconfig.json"
-- "src/tslint.json"
-- "src/assets/*"
+  - node_modules/**/*
+  - src/assets/**/*
