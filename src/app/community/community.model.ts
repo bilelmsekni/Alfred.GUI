@@ -1,6 +1,6 @@
-import { ICommunity } from './community.entity';
+import { Community } from './community.entity';
 
 export class CommunityModel {
-    communities: ICommunity[] = [];
+    communities: Community[] = [];
     errorMessage: string = '';
 }

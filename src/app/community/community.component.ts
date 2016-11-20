@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ICommunity } from './community.entity';
+import { Community } from './community.entity';
 import { CommunityService } from './community.service';
 import { CommunityModel } from './community.model';
 

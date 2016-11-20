@@ -17,7 +17,7 @@ describe("filter members", function () {
         createMember(0, "jet", "go"),
         createMember(0),
     ];
-    it("should return all members when filter is Bilel", function () {
+    it("should return 0 members when filter is Bilel", function () {
         let memberFilter = new MemberFilterPipe();
         let res = memberFilter.transform(members, "Bilel");
         expect(res.length).eql(0);

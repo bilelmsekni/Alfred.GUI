@@ -16,7 +16,7 @@ describe("filter artifacts", function () {
         createArtifact(0, "12a13 agile"),
         createArtifact(0),
     ];
-    it("should return all artifacts when filter is BDD", function () {
+    it("should return 0 artifacts when filter is BDD", function () {
         let artifactFilter = new ArtifactFilterPipe();
         let res = artifactFilter.transform(artifacts, "BDD");
         expect(res.length).eql(0);
