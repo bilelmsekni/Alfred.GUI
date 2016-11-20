@@ -1,6 +1,6 @@
-import { IMember } from './member.entity';
+import { Member } from './member.entity';
 
 export class MemberModel {
-    members: IMember[] = [];
+    members: Member[] = [];
     errorMessage: string = '';
 }

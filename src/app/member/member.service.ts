@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
-import { IMember } from './member.entity';
+import { Member } from './member.entity';
 import { BaseService} from '../common/base.service';
 import { ConfigurationService } from '../common/configuration.service';
 
@@ -13,7 +13,7 @@ export class MemberService extends BaseService {
         super(_http, _configService);
     }
 
-    getMembers(): Observable<IMember[]> {
-        return super.getData<IMember>(this._membersUrl);
+    getMembers(): Observable<Member[]> {
+        return super.getData<Member>(this._membersUrl);
     }
 }

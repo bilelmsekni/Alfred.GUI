@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IMember } from './member.entity';
+import { Member } from './member.entity';
 import { CommunityRole } from './community-role.enum';
 
 @Pipe({
@@ -7,8 +7,8 @@ import { CommunityRole } from './community-role.enum';
 })
 export class LeaderFilterPipe implements PipeTransform {
 
-    transform(members: IMember[]): string {
-        let leader = members.find((member: IMember) => member.role == CommunityRole.Leader);
+    transform(members: Member[]): string {
+        let leader = members.find((member: Member) => member.role == CommunityRole.Leader);
         return leader ? leader.firstName + ' ' + leader.lastName : 'no leader';
     }
 }
