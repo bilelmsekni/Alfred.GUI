@@ -3,17 +3,16 @@ import { ArtifactModel } from "./artifact.model";
 import { ArtifactService } from "./artifact.service";
 
 @Component({
-    templateUrl: "./artifact/artifact.component.html",
-    providers: [ArtifactService]
+    providers: [ArtifactService],
+    templateUrl: "./artifact/artifact.component.html"
 })
 export class ArtifactComponent implements OnInit {
-    model: ArtifactModel;
-    listFilter: string = "";
+    private model: ArtifactModel;
     constructor(private _artifactService: ArtifactService) {
         this.model = new ArtifactModel();
     }
 
-    ngOnInit() {
+    public ngOnInit() {
         this._artifactService.getArtifacts()
             .subscribe(artifacts => this.model.artifacts = artifacts,
             error => this.model.errorMessage = <any>error);

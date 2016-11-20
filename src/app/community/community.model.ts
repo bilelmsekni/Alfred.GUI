@@ -1,6 +1,7 @@
-import { Community } from './community.entity';
+import { Community } from "./community.entity";
 
 export class CommunityModel {
-    communities: Community[] = [];
-    errorMessage: string = '';
+    public communities: Community[] = [];
+    public errorMessage: string = "";
+    public listFilter: string = "";
 }

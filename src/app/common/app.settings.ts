@@ -1,3 +1,3 @@
-export interface IAppSettings{
+export interface IAppSettings {
     apiUrl: string;
 }

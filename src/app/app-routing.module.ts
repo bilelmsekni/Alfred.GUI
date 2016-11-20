@@ -1,32 +1,32 @@
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { CommunityComponent } from './community/community.component';
-import { MemberComponent } from './member/member.component';
-import { ArtifactComponent } from './artifact/artifact.component';
+import { NgModule } from "@angular/core";
+import { RouterModule } from "@angular/router";
+import { DashboardComponent } from "./dashboard/dashboard.component";
+import { CommunityComponent } from "./community/community.component";
+import { MemberComponent } from "./member/member.component";
+import { ArtifactComponent } from "./artifact/artifact.component";
 
 @NgModule({
     imports: [
         RouterModule.forRoot([
             {
-                path: '',
-                redirectTo: '/dashboard',
-                pathMatch: 'full'
+                path: "",
+                redirectTo: "/dashboard",
+                pathMatch: "full"
             },
             {
-                path: 'dashboard',
+                path: "dashboard",
                 component: DashboardComponent
             },
             {
-                path: 'communities',
+                path: "communities",
                 component: CommunityComponent
             },
             {
-                path: 'members',
+                path: "members",
                 component: MemberComponent
             },
             {
-                path:'artifacts',
+                path: "artifacts",
                 component: ArtifactComponent
             }
 
