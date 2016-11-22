@@ -1,0 +1,55 @@
+<div class="box box-default">
+    <div class="box-header with-border">
+        <h3 class="box-title">Artifact Statistics</h3>
+
+        <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+        </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="chart-responsive">
+                    <div style="display: block">
+                        <canvas baseChart 
+                        [data]="doughnutChartData" 
+                        [labels]="doughnutChartLabels"
+                        [chartType]="doughnutChartType"
+                        [legend]="doughnutChartlegend"
+                        [colors]="doughnutChartLabelColors" 
+                        (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)"></canvas>
+                    </div>
+                </div>
+                <!-- ./chart-responsive -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-4">
+                <ul class="chart-legend clearfix">
+                    <li><i class="fa fa-circle-o text-red"></i> ToDo</li>
+                    <li><i class="fa fa-circle-o text-green"></i> Done</li>
+                    <li><i class="fa fa-circle-o text-yellow"></i> Pending</li>
+                    <li><i class="fa fa-circle-o text-aqua"></i> Progress</li>
+                    <li><i class="fa fa-circle-o text-gray"></i> Canceled</li>
+                </ul>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer no-padding">
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">StarTech .Net
+                  <span class="pull-right text-red"><i class="fa fa-angle-down"></i> 12%</span></a></li>
+            <li><a href="#">StarTech Agile <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 4%</span></a>
+            </li>
+            <li><a href="#">StarTech Java
+                  <span class="pull-right text-yellow"><i class="fa fa-angle-left"></i> 0%</span></a></li>
+        </ul>
+    </div>
+    <!-- /.footer -->
+</div>

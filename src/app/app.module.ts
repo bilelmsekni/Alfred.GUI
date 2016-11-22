@@ -5,7 +5,7 @@ import { FormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { ScoreboardComponent } from "./dashboard/scoreboard.component";
-import { ArtifactboardComponent } from "./dashboard/artifactboard.component";
+import { ArtifactboardComponent } from "./artifact/artifactboard.component";
 import { CommunityboardComponent } from "./dashboard/communityboard.component";
 import { DoneboardComponent } from "./dashboard/doneboard.component";
 import { CommunityComponent } from "./community/community.component";
@@ -16,12 +16,17 @@ import { MemberComponent } from "./member/member.component";
 import { MemberFilterPipe } from "./member/member-filter.pipe";
 import { ArtifactComponent } from "./artifact/artifact.component";
 import { ArtifactFilterPipe } from "./artifact/artifact-filter.pipe";
+import { ArtifactStatusPipe } from "./artifact/artifact-status.pipe";
+import { ArtifactTypePipe } from "./artifact/artifact-type.pipe";
+import { ArtifactLabelPipe } from "./artifact/artifact-label.pipe";
+import { ArtifactPieComponent } from "./artifact/artifactpie.component";
 import { ConfigurationService } from "./common/configuration.service";
+import { ChartsModule } from "ng2-charts/ng2-charts";
 import { APP_CONFIG_ENV, CONFIG_ENV } from "./config/env.config";
 
 @NgModule({
     bootstrap: [AppComponent],
-        declarations: [
+    declarations: [
         AppComponent,
         DashboardComponent,
         ScoreboardComponent,
@@ -34,12 +39,17 @@ import { APP_CONFIG_ENV, CONFIG_ENV } from "./config/env.config";
         MemberFilterPipe,
         MemberComponent,
         ArtifactComponent,
-        ArtifactFilterPipe],
+        ArtifactFilterPipe,
+        ArtifactStatusPipe,
+        ArtifactTypePipe,
+        ArtifactLabelPipe,
+        ArtifactPieComponent],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
-        AppRoutingModule
+        AppRoutingModule,
+        ChartsModule
     ],
 
     providers: [
