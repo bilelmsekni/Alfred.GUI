@@ -21,7 +21,7 @@ import { ArtifactTypePipe } from "./artifact/artifact-type.pipe";
 import { ArtifactLabelPipe } from "./artifact/artifact-label.pipe";
 import { ArtifactPieComponent } from "./artifact/artifactpie.component";
 import { ConfigurationService } from "./common/configuration.service";
-import { ChartsModule } from "ng2-charts/ng2-charts";
+import { ChartModule  } from "angular2-highcharts";
 import { APP_CONFIG_ENV, CONFIG_ENV } from "./config/env.config";
 
 @NgModule({
@@ -49,7 +49,7 @@ import { APP_CONFIG_ENV, CONFIG_ENV } from "./config/env.config";
         FormsModule,
         HttpModule,
         AppRoutingModule,
-        ChartsModule
+        ChartModule
     ],
 
     providers: [

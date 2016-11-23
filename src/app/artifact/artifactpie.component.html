@@ -9,36 +9,10 @@
         </div>
     </div>
     <!-- /.box-header -->
-    <div class="box-body">
+    <div id="container" class="box-body">
         <div class="row">
-            <div class="col-md-8">
-                <div class="chart-responsive">
-                    <div style="display: block">
-                        <canvas baseChart 
-                        [data]="doughnutChartData" 
-                        [labels]="doughnutChartLabels"
-                        [chartType]="doughnutChartType"
-                        [legend]="doughnutChartlegend"
-                        [colors]="doughnutChartLabelColors" 
-                        (chartHover)="chartHovered($event)"
-                        (chartClick)="chartClicked($event)"></canvas>
-                    </div>
-                </div>
-                <!-- ./chart-responsive -->
-            </div>
-            <!-- /.col -->
-            <div class="col-md-4">
-                <ul class="chart-legend clearfix">
-                    <li><i class="fa fa-circle-o text-red"></i> ToDo</li>
-                    <li><i class="fa fa-circle-o text-green"></i> Done</li>
-                    <li><i class="fa fa-circle-o text-yellow"></i> Pending</li>
-                    <li><i class="fa fa-circle-o text-aqua"></i> Progress</li>
-                    <li><i class="fa fa-circle-o text-gray"></i> Canceled</li>
-                </ul>
-            </div>
-            <!-- /.col -->
+            <chart [options]="options"></chart>
         </div>
-        <!-- /.row -->
     </div>
     <!-- /.box-body -->
     <div class="box-footer no-padding">

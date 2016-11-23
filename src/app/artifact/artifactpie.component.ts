@@ -6,12 +6,46 @@ import { Component } from "@angular/core";
 })
 export class ArtifactPieComponent {
 
-    public doughnutChartLabels: string[] = ["Progress", "Pending", "Done", "Canceled", "ToDo"];
-    public doughnutChartLabelColors: any[] = [
-        {
-            backgroundColor: "#F00"
-        }];
-    public doughnutChartData: number[] = [350, 150, 100, 200, 100];
-    public doughnutChartType: string = "doughnut";
-    public doughnutChartlegend: boolean = false;
+    public options: any;
+
+    constructor() {
+        this.options = {
+            chart: {
+                renderTo: "container",
+                type: "pie"
+            },
+            title: "",
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: "pointer",
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            colors: ["#00c0ef", "#f39c12", "#00a65a", "#d2d6de", "#dd4b39"],
+            series: [{
+                colorByPoint: true,
+                data: [{
+                    name: "In Progress",
+                    y: 56.33
+                }, {
+                    name: "Pending",
+                    y: 24.03,
+
+                }, {
+                    name: "Done",
+                    y: 10.38
+                }, {
+                    name: "Canceled",
+                    y: 4.77
+                }, {
+                    name: "ToDo",
+                    y: 0.91
+                }]
+            }]
+        };
+    }
 }
