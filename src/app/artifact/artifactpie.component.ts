@@ -11,7 +11,7 @@ export class ArtifactPieComponent {
     constructor() {
         this.options = {
             chart: {
-                renderTo: "container",
+                renderTo: "pieContainer",
                 type: "pie"
             },
             title: "",
