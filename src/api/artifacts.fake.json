@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "title": "Clean Code Support",
+        "title": "Clean Code Article",
         "reward": 200,
         "type": 0,
         "status": 1,
@@ -17,7 +17,7 @@
     },
     {
         "id": 3,
-        "title": "Formation BDD",
+        "title": "BDD coaching",
         "reward": 370,
         "type": 0,
         "status": 2,
@@ -25,7 +25,7 @@
     },
     {
         "id": 4,
-        "title": "Formation Agile",
+        "title": "Agile coaching",
         "reward": 520,
         "type": 1,
         "status": 2,

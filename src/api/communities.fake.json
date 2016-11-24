@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "name": "StarTech",
-        "email": "StarTech@superheros.com",
+        "name": "AgileCommunity",
+        "email": "AgileCommunity@superheros.com",
         "members": [
             {
                 "id": 2,
@@ -13,7 +13,7 @@
                 "artifacts": [
                     {
                         "id": 3,
-                        "title": "Formation Agile",
+                        "title": "Agile Coaching",
                         "reward": 520,
                         "type": 1,
                         "status": 2,
@@ -33,7 +33,7 @@
         "artifacts": [
             {
                 "id": 1,
-                "title": "Clean Code Support",
+                "title": "Clean Code Article",
                 "reward": 200,
                 "type": 0,
                 "status": 1,
@@ -43,8 +43,8 @@
     },
     {
         "id": 2,
-        "name": "StarOne",
-        "email": "StarOne@superheros.com",
+        "name": "JavaCommunity",
+        "email": "JavaCommunity@superheros.com",
         "members": [
             {
                 "id": 3,
@@ -59,8 +59,8 @@
     },
     {
         "id": 3,
-        "name": "ArgentDawn",
-        "email": "ArgentDawn@superheros.com",
+        "name": "DotNetCommunity",
+        "email": "DotNetCommunity@superheros.com",
         "members": [],
         "artifacts": []
     }

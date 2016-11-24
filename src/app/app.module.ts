@@ -6,8 +6,6 @@ import { AppComponent } from "./app.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { ScoreboardComponent } from "./dashboard/scoreboard.component";
 import { ArtifactboardComponent } from "./artifact/artifactboard.component";
-import { CommunityboardComponent } from "./dashboard/communityboard.component";
-import { DoneboardComponent } from "./dashboard/doneboard.component";
 import { CommunityComponent } from "./community/community.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { CommunityFilterPipe } from "./community/community-filter.pipe";
@@ -31,8 +29,6 @@ import { APP_CONFIG_ENV, CONFIG_ENV } from "./config/env.config";
         DashboardComponent,
         ScoreboardComponent,
         ArtifactboardComponent,
-        CommunityboardComponent,
-        DoneboardComponent,
         CommunityComponent,
         CommunityFilterPipe,
         LeaderFilterPipe,
