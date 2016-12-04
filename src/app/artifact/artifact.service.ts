@@ -18,6 +18,7 @@ export class ArtifactService extends BaseService {
     }
 
     public getInProgressArtifacts(): Observable<Artifact[]> {
-        return super.getData<Artifact>(this._artifactUrl);
+        let inProgressUrl = this._artifactUrl + "?status=1";
+        return super.getData<Artifact>(inProgressUrl);
     }
 }

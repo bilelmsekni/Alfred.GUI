@@ -8,4 +8,6 @@ export class Artifact {
     public type: ArtifactType;
     public status: ArtifactStatus;
     public bonus: number;
+    public communityId: number;
+    public memberId: number;
 }

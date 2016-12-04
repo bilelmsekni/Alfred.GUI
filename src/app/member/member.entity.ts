@@ -1,4 +1,3 @@
-import { Artifact } from "../artifact/artifact.entity";
 import { CommunityRole } from "./community-role.enum";
 
 export class Member {
@@ -7,5 +6,5 @@ export class Member {
     public firstName: string;
     public lastName: string;
     public role: CommunityRole;
-    public artifacts: Artifact[];
+    public communityIds: number[];
 }

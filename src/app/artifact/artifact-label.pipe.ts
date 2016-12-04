@@ -12,7 +12,10 @@ export class ArtifactLabelPipe implements PipeTransform {
             return "label-warning";
         } else if (value === ArtifactStatus.Done) {
             return "label-success";
+        } else if (value === ArtifactStatus.Pending) {
+            return "label-primary";
         }
+
         return "";
     }
 }

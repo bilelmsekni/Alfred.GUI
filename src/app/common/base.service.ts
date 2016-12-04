@@ -11,7 +11,8 @@ export class BaseService {
 
     public getData<T>(urlFragment: string): Observable<T[]> {
         return this._http.get(this.createApiUrl(urlFragment))
-            .map((res: Response) => res.json() as T[])
+            .map((res: Response) => res.json().results as T[])
+            .do(d => console.log(d))
             .catch(this.handleError);
     }
 

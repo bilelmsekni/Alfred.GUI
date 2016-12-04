@@ -1,67 +1,29 @@
-[
+{
+  "results": [
     {
-        "id": 1,
-        "name": "AgileCommunity",
-        "email": "AgileCommunity@superheros.com",
-        "members": [
-            {
-                "id": 2,
-                "email": "HitGirl@SuperHeros.com",
-                "firstName": "Hit",
-                "lastName": "Girl",
-                "role": 1,
-                "artifacts": [
-                    {
-                        "id": 3,
-                        "title": "Agile Coaching",
-                        "reward": 520,
-                        "type": 1,
-                        "status": 2,
-                        "bonus": 0
-                    }
-                ]
-            },
-            {
-                "id": 3,
-                "email": "BigDaddy@SuperHeros.com",
-                "firstName": "Super",
-                "lastName": "Heros",
-                "role": 2,
-                "artifacts": []
-            }
-        ],
-        "artifacts": [
-            {
-                "id": 1,
-                "title": "Clean Code Article",
-                "reward": 200,
-                "type": 0,
-                "status": 1,
-                "bonus": 0
-            }
-        ]
+      "id": 1,
+      "name": "DotNet Community",
+      "email": "DotNetCommunity@superheros.com"
     },
     {
-        "id": 2,
-        "name": "JavaCommunity",
-        "email": "JavaCommunity@superheros.com",
-        "members": [
-            {
-                "id": 3,
-                "email": "BigDaddy@SuperHeros.com",
-                "firstName": "Super",
-                "lastName": "Heros",
-                "role": 2,
-                "artifacts": []
-            }
-        ],
-        "artifacts": []
+      "id": 2,
+      "name": "Java Community",
+      "email": "JavaCommunity@superheros.com"
     },
     {
-        "id": 3,
-        "name": "DotNetCommunity",
-        "email": "DotNetCommunity@superheros.com",
-        "members": [],
-        "artifacts": []
+      "id": 3,
+      "name": "Agile Community",
+      "email": "AgileCommunity@superheros.com"
     }
-]
+  ],
+  "links": [
+    {
+      "href": "http://localhost:50405/artifacts?page=1",
+      "rel": "firstPage"
+    },
+    {
+      "href": "http://localhost:50405/artifacts?page=1",
+      "rel": "lastPage"
+    }
+  ]
+}

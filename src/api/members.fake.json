@@ -1,29 +1,91 @@
-[
+{
+  "results": [
     {
-        "id":"1",
-        "email":"paul.moto@soft.fr",
-        "firstName":"paul",
-        "lastName":"moto",
-        "role":"Member",
-        "artifacts":[],
-        "communities":[]
+      "id": 2,
+      "email": "Clementine.Nikolaus@Alfred.com",
+      "firstName": "Clementine",
+      "lastName": "Nikolaus",
+      "role": 2
     },
-        {
-        "id":"2",
-        "email":"matt.popo@soft.fr",
-        "firstName":"matt",
-        "lastName":"popo",
-        "role":"Leader",
-        "artifacts":[],
-        "communities":[]
+    {
+      "id": 3,
+      "email": "Christop.Harvey@Alfred.com",
+      "firstName": "Christop",
+      "lastName": "Harvey",
+      "role": 0
     },
-        {
-        "id":"3",
-        "email":"karen.dodo@soft.fr",
-        "firstName":"karen",
-        "lastName":"dodo",
-        "role":"Manager",
-        "artifacts":[],
-        "communities":[]        
+    {
+      "id": 4,
+      "email": "Lavinia.Adams@Alfred.com",
+      "firstName": "Lavinia",
+      "lastName": "Adams",
+      "role": 3
+    },
+    {
+      "id": 5,
+      "email": "Eugene.Glover@Alfred.com",
+      "firstName": "Eugene",
+      "lastName": "Glover",
+      "role": 3
+    },
+    {
+      "id": 6,
+      "email": "Dane.Huels@Alfred.com",
+      "firstName": "Dane",
+      "lastName": "Huels",
+      "role": 1
+    },
+    {
+      "id": 7,
+      "email": "Rogelio.Feeney@Alfred.com",
+      "firstName": "Rogelio",
+      "lastName": "Feeney",
+      "role": 0
+    },
+    {
+      "id": 8,
+      "email": "Cedrick.Wiegand@Alfred.com",
+      "firstName": "Cedrick",
+      "lastName": "Wiegand",
+      "role": 2
+    },
+    {
+      "id": 9,
+      "email": "Maude.Langosh@Alfred.com",
+      "firstName": "Maude",
+      "lastName": "Langosh",
+      "role": 3
+    },
+    {
+      "id": 10,
+      "email": "Antonia.Friesen@Alfred.com",
+      "firstName": "Antonia",
+      "lastName": "Friesen",
+      "role": 1
+    },
+    {
+      "id": 11,
+      "email": "Delta.Stark@Alfred.com",
+      "firstName": "Delta",
+      "lastName": "Stark",
+      "role": 1
+    },
+    {
+      "id": 1,
+      "email": "Alfred.Reacher@Alfred.com",
+      "firstName": "Alfred",
+      "lastName": "Pennyworth",
+      "role": 1
     }
-]
+  ],
+  "links": [
+    {
+      "href": "http://localhost:50405/artifacts?page=1",
+      "rel": "firstPage"
+    },
+    {
+      "href": "http://localhost:50405/artifacts?page=1",
+      "rel": "lastPage"
+    }
+  ]
+}

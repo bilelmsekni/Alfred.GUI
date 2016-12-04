@@ -1,34 +1,218 @@
-[
+{
+  "results": [
     {
-        "id": 1,
-        "title": "Clean Code Article",
-        "reward": 200,
-        "type": 0,
-        "status": 1,
-        "bonus": 0
+      "id": 1,
+      "title": "BDD Coaching",
+      "reward": 611,
+      "type": 1,
+      "status": 2,
+      "communityId": 3,
+      "memberId": 5,
+      "bonus": 97
     },
     {
-        "id": 2,
-        "title": "ElasticSearch presentation",
-        "reward": 100,
-        "type": 2,
-        "status": 1,
-        "bonus": 0
+      "id": 2,
+      "title": "ElasticSearch presentation",
+      "reward": 883,
+      "type": 1,
+      "status": 4,
+      "communityId": 3,
+      "memberId": 4,
+      "bonus": 22
     },
     {
-        "id": 3,
-        "title": "BDD coaching",
-        "reward": 370,
-        "type": 0,
-        "status": 2,
-        "bonus": 0
+      "id": 3,
+      "title": "Clean Code Article",
+      "reward": 186,
+      "type": 2,
+      "status": 2,
+      "communityId": 1,
+      "memberId": 10,
+      "bonus": 41
     },
     {
-        "id": 4,
-        "title": "Agile coaching",
-        "reward": 520,
-        "type": 1,
-        "status": 2,
-        "bonus": 0
+      "id": 4,
+      "title": "Clean Code Article",
+      "reward": 577,
+      "type": 2,
+      "status": 3,
+      "communityId": 2,
+      "memberId": 10,
+      "bonus": 75
+    },
+    {
+      "id": 5,
+      "title": "Agile Coaching",
+      "reward": 197,
+      "type": 3,
+      "status": 0,
+      "communityId": 1,
+      "memberId": 5,
+      "bonus": 84
+    },
+    {
+      "id": 6,
+      "title": "Agile Coaching",
+      "reward": 650,
+      "type": 4,
+      "status": 1,
+      "communityId": 1,
+      "memberId": 7,
+      "bonus": 57
+    },
+    {
+      "id": 7,
+      "title": "Clean Code Article",
+      "reward": 451,
+      "type": 1,
+      "status": 3,
+      "communityId": 2,
+      "memberId": 9,
+      "bonus": 44
+    },
+    {
+      "id": 8,
+      "title": "ElasticSearch presentation",
+      "reward": 179,
+      "type": 0,
+      "status": 0,
+      "communityId": 1,
+      "memberId": 8,
+      "bonus": 100
+    },
+    {
+      "id": 9,
+      "title": "Agile Coaching",
+      "reward": 363,
+      "type": 2,
+      "status": 3,
+      "communityId": 2,
+      "memberId": 3,
+      "bonus": 3
+    },
+    {
+      "id": 10,
+      "title": "Agile Coaching",
+      "reward": 575,
+      "type": 4,
+      "status": 2,
+      "communityId": 3,
+      "memberId": 4,
+      "bonus": 76
+    },
+    {
+      "id": 11,
+      "title": "Clean Code Article",
+      "reward": 245,
+      "type": 1,
+      "status": 3,
+      "communityId": 1,
+      "memberId": 9,
+      "bonus": 48
+    },
+    {
+      "id": 12,
+      "title": "Agile Coaching",
+      "reward": 215,
+      "type": 0,
+      "status": 1,
+      "communityId": 1,
+      "memberId": 4,
+      "bonus": 14
+    },
+    {
+      "id": 13,
+      "title": "Clean Code Article",
+      "reward": 634,
+      "type": 3,
+      "status": 3,
+      "communityId": 2,
+      "memberId": 9,
+      "bonus": 1
+    },
+    {
+      "id": 14,
+      "title": "BDD Coaching",
+      "reward": 253,
+      "type": 2,
+      "status": 1,
+      "communityId": 2,
+      "memberId": 6,
+      "bonus": 32
+    },
+    {
+      "id": 15,
+      "title": "Clean Code Article",
+      "reward": 373,
+      "type": 4,
+      "status": 1,
+      "communityId": 2,
+      "memberId": 7,
+      "bonus": 87
+    },
+    {
+      "id": 16,
+      "title": "ElasticSearch presentation",
+      "reward": 287,
+      "type": 1,
+      "status": 4,
+      "communityId": 3,
+      "memberId": 6,
+      "bonus": 93
+    },
+    {
+      "id": 17,
+      "title": "ElasticSearch presentation",
+      "reward": 842,
+      "type": 1,
+      "status": 2,
+      "communityId": 3,
+      "memberId": 9,
+      "bonus": 16
+    },
+    {
+      "id": 18,
+      "title": "Agile Coaching",
+      "reward": 762,
+      "type": 4,
+      "status": 0,
+      "communityId": 2,
+      "memberId": 8,
+      "bonus": 94
+    },
+    {
+      "id": 19,
+      "title": "Clean Code Article",
+      "reward": 523,
+      "type": 3,
+      "status": 3,
+      "communityId": 1,
+      "memberId": 2,
+      "bonus": 100
+    },
+    {
+      "id": 20,
+      "title": "Agile Coaching",
+      "reward": 805,
+      "type": 3,
+      "status": 0,
+      "communityId": 2,
+      "memberId": 3,
+      "bonus": 83
     }
-]
+  ],
+  "links": [
+    {
+      "href": "http://localhost:50405/artifacts?page=1",
+      "rel": "firstPage"
+    },
+    {
+      "href": "http://localhost:50405/artifacts?page=2",
+      "rel": "lastPage"
+    },
+    {
+      "href": "http://localhost:50405/artifacts?page=2",
+      "rel": "nextPage"
+    }
+  ]
+}
