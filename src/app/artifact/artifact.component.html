@@ -25,8 +25,8 @@
 					<tbody>
 						<tr *ngFor='let artifact of (model.artifacts | artifactFilter: model.listFilter)'>
 							<td>{{artifact.title}}</td>
-							<td>{{artifact.type}}</td>
-							<td>{{artifact.status}}</td>
+							<td>{{artifact.type | artifactType}}</td>
+							<td><span class="label {{artifact.status | artifactLabel}}">{{artifact.status | artifactStatus}}</span></td>
 							<td>{{artifact.reward}}</td>
 							<td>{{artifact.bonus}}</td>
 						</tr>
