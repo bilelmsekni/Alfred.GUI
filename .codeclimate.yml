@@ -2,7 +2,7 @@ languages:
   JavaScript: true
 exclude_paths:
   - node_modules/**/*
-  - src/assets/**/*
+  - src/vendor/**/*
   - src/gulpfile.js
   - src/package.json
   - src/tsconfig.json
