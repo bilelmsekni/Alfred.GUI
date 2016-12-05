@@ -15,20 +15,16 @@
 				<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
 					<thead>
 						<tr>
+							<th>Id</th>							
 							<th>Name</th>
 							<th>Email</th>
-							<th>Leader</th>
-							<th>Artifacts</th>
-							<th>Members</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr *ngFor='let community of (model.communities | communityFilter: model.listFilter)'>
+							<td>{{community.id}}</td>
 							<td>{{community.name}}</td>
-							<td>{{community.email}}</td>
-							<td>{{community.members | leaderFilter}}</td>
-							<td>{{community.artifacts.length}}</td>
-							<td>{{community.members.length}}</td>
+							<td>{{community.email}}</td>						
 						</tr>
 					</tbody>
 				</table>

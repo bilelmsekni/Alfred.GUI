@@ -20,7 +20,7 @@ import { ArtifactLabelPipe } from "./artifact/artifact-label.pipe";
 import { ArtifactPieComponent } from "./artifact/artifactpie.component";
 import { ConfigurationService } from "./common/configuration.service";
 import { ChartModule } from "angular2-highcharts";
-import { CommunityNavigationComponent } from "./community/community-nav.component";
+import { NavigationComponent } from "./common/navigation.component";
 import { APP_CONFIG_ENV, CONFIG_ENV } from "./config/env.config";
 
 @NgModule({
@@ -41,7 +41,7 @@ import { APP_CONFIG_ENV, CONFIG_ENV } from "./config/env.config";
         ArtifactTypePipe,
         ArtifactLabelPipe,
         ArtifactPieComponent,
-        CommunityNavigationComponent],
+        NavigationComponent],
     imports: [
         BrowserModule,
         FormsModule,
