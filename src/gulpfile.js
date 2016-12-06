@@ -41,7 +41,7 @@ gulp.task('copy-data', function () {
         .pipe(gulp.dest('dist/api'));
     gulp.src(['config/*.json'])
         .pipe(gulp.dest('dist/config'));
-    gulp.src(['app/*.html', 'app/**/*.html', 'app/**/*.png'])
+    gulp.src(['app/*.html', 'app/**/*.html', 'app/**/*.png', 'app/**/*.jpg'])
         .pipe(gulp.dest('dist'));
 });
 

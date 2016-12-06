@@ -15,6 +15,12 @@ export class BaseService {
             .catch(this.handleError);
     }
 
+    public getItemData<T>(urlFragment: string): Observable<T> {
+        return this._http.get(this.createApiUrl(urlFragment))
+            .map((res: Response) => res.json() as T)
+            .catch(this.handleError);
+    }
+
     private createApiUrl(urlFragment: string): string {
         return this._appSettings.apiUrl.replace("{resource}", urlFragment);
     }

@@ -8,7 +8,7 @@
             </span>
         </a>
         <ul class="treeview-menu" *ngFor='let community of (model.communities)'>
-            <li><a href="/communities/{{community.id}}"><i class="fa fa-circle-o"></i>{{community.name}}</a></li>
+            <li><a [routerLink]="['/communities', community.id]"><i class="fa fa-circle-o"></i>{{community.name}}</a></li>
         </ul>
     </li>
     <li class="treeview">

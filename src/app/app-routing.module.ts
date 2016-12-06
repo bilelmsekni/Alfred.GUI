@@ -4,6 +4,7 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { CommunityComponent } from "./community/community.component";
 import { MemberComponent } from "./member/member.component";
 import { ArtifactComponent } from "./artifact/artifact.component";
+import { CommunityDetailsComponent} from "./community/communitydetails.component";
 
 @NgModule({
     imports: [
@@ -28,6 +29,10 @@ import { ArtifactComponent } from "./artifact/artifact.component";
             {
                 path: "artifacts",
                 component: ArtifactComponent
+            },
+            {
+                path: "communities/:id",
+                component: CommunityDetailsComponent
             }
 
         ])
