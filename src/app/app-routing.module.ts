@@ -5,7 +5,7 @@ import { CommunityComponent } from "./community/community.component";
 import { MemberComponent } from "./member/member.component";
 import { ArtifactComponent } from "./artifact/artifact.component";
 import { CommunityDetailsComponent} from "./community/communitydetails.component";
-
+import { ArtifactDetailsComponent } from "./artifact/artifactdetails.component";
 @NgModule({
     imports: [
         RouterModule.forRoot([
@@ -33,8 +33,11 @@ import { CommunityDetailsComponent} from "./community/communitydetails.component
             {
                 path: "communities/:id",
                 component: CommunityDetailsComponent
+            },
+            {
+                path: "artifacts/:id",
+                component: ArtifactDetailsComponent
             }
-
         ])
     ],
     exports: [

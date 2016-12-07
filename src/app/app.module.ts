@@ -15,6 +15,7 @@ import { ArtifactComponent } from "./artifact/artifact.component";
 import { ArtifactPieComponent } from "./artifact/artifactpie.component";
 import { NavigationComponent } from "./common/navigation.component";
 import { CommunityDetailsComponent } from "./community/communitydetails.component";
+import { ArtifactDetailsComponent } from "./artifact/artifactdetails.component";
 
 import { ConfigurationService } from "./common/configuration.service";
 
@@ -47,7 +48,8 @@ import { APP_CONFIG_ENV, CONFIG_ENV } from "./config/env.config";
         ArtifactLabelPipe,
         ArtifactPieComponent,
         NavigationComponent,
-        CommunityDetailsComponent],
+        CommunityDetailsComponent,
+        ArtifactDetailsComponent],
     imports: [
         BrowserModule,
         FormsModule,

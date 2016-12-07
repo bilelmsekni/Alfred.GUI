@@ -18,7 +18,7 @@ export class CommunityService extends BaseService {
     }
 
     public getCommunity(id: number): Observable<Community> {
-        let url = this._communitiesUrl + "/${id}";
+        let url = this._communitiesUrl + "/" + id;
         return super.getItemData<Community>(url);
     }
 }
