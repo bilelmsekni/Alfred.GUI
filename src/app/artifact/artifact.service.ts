@@ -28,6 +28,6 @@ export class ArtifactService extends BaseService {
     }
     public getArtifact(id: number): Observable<Artifact> {
         let url = this._artifactsUrl + "/" + id;
-        return super.getItemData<Artifact>(url);
+        return super.getDataItem<Artifact>(url);
     }
 }

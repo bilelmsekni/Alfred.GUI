@@ -15,7 +15,7 @@ export class BaseService {
             .catch(this.handleError);
     }
 
-    public getItemData<T>(urlFragment: string): Observable<T> {
+    public getDataItem<T>(urlFragment: string): Observable<T> {
         return this._http.get(this.createApiUrl(urlFragment))
             .map((res: Response) => res.json() as T)
             .catch(this.handleError);
