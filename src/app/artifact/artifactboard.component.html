@@ -1,6 +1,6 @@
 <div class="box box-info">
 	<div class="box-header with-border">
-		<h3 class="box-title">Artifacts in progress</h3>
+		<h3 class="box-title">My Artifacts</h3>
 		<div class="box-tools pull-right">
 			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                 </button>
@@ -21,7 +21,7 @@
 				</thead>
 				<tbody>
 					<tr *ngFor='let artifact of model.artifacts'>
-						<td>{{artifact.id}}</td>
+						<td><a [routerLink]="['/artifacts', artifact.id]">{{artifact.id}}</a></td>
 						<td>{{artifact.title}}</td>
 						<td>{{artifact.type | artifactType}}</td>
 						<td><span class="label {{artifact.status | artifactLabel}}">{{artifact.status | artifactStatus}}</span></td>

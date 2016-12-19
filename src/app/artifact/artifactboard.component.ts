@@ -13,7 +13,7 @@ export class ArtifactboardComponent implements OnInit {
         this.model = new ArtifactBoardModel();
     }
     public ngOnInit() {
-        this._artifactService.getInProgressArtifacts()
+        this._artifactService.getMemberArtifacts(1)
             .subscribe(artifacts => this.model.artifacts = artifacts,
             error => this.model.errorMessage = <any>error);
     }
