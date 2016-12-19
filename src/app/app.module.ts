@@ -18,6 +18,7 @@ import { CommunityDetailsComponent } from "./community/communitydetails.componen
 import { ArtifactDetailsComponent } from "./artifact/artifactdetails.component";
 
 import { ConfigurationService } from "./common/configuration.service";
+import { CommunityService } from "./community/community.service";
 
 import { CommunityFilterPipe } from "./community/community-filter.pipe";
 import { ArtifactFilterPipe } from "./artifact/artifact-filter.pipe";
@@ -26,7 +27,7 @@ import { ArtifactTypePipe } from "./artifact/artifact-type.pipe";
 import { ArtifactLabelPipe } from "./artifact/artifact-label.pipe";
 import { MemberFilterPipe } from "./member/member-filter.pipe";
 import { LeaderFilterPipe } from "./member/leader-filter.pipe";
-
+import { CommunityLabelPipe } from "./community/community-label.pipe";
 import { APP_CONFIG_ENV, CONFIG_ENV } from "./config/env.config";
 
 @NgModule({
@@ -46,6 +47,7 @@ import { APP_CONFIG_ENV, CONFIG_ENV } from "./config/env.config";
         ArtifactStatusPipe,
         ArtifactTypePipe,
         ArtifactLabelPipe,
+        CommunityLabelPipe,
         ArtifactPieComponent,
         NavigationComponent,
         CommunityDetailsComponent,
@@ -60,7 +62,8 @@ import { APP_CONFIG_ENV, CONFIG_ENV } from "./config/env.config";
 
     providers: [
         ConfigurationService,
-        { provide: APP_CONFIG_ENV, useValue: CONFIG_ENV }
+        { provide: APP_CONFIG_ENV, useValue: CONFIG_ENV },
+        CommunityService
     ]
 })
 export class AppModule { }
