@@ -19,11 +19,7 @@
         <ul class="nav nav-pills nav-stacked" *ngFor='let community of model.communityStats'>
             
             <li><a [routerLink]="['/communities', community.id]">{{community.id | communityLabel | async}}
-                  <span class="pull-right text-red"><i class="fa fa-angle-down"></i> {{community.stats}}</span></a></li>
-            <!--<li><a href="#">Agile Community<span class="pull-right text-green"><i class="fa fa-angle-up"></i> 4%</span></a>
-            </li>
-            <li><a href="#">Java Community
-                  <span class="pull-right text-yellow"><i class="fa fa-angle-left"></i> 0%</span></a></li>-->
+                  <span class="pull-right text-red"><i class="fa fa-angle-down"></i> {{community.stats | percent }}</span></a></li>
         </ul>
     </div>
     <!-- /.footer -->

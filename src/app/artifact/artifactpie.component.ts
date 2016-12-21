@@ -4,6 +4,7 @@ import { ArtifactPieModel } from "./artifactpie.model";
 import { Artifact } from "./artifact.entity";
 import { ArtifactStatus } from "./artifact-status.enum";
 import * as _ from "lodash";
+import { statusColors } from "./artifact-status.enum";
 
 @Component({
     selector: "al-artifactpie",
@@ -44,6 +45,11 @@ export class ArtifactPieComponent implements OnInit {
     }
 
     private initPieChart(stats: any[]) {
+        let colors: string[] = [];
+        stats.forEach(element => {
+            colors.push(statusColors[element.name]);
+        });
+
         this.options = {
             chart: {
                 renderTo: "pieContainer",
@@ -60,7 +66,7 @@ export class ArtifactPieComponent implements OnInit {
                     showInLegend: true
                 }
             },
-            colors: ["#00c0ef", "#f39c12", "#00a65a", "#d2d6de", "#dd4b39"],
+            colors: colors,
             series: [{
                 colorByPoint: true,
                 data: stats
