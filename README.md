@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/mseknibilel/Alfred.GUI.png?label=ready&title=Ready)](https://waffle.io/mseknibilel/Alfred.GUI)
 # Alfred.GUI
 
 [![Build Status](https://travis-ci.org/mseknibilel/Alfred.GUI.svg?branch=master)](https://travis-ci.org/mseknibilel/Alfred.GUI)
