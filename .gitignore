@@ -40,3 +40,4 @@ jspm_packages
 src/assets/pages
 src/dist
 src/node_modules
+.vscode/
