@@ -19,7 +19,7 @@
             </span>
         </a>
         <ul class="treeview-menu" *ngFor='let artifactStatus of model.artifactStatuses'>
-            <li><a href="/artifacts?status={{artifactStatus.value}}"><i class="fa fa-circle-o"></i>{{artifactStatus.name}}</a></li>
+            <li><a [routerLink]="['/artifacts']" [queryParams] = "{status: artifactStatus.value}"><i class="fa fa-circle-o"></i>{{artifactStatus.name}}</a></li>
         </ul>
     </li>
     <li class="treeview">
@@ -30,7 +30,7 @@
             </span>
         </a>
         <ul class="treeview-menu" *ngFor='let communityRole of model.communityRoles'>
-            <li><a routerLink="/members?role={{communityRole.value}}"><i class="fa fa-circle-o"></i>{{communityRole.name}}</a></li>
+            <li><a [routerLink]="['/members']" [queryParams]="{role: communityRole.value}"><i class="fa fa-circle-o"></i>{{communityRole.name}}</a></li>
         </ul>
     </li>
 </ul>

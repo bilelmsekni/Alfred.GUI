@@ -6,5 +6,4 @@ export class Member {
     public firstName: string;
     public lastName: string;
     public role: CommunityRole;
-    public communityIds: number[];
 }
