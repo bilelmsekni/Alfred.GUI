@@ -1,19 +1,25 @@
 import { Component, OnInit } from "@angular/core";
 import { MemberService } from "./member.service";
 import { MemberModel } from "./member.model";
+import {ActivatedRoute, Params} from "@angular/router";
+
 @Component({
     providers: [MemberService],
     templateUrl: "./member/member.component.html"
 })
 export class MemberComponent implements OnInit {
     private model: MemberModel;
-    constructor(private _memberService: MemberService) {
+    constructor(private _memberService: MemberService,
+     private _route: ActivatedRoute) {
         this.model = new MemberModel();
     }
 
     public ngOnInit() {
-        this._memberService.getMembers()
-            .subscribe(members => this.model.members = members, error => this.model.errorMessage = <any>error);
+        this._route.queryParams
+        .switchMap((queryParams: Params) => this._memberService.getMembersWithQueryParams(queryParams))
+        .subscribe(members => this.model.members = members, error => this.model.errorMessage = <any>error);
+        // this._memberService.getMembers()
+        //     .subscribe(members => this.model.members = members, error => this.model.errorMessage = <any>error);
     }
 
 }

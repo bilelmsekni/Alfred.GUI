@@ -21,6 +21,14 @@ export class BaseService {
             .catch(this.handleError);
     }
 
+    public encodeQueryParams(queryParams: any): string {
+        let queryUrl = [];
+        for (let qp in queryParams) {
+            queryUrl.push(encodeURIComponent(qp) + "=" + encodeURIComponent(queryParams[qp]));
+        }
+        return queryUrl.join("&");
+    }
+
     private createApiUrl(urlFragment: string): string {
         return this._appSettings.apiUrl.replace("{resource}", urlFragment);
     }

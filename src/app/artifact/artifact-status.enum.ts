@@ -8,9 +8,9 @@ export enum ArtifactStatus {
 
 export const statusColors: any = {
     ToDo: "#dd4b39",
-    InProgress: "#d2d6de",
+    InProgress: "#00c0ef",
     Done: "#00a65a",
-    Pending: "#00c0ef",
+    Pending: "#3c8dbc",
     Canceled: "#f39c12"
 };
 

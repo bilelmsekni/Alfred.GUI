@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Http } from "@angular/http";
 import { Observable } from "rxjs";
 import { Member } from "./member.entity";
-import { BaseService} from "../common/base.service";
+import { BaseService } from "../common/base.service";
 import { ConfigurationService } from "../common/configuration.service";
 
 @Injectable()
@@ -15,5 +15,12 @@ export class MemberService extends BaseService {
 
     public getMembers(): Observable<Member[]> {
         return super.getData<Member>(this._membersUrl);
+    }
+
+    public getMembersWithQueryParams(queryParams: any): Observable<Member[]> {
+        console.log(queryParams);
+        let queryUrl = this._membersUrl + "?" + super.encodeQueryParams(queryParams);
+        console.log(queryUrl);
+        return super.getData<Member>(queryUrl);
     }
 }
