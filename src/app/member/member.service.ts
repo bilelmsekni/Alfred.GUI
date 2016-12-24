@@ -18,9 +18,7 @@ export class MemberService extends BaseService {
     }
 
     public getMembersWithQueryParams(queryParams: any): Observable<Member[]> {
-        console.log(queryParams);
         let queryUrl = this._membersUrl + "?" + super.encodeQueryParams(queryParams);
-        console.log(queryUrl);
         return super.getData<Member>(queryUrl);
     }
 }

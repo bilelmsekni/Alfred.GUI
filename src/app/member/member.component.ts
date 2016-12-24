@@ -18,8 +18,6 @@ export class MemberComponent implements OnInit {
         this._route.queryParams
         .switchMap((queryParams: Params) => this._memberService.getMembersWithQueryParams(queryParams))
         .subscribe(members => this.model.members = members, error => this.model.errorMessage = <any>error);
-        // this._memberService.getMembers()
-        //     .subscribe(members => this.model.members = members, error => this.model.errorMessage = <any>error);
     }
 
 }
