@@ -6,6 +6,9 @@ import { MemberComponent } from "./member/member.component";
 import { ArtifactComponent } from "./artifact/artifact.component";
 import { CommunityDetailsComponent} from "./community/communitydetails.component";
 import { ArtifactDetailsComponent } from "./artifact/artifactdetails.component";
+import { MemberDetailsComponent } from "./member/member-details.component";
+import { MemberDetailsHomeComponent } from "./member/member-details-home.component";
+
 @NgModule({
     imports: [
         RouterModule.forRoot([
@@ -24,7 +27,17 @@ import { ArtifactDetailsComponent } from "./artifact/artifactdetails.component";
             },
             {
                 path: "members",
-                component: MemberComponent
+                component: MemberComponent,
+                 children: [
+                     {
+                         path: "",
+                         component: MemberDetailsHomeComponent
+                     },
+                    {
+                        path: ":id",
+                        component: MemberDetailsComponent
+                    }
+                ]
             },
             {
                 path: "artifacts",

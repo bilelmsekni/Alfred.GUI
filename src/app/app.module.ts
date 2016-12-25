@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+//import { MemberRoutingModule } from "./member/member-routing.modules";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule } from "@angular/http";
 import { FormsModule } from "@angular/forms";
@@ -16,6 +17,8 @@ import { ArtifactPieComponent } from "./artifact/artifactpie.component";
 import { NavigationComponent } from "./common/navigation.component";
 import { CommunityDetailsComponent } from "./community/communitydetails.component";
 import { ArtifactDetailsComponent } from "./artifact/artifactdetails.component";
+import { MemberDetailsComponent } from "./member/member-details.component";
+import { MemberDetailsHomeComponent } from "./member/member-details-home.component";
 
 import { ConfigurationService } from "./common/configuration.service";
 import { CommunityService } from "./community/community.service";
@@ -51,12 +54,15 @@ import { APP_CONFIG_ENV, CONFIG_ENV } from "./config/env.config";
         ArtifactPieComponent,
         NavigationComponent,
         CommunityDetailsComponent,
-        ArtifactDetailsComponent],
+        ArtifactDetailsComponent,
+        MemberDetailsHomeComponent,
+        MemberDetailsComponent],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
         AppRoutingModule,
+        //MemberRoutingModule,
         ChartModule
     ],
 

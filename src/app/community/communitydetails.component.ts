@@ -11,6 +11,7 @@ import "rxjs/add/operator/switchMap";
 })
 export class CommunityDetailsComponent implements OnInit {
     private model: CommunityDetailsModel;
+    private _id: string = "id";
     constructor(private _communityService: CommunityService,
         private _artifactService: ArtifactService,
         private _route: ActivatedRoute) {
@@ -19,13 +20,11 @@ export class CommunityDetailsComponent implements OnInit {
 
     public ngOnInit() {
         this._route.params
-            // tslint:disable-next-line:no-string-literal
-            .switchMap((params: Params) => this._communityService.getCommunity(+params["id"]))
+            .switchMap((params: Params) => this._communityService.getCommunity(+params[this._id]))
             .subscribe(community => this.model.community = community);
 
         this._route.params
-            // tslint:disable-next-line:no-string-literal
-            .switchMap((params: Params) => this._artifactService.getCommunityArtifacts(+params["id"]))
+            .switchMap((params: Params) => this._artifactService.getCommunityArtifacts(+params[this._id]))
             .subscribe(artifacts => this.model.artifacts = artifacts);
     }
 }
