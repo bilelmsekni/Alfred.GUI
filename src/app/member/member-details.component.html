@@ -10,8 +10,10 @@
         <div class="box-footer no-padding">
           <ul class="nav nav-stacked">
             <li><a>Joined <span class="pull-right badge bg-blue">{{model.creationDate | date}}</span></a></li>
-            <li><a>Communities <span class="pull-right badge bg-aqua">5</span></a></li>
-            <li><a>Artifacts <span class="pull-right badge bg-green">12</span></a></li>
+            <li><a>Communities               
+              <span *ngFor= 'let communityName of communityNames' class="pull-right badge bg-aqua">{{communityName}}</span></a></li>
+            <li><a>Artifacts 
+              <span *ngFor= 'let artifactStat of artifactStats' class="pull-right badge bg-green">{{artifactStat.name}} : {{artifactStat.count}}</span></a></li>
             <li><a>Score <span class="pull-right badge bg-red">999</span></a></li>
           </ul>
         </div>
