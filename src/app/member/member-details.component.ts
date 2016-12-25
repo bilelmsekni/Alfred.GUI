@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Member } from "./member.entity";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Params } from "@angular/router";
 import { MemberService } from "./member.service";
 
 @Component({
@@ -15,8 +15,8 @@ export class MemberDetailsComponent implements OnInit {
     }
 
     public ngOnInit() {
-        let url = +this._route.snapshot.params[this._id];
-        this._memberService.getMember(url)
-            .subscribe((member: Member) => this.model = member);
+        this._route.params
+        .switchMap((params: Params) => this._memberService.getMember(+params[this._id]))
+        .subscribe((member: Member) => this.model = member, error => console.log(<any>error));
     }
 }

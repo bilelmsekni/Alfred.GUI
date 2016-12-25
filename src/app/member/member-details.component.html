@@ -2,7 +2,7 @@
   <div class="box box-widget widget-user-2">
     <div class="widget-user-header bg-yellow">
       <div class="widget-user-image">
-        <img class="img-circle" src="assets/img/user7-128x128.jpg" alt="User Avatar">
+        <img class="img-circle" [src]="model.imageUrl" alt="User Avatar">
       </div>
       <h3 class="widget-user-username">{{model.firstName}} {{model.lastName}}</h3>
       <h5 class="widget-user-desc">{{model.job}}</h5>
@@ -12,7 +12,7 @@
             <li><a>Joined <span class="pull-right badge bg-blue">{{model.creationDate | date}}</span></a></li>
             <li><a>Communities <span class="pull-right badge bg-aqua">5</span></a></li>
             <li><a>Artifacts <span class="pull-right badge bg-green">12</span></a></li>
-            <li><a>Score <span class="pull-right badge bg-red">842</span></a></li>
+            <li><a>Score <span class="pull-right badge bg-red">{{model.gender}}-{{model.imageUrl}}</span></a></li>
           </ul>
         </div>
       </div>
