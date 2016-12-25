@@ -10,9 +10,9 @@
 				<i class="fa fa-group"></i> Members
 				<small class="pull-right">
                         <ol class="breadcrumb">
-        <li><a routerLink="/dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a routerLink="/dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li><a routerLink="/members">Members</a></li>
-        <li class="active"> Overview</li>
+        <li class="active">Contributors</li>
     </ol>
                     </small>
 			</h2>
@@ -20,43 +20,33 @@
 	</div>
 	<div class="row">
 		<div class="box-header">
+		</div>
 
-			<div class="box-tools">
-				<div class="input-group input-group-sm" style="width: 150px;">
-<input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
-<!--<input type="search" [(ngModel)]='model.listFilter' class="form-control input-sm" placeholder="" aria-controls="dataTables-example">-->
-<div class="input-group-btn">
-	<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-</div>
-</div>
-</div>
-</div>
-<p class="text-center">
-</p>
-
-<div class="table-responsive">
-	<table class="table no-margin">
-		<thead>
-			<tr>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Email</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr *ngFor='let member of (model.members | memberFilter: model.listFilter)'>
-				<td>{{member.firstName}}</td>
-				<td>{{member.lastName}}</td>
-				<td>{{member.email}}</td>
-				<td><a [routerLink] = "[member.id]" [queryParams] = "{role: member.role}" routerLinkActive="active" class="fa fa-search-plus btn btn-flat pull-left"></a></td>
-			</tr>
-		</tbody>
-	</table>
-	<div class="box-footer clearfix">
-		<a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Create New Member</a>
+		<div class="table-responsive">
+			<table class="table no-margin">
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email</th>
+						<th>Details</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor='let member of (model.members | memberFilter: model.listFilter)'>
+						<td>{{member.firstName}}</td>
+						<td>{{member.lastName}}</td>
+						<td>{{member.email}}</td>
+						<td>
+							<a [routerLink]="[member.id]" [queryParams]="{role: member.role}" routerLinkActive="active" class="fa fa-search-plus btn btn-flat pull-left"></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="box-footer clearfix">
+				<a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Create New Member</a>
+			</div>
+		</div>
 	</div>
-</div>
-</div>
-<router-outlet></router-outlet>
+	<router-outlet></router-outlet>
 </section>

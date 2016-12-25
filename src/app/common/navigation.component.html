@@ -30,7 +30,7 @@
             </span>
         </a>
         <ul class="treeview-menu" *ngFor='let communityRole of model.communityRoles'>
-            <li><a [routerLink]="['/members']" [queryParams]="{role: communityRole.value}"><i class="fa fa-circle-o"></i>{{communityRole.name}}</a></li>
+            <li><a [routerLink]="['/members']" [queryParams]="{role: communityRole.value}"><i class="fa fa-circle-o"></i>{{communityRole.name}}s</a></li>
         </ul>
     </li>
 </ul>

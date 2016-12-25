@@ -14,7 +14,7 @@ function createMember(id: number, firstName?: string, lastName?: string, role?: 
 
 describe("find leader", function () {
     let memberswithoutleader = [
-        createMember(0, "jack", "khan", CommunityRole.Member),
+        createMember(0, "jack", "khan", CommunityRole.Contributor),
         createMember(0, "jet", "go", CommunityRole.Manager),
         createMember(0),
     ];

@@ -1,5 +1,5 @@
 export enum CommunityRole {
-    Member, // = <any>'Member',
+    Contributor, // = <any>'Member',
     Leader, // = <any>'Leader',
     Manager, // = <any>'Manager'
 }
