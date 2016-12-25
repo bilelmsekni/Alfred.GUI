@@ -10,8 +10,8 @@
 				<i class="fa fa-group"></i> Members
 				<small class="pull-right">
                         <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Members</a></li>
+        <li><a routerLink="/dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a routerLink="/members">Members</a></li>
         <li class="active"> Overview</li>
     </ol>
                     </small>
@@ -49,7 +49,7 @@
 				<td>{{member.firstName}}</td>
 				<td>{{member.lastName}}</td>
 				<td>{{member.email}}</td>
-				<td><a [routerLink] = "[member.id]" class="fa fa-search-plus btn btn-flat pull-left"></a></td>
+				<td><a [routerLink] = "[member.id]" [queryParams] = "{role: member.role}" routerLinkActive="active" class="fa fa-search-plus btn btn-flat pull-left"></a></td>
 			</tr>
 		</tbody>
 	</table>
