@@ -2,12 +2,12 @@ import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { CommunityComponent } from "./community/community.component";
-import { MemberComponent } from "./member/member.component";
 import { ArtifactComponent } from "./artifact/artifact.component";
 import { CommunityDetailsComponent} from "./community/communitydetails.component";
 import { ArtifactDetailsComponent } from "./artifact/artifactdetails.component";
-import { MemberDetailsComponent } from "./member/member-details.component";
-import { MemberDetailsHomeComponent } from "./member/member-details-home.component";
+//import { MemberComponent } from "./member/member.component";
+//import { MemberDetailsComponent } from "./member/member-details.component";
+//import { MemberDetailsHomeComponent } from "./member/member-details-home.component";
 
 @NgModule({
     imports: [
@@ -15,7 +15,7 @@ import { MemberDetailsHomeComponent } from "./member/member-details-home.compone
             {
                 path: "",
                 redirectTo: "/dashboard",
-                pathMatch: "full"
+                pathMatch: "full",
             },
             {
                 path: "dashboard",
@@ -27,17 +27,18 @@ import { MemberDetailsHomeComponent } from "./member/member-details-home.compone
             },
             {
                 path: "members",
-                component: MemberComponent,
-                 children: [
-                     {
-                         path: "",
-                         component: MemberDetailsHomeComponent
-                     },
-                    {
-                        path: ":id",
-                        component: MemberDetailsComponent
-                    }
-                ]
+                loadChildren: "./member/member-module#MemberModule"
+                // component: MemberComponent,
+                //  children: [
+                //      {
+                //          path: "",
+                //          component: MemberDetailsHomeComponent
+                //      },
+                //     {
+                //         path: ":id",
+                //         component: MemberDetailsComponent
+                //     }
+                // ]
             },
             {
                 path: "artifacts",

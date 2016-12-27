@@ -33,7 +33,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr *ngFor='let member of (model.members | memberFilter: model.listFilter)'>
+					<tr *ngFor='let member of model.members'>
 						<td>{{member.firstName}}</td>
 						<td>{{member.lastName}}</td>
 						<td>{{member.email}}</td>

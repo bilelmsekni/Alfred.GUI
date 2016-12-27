@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { ArtifactService } from "./artifact/artifact.service";
-//import { MemberRoutingModule } from "./member/member-routing.modules";
+//import { MemberModule } from "./member/member.module";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule } from "@angular/http";
 import { FormsModule } from "@angular/forms";
@@ -12,14 +12,14 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { ScoreboardComponent } from "./dashboard/scoreboard.component";
 import { ArtifactboardComponent } from "./artifact/artifactboard.component";
 import { CommunityComponent } from "./community/community.component";
-import { MemberComponent } from "./member/member.component";
 import { ArtifactComponent } from "./artifact/artifact.component";
 import { ArtifactPieComponent } from "./artifact/artifactpie.component";
 import { NavigationComponent } from "./common/navigation.component";
 import { CommunityDetailsComponent } from "./community/communitydetails.component";
 import { ArtifactDetailsComponent } from "./artifact/artifactdetails.component";
-import { MemberDetailsComponent } from "./member/member-details.component";
-import { MemberDetailsHomeComponent } from "./member/member-details-home.component";
+//import { MemberComponent } from "./member/member.component";
+//import { MemberDetailsComponent } from "./member/member-details.component";
+//import { MemberDetailsHomeComponent } from "./member/member-details-home.component";
 
 import { ConfigurationService } from "./common/configuration.service";
 import { CommunityService } from "./community/community.service";
@@ -45,7 +45,9 @@ import { APP_CONFIG_ENV, CONFIG_ENV } from "./config/env.config";
         CommunityFilterPipe,
         LeaderFilterPipe,
         MemberFilterPipe,
-        MemberComponent,
+        //MemberComponent,
+        //MemberDetailsHomeComponent,
+        //MemberDetailsComponent,
         ArtifactComponent,
         ArtifactFilterPipe,
         ArtifactStatusPipe,
@@ -56,14 +58,13 @@ import { APP_CONFIG_ENV, CONFIG_ENV } from "./config/env.config";
         NavigationComponent,
         CommunityDetailsComponent,
         ArtifactDetailsComponent,
-        MemberDetailsHomeComponent,
-        MemberDetailsComponent],
+        ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
         AppRoutingModule,
-        //MemberRoutingModule,
+        //MemberModule,
         ChartModule
     ],
 
