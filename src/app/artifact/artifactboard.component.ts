@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { ArtifactService} from "./artifact.service";
-import { ArtifactBoardModel} from "./artifactboard.model";
+import { Component, OnInit } from '@angular/core';
+import { ArtifactService} from './artifact.service';
+import { ArtifactBoardModel} from './artifactboard.model';
 
 @Component({
-    selector: "al-artifactboard",
+    selector: 'al-artifactboard',
     providers: [ArtifactService],
-    templateUrl: "./artifact/artifactboard.component.html"
+    templateUrl: './artifactboard.component.html'
 })
 export class ArtifactboardComponent implements OnInit {
     private model: ArtifactBoardModel;

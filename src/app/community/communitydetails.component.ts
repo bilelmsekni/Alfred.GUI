@@ -1,17 +1,17 @@
-import { Component, OnInit } from "@angular/core";
-import { CommunityDetailsModel } from "./communitydetails.model";
-import { CommunityService } from "./community.service";
-import { ArtifactService } from "../artifact/artifact.service";
-import { ActivatedRoute, Params } from "@angular/router";
-import "rxjs/add/operator/switchMap";
+import { Component, OnInit } from '@angular/core';
+import { CommunityDetailsModel } from './communitydetails.model';
+import { CommunityService } from './community.service';
+import { ArtifactService } from '../artifact/artifact.service';
+import { ActivatedRoute, Params } from '@angular/router';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
-    templateUrl: "./community/communitydetails.component.html",
+    templateUrl: './communitydetails.component.html',
     providers: [CommunityService, ArtifactService]
 })
 export class CommunityDetailsComponent implements OnInit {
     private model: CommunityDetailsModel;
-    private _id: string = "id";
+    private _id: string = 'id';
     constructor(private _communityService: CommunityService,
         private _artifactService: ArtifactService,
         private _route: ActivatedRoute) {

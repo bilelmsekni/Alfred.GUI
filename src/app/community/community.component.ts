@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
-import { CommunityService } from "./community.service";
-import { CommunityModel } from "./community.model";
+import { Component, OnInit } from '@angular/core';
+import { CommunityService } from './community.service';
+import { CommunityModel } from './community.model';
 
 @Component({
     providers: [CommunityService],
-    templateUrl: "./community/community.component.html"
+    templateUrl: './community.component.html'
 })
 export class CommunityComponent implements OnInit {
     private model: CommunityModel;

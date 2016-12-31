@@ -9,7 +9,7 @@ var stripAnsi            = require('strip-ansi');
 /**
  * Require ./webpack.config.js and make a bundler from it
  */
-var webpackConfig = require('../webpack.config.dev.js');
+var webpackConfig = require('../config/webpack.config.dev.js');
 var bundler       = webpack(webpackConfig);
 
 /**
@@ -40,9 +40,5 @@ browserSync.init({
             stats: {colors: true}
         })
     ],
-    plugins: ['bs-fullscreen-message'],
-    files: [
-        'app/**/*.css',
-        'app/**/*.html'
-    ]
+    plugins: ['bs-fullscreen-message']
 });

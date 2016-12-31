@@ -1,14 +1,14 @@
-import { Component, OnInit } from "@angular/core";
-import { ArtifactService } from "./artifact.service";
-import { ArtifactPieModel } from "./artifactpie.model";
-import { Artifact } from "./artifact.entity";
-import { ArtifactStatus } from "./artifact-status.enum";
-import * as _ from "lodash";
-import { statusColors } from "./artifact-status.enum";
+import { Component, OnInit } from '@angular/core';
+import { ArtifactService } from './artifact.service';
+import { ArtifactPieModel } from './artifactpie.model';
+import { Artifact } from './artifact.entity';
+import { ArtifactStatus } from './artifact-status.enum';
+import * as _ from 'lodash';
+import { statusColors } from './artifact-status.enum';
 
 @Component({
-    selector: "al-artifactpie",
-    templateUrl: "./artifact/artifactpie.component.html",
+    selector: 'al-artifactpie',
+    templateUrl: './artifactpie.component.html',
     providers: [ArtifactService]
 })
 export class ArtifactPieComponent implements OnInit {
@@ -52,14 +52,14 @@ export class ArtifactPieComponent implements OnInit {
 
         this.options = {
             chart: {
-                renderTo: "pieContainer",
-                type: "pie"
+                renderTo: 'pieContainer',
+                type: 'pie'
             },
-            title: "",
+            title: '',
             plotOptions: {
                 pie: {
                     allowPointSelect: true,
-                    cursor: "pointer",
+                    cursor: 'pointer',
                     dataLabels: {
                         enabled: false
                     },

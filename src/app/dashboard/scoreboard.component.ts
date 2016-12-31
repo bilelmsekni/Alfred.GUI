@@ -1,8 +1,8 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: "al-scoreboard",
-    templateUrl: "./dashboard/scoreboard.component.html"
+    selector: 'al-scoreboard',
+    templateUrl: './scoreboard.component.html'
 })
 export class ScoreboardComponent {
 
@@ -10,31 +10,31 @@ export class ScoreboardComponent {
     constructor() {
         this.options = {
             chart: {
-                renderTo: "lineContainer"
+                renderTo: 'lineContainer'
             },
-            title: "",
+            title: '',
             xAxis: {
-                categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
             },
             yAxis: {
                 title: {
-                    text: "Points"
+                    text: 'Points'
                 }
             },
             legend: {
-            layout: "vertical",
-            align: "right",
-            verticalAlign: "middle",
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
             borderWidth: 0
         },
-             colors: ["#00c0ef", "#dd4b39"],
+             colors: ['#00c0ef', '#dd4b39'],
             series: [{
-                name: "Gained",
+                name: 'Gained',
                 data: [70.0, 130, 130, 150, 180, 210, 250, 260, 300, 480, 480, 500]
             },
             {
-                name: "Used",
+                name: 'Used',
                 data: [500, 490, 420, 420, 420, 420, 400, 400, 350, 350, 350, 300]
             }]
         };

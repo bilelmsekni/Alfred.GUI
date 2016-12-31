@@ -1,13 +1,13 @@
-import { Component, OnInit } from "@angular/core";
-import { CommunityService } from "../community/community.service";
-import { NavigationModel } from "./navigation.model";
-import { ArtifactStatus } from "../artifact/artifact-status.enum";
-import {EnumExtension} from "../common/enum.extension";
-import { CommunityRole} from "../member/community-role.enum";
+import { Component, OnInit } from '@angular/core';
+import { CommunityService } from '../community/community.service';
+import { NavigationModel } from './navigation.model';
+import { ArtifactStatus } from '../artifact/artifact-status.enum';
+import {EnumExtension} from '../common/enum.extension';
+import { CommunityRole} from '../member/community-role.enum';
 @Component({
-    templateUrl: "./common/navigation.component.html",
+    templateUrl: './navigation.component.html',
     providers: [CommunityService],
-    selector: "al-navigation"
+    selector: 'al-navigation'
 })
 export class NavigationComponent implements OnInit {
     private model: NavigationModel;

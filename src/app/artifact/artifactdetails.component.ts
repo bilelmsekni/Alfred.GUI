@@ -1,12 +1,12 @@
-import { Component, OnInit } from "@angular/core";
-import { ArtifactService } from "./artifact.service";
-import { ArtifactDetailsModel } from "./artifactdetails.model";
-import { ActivatedRoute, Params } from "@angular/router";
-import { Location } from "@angular/common";
-import "rxjs/add/operator/switchMap";
+import { Component, OnInit } from '@angular/core';
+import { ArtifactService } from './artifact.service';
+import { ArtifactDetailsModel } from './artifactdetails.model';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
-    templateUrl: "./artifact/artifactdetails.component.html",
+    templateUrl: './artifactdetails.component.html',
     providers: [ArtifactService]
 })
 export class ArtifactDetailsComponent implements OnInit {
@@ -19,7 +19,7 @@ export class ArtifactDetailsComponent implements OnInit {
 
     public ngOnInit() {
         this._route.params
-            .switchMap((params: Params) => this._artifactService.getArtifact(+params["id"]))
+            .switchMap((params: Params) => this._artifactService.getArtifact(+params['id']))
             .subscribe(artifact => this.model.artifact = artifact);
 
             console.log(this.model.artifact);
