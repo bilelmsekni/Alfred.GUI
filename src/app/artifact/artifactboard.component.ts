@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ArtifactService} from './artifact.service';
-import { ArtifactBoardModel} from './artifactboard.model';
+import { ArtifactService } from './artifact.service';
+import { ArtifactBoardModel } from './artifactboard.model';
 
 @Component({
     selector: 'al-artifactboard',
