@@ -1,6 +1,6 @@
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
 import { ArtifactService } from './artifact/artifact.service';
-//import { MemberModule } from "./member/member.module";
+// import { MemberModule } from "./member/member.module";
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
@@ -17,9 +17,9 @@ import { ArtifactPieComponent } from './artifact/artifactpie.component';
 import { NavigationComponent } from './common/navigation.component';
 import { CommunityDetailsComponent } from './community/communitydetails.component';
 import { ArtifactDetailsComponent } from './artifact/artifactdetails.component';
-//import { MemberComponent } from "./member/member.component";
-//import { MemberDetailsComponent } from "./member/member-details.component";
-//import { MemberDetailsHomeComponent } from "./member/member-details-home.component";
+// import { MemberComponent } from "./member/member.component";
+// import { MemberDetailsComponent } from "./member/member-details.component";
+// import { MemberDetailsHomeComponent } from "./member/member-details-home.component";
 
 import { ConfigurationService } from './common/configuration.service';
 import { CommunityService } from './community/community.service';
@@ -45,9 +45,9 @@ import { APP_CONFIG_ENV, CONFIG_ENV } from './config/env.config';
         CommunityFilterPipe,
         LeaderFilterPipe,
         MemberFilterPipe,
-        //MemberComponent,
-        //MemberDetailsHomeComponent,
-        //MemberDetailsComponent,
+        // MemberComponent,
+        // MemberDetailsHomeComponent,
+        // MemberDetailsComponent,
         ArtifactComponent,
         ArtifactFilterPipe,
         ArtifactStatusPipe,
@@ -64,7 +64,7 @@ import { APP_CONFIG_ENV, CONFIG_ENV } from './config/env.config';
         FormsModule,
         HttpModule,
         AppRoutingModule,
-        //MemberModule,
+        // MemberModule,
         ChartModule
     ],
 

@@ -1,7 +1,7 @@
-import { Http, Response } from "@angular/http";
-import { ConfigurationService } from "./configuration.service";
-import { IAppSettings } from "./app.settings";
-import { Observable } from "rxjs";
+import { Http, Response } from '@angular/http';
+import { ConfigurationService } from './configuration.service';
+import { IAppSettings } from './app.settings';
+import { Observable } from 'rxjs';
 
 export class BaseService {
     private _appSettings: IAppSettings;
@@ -24,16 +24,16 @@ export class BaseService {
     public encodeQueryParams(queryParams: any): string {
         let queryUrl = [];
         for (let qp in queryParams) {
-            queryUrl.push(encodeURIComponent(qp) + "=" + encodeURIComponent(queryParams[qp]));
+            queryUrl.push(encodeURIComponent(qp) + '=' + encodeURIComponent(queryParams[qp]));
         }
-        return queryUrl.join("&");
+        return queryUrl.join('&');
     }
 
     private createApiUrl(urlFragment: string): string {
-        return this._appSettings.apiUrl.replace("{resource}", urlFragment);
+        return this._appSettings.apiUrl.replace('{resource}', urlFragment);
     }
 
     private handleError(error: Response) {
-        return Observable.throw(error.json().error || "Server error");
+        return Observable.throw(error.json().error || 'Server error');
     }
 }

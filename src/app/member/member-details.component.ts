@@ -1,22 +1,22 @@
-import { Component, OnInit } from "@angular/core";
-import { ArtifactStatus } from "./../artifact/artifact-status.enum";
-import { Artifact } from "./../artifact/artifact.entity";
-import { ArtifactService } from "./../artifact/artifact.service";
-import { Community } from "./../community/community.entity";
-import { Member } from "./member.entity";
-import { ActivatedRoute, Params } from "@angular/router";
-import { MemberService } from "./member.service";
-import * as _ from "lodash";
+import { Component, OnInit } from '@angular/core';
+import { ArtifactStatus } from './../artifact/artifact-status.enum';
+import { Artifact } from './../artifact/artifact.entity';
+import { ArtifactService } from './../artifact/artifact.service';
+import { Community } from './../community/community.entity';
+import { Member } from './member.entity';
+import { ActivatedRoute, Params } from '@angular/router';
+import { MemberService } from './member.service';
+import * as _ from 'lodash';
 
 @Component({
-    templateUrl: "./member/member-details.component.html"
+    templateUrl: './member/member-details.component.html'
 })
 export class MemberDetailsComponent implements OnInit {
     private model: Member;
     private communityNames: string[];
     private artifactStats: any[];
 
-    private _id: string = "id";
+    private _id: string = 'id';
     constructor(private _memberService: MemberService,
         private _artifactService: ArtifactService,
         private _route: ActivatedRoute) {

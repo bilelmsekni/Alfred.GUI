@@ -1,8 +1,8 @@
-import { Pipe, PipeTransform } from "@angular/core";
-import { Artifact } from "./artifact.entity";
+import { Pipe, PipeTransform } from '@angular/core';
+import { Artifact } from './artifact.entity';
 
 @Pipe({
-    name: "artifactFilter"
+    name: 'artifactFilter'
 })
 export class ArtifactFilterPipe implements PipeTransform {
 

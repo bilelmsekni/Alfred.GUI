@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { MemberService } from "./member.service";
-import { MemberModel } from "./member.model";
-import { ActivatedRoute } from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { MemberService } from './member.service';
+import { MemberModel } from './member.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     providers: [MemberService],
-    templateUrl: "./member/member.component.html"
+    templateUrl: './member/member.component.html'
 })
 export class MemberComponent implements OnInit {
     private model: MemberModel;

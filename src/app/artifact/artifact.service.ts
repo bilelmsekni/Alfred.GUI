@@ -1,13 +1,13 @@
-import { Injectable } from "@angular/core";
-import { Http } from "@angular/http";
-import { Observable } from "rxjs";
-import { Artifact } from "./artifact.entity";
-import { BaseService } from "../common/base.service";
-import { ConfigurationService } from "../common/configuration.service";
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { Observable } from 'rxjs';
+import { Artifact } from './artifact.entity';
+import { BaseService } from '../common/base.service';
+import { ConfigurationService } from '../common/configuration.service';
 
 @Injectable()
 export class ArtifactService extends BaseService {
-    private _artifactsUrl = "artifacts";
+    private _artifactsUrl = 'artifacts';
 
     constructor(_http: Http, _configService: ConfigurationService) {
         super(_http, _configService);
@@ -18,16 +18,16 @@ export class ArtifactService extends BaseService {
     }
 
     public getMemberArtifacts(id: number): Observable<Artifact[]> {
-        let memberUrl = this._artifactsUrl + "?memberId=" + id;
+        let memberUrl = this._artifactsUrl + '?memberId=' + id;
         return super.getData<Artifact>(memberUrl);
     }
 
     public getCommunityArtifacts(id: number): Observable<Artifact[]> {
-        let communityArtifactsUrl = this._artifactsUrl + "?communityId=" + id;
+        let communityArtifactsUrl = this._artifactsUrl + '?communityId=' + id;
         return super.getData<Artifact>(communityArtifactsUrl);
     }
     public getArtifact(id: number): Observable<Artifact> {
-        let url = this._artifactsUrl + "/" + id;
+        let url = this._artifactsUrl + '/' + id;
         return super.getDataItem<Artifact>(url);
     }
 }

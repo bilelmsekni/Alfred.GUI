@@ -1,5 +1,5 @@
-import { ArtifactType } from "./artifact-type.enum";
-import { ArtifactStatus } from "./artifact-status.enum";
+import { ArtifactType } from './artifact-type.enum';
+import { ArtifactStatus } from './artifact-status.enum';
 
 export class Artifact {
     public id: number;

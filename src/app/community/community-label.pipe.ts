@@ -1,8 +1,8 @@
-import { Pipe, PipeTransform } from "@angular/core";
-import { CommunityService } from "./community.service";
-import { Observable } from "rxjs/Observable";
+import { Pipe, PipeTransform } from '@angular/core';
+import { CommunityService } from './community.service';
+import { Observable } from 'rxjs/Observable';
 
-@Pipe({ name: "communityLabel" })
+@Pipe({ name: 'communityLabel' })
 export class CommunityLabelPipe implements PipeTransform {
     constructor(private _communityService: CommunityService) {
 

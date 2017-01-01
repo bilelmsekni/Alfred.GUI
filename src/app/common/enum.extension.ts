@@ -5,12 +5,12 @@ export class EnumExtension {
     }
     public static getValues<T extends number>(e: any) {
         return EnumExtension.getObjValues(e)
-            .filter(v => typeof v === "number") as T[];
+            .filter(v => typeof v === 'number') as T[];
     }
 
     public static getNames(e: any) {
         return EnumExtension.getObjValues(e)
-            .filter(n => typeof n === "string") as string[];
+            .filter(n => typeof n === 'string') as string[];
     }
 
     private static getObjValues(e: any): (number | string)[] {

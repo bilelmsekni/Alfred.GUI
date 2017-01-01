@@ -1,5 +1,5 @@
-import { CommunityRole } from "./community-role.enum";
-import { Community } from "./../community/community.entity";
+import { CommunityRole } from './community-role.enum';
+import { Community } from './../community/community.entity';
 
 export class Member {
     public id: number;

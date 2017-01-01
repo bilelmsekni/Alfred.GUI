@@ -1,7 +1,7 @@
-import { Pipe, PipeTransform } from "@angular/core";
-import { Member } from "./member.entity";
+import { Pipe, PipeTransform } from '@angular/core';
+import { Member } from './member.entity';
 
-@Pipe({ name: "memberFilter" })
+@Pipe({ name: 'memberFilter' })
 export class MemberFilterPipe implements PipeTransform {
     public transform(value: Member[], arg: string): Member[] {
         let filter: string = arg ? arg.toLocaleLowerCase() : null;

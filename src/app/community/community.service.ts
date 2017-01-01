@@ -1,13 +1,13 @@
-import { Http } from "@angular/http";
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { Community } from "./community.entity";
-import { BaseService } from "../common/base.service";
-import { ConfigurationService } from "../common/configuration.service";
+import { Http } from '@angular/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Community } from './community.entity';
+import { BaseService } from '../common/base.service';
+import { ConfigurationService } from '../common/configuration.service';
 
 @Injectable()
 export class CommunityService extends BaseService {
-    private _communitiesUrl = "communities";
+    private _communitiesUrl = 'communities';
 
     constructor(_http: Http, _configService: ConfigurationService) {
         super(_http, _configService);
@@ -18,7 +18,7 @@ export class CommunityService extends BaseService {
     }
 
     public getCommunity(id: number): Observable<Community> {
-        let url = this._communitiesUrl + "/" + id;
+        let url = this._communitiesUrl + '/' + id;
         return super.getDataItem<Community>(url);
     }
 }
