@@ -5,6 +5,7 @@ var browserSync          = require('browser-sync').create();
 var webpack              = require('webpack');
 var webpackDevMiddleware = require('webpack-dev-middleware');
 var stripAnsi            = require('strip-ansi');
+var historyApiFallback = require('connect-history-api-fallback');
 
 /**
  * Require ./webpack.config.js and make a bundler from it
@@ -35,10 +36,11 @@ browserSync.init({
     open: false,
     logFileChanges: false,
     middleware: [
+        historyApiFallback(),
         webpackDevMiddleware(bundler, {
             publicPath: webpackConfig.output.publicPath,
             stats: {colors: true}
-        })
+        })        
     ],
     plugins: ['bs-fullscreen-message']
 });
