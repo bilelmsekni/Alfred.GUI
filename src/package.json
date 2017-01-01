@@ -1,10 +1,11 @@
 {
   "name": "alfred.gui",
   "version": "1.0.0",
-  "description": "This is alfred's ui using angular",
+  "description": "This is alfred's ui using angular 2",
   "main": "./dist/main.js",
   "scripts": {
-    "test": "mocha-webpack --webpack-config config/webpack.config.test.js \"app/**/*.test.ts\"",
+    "test": "nyc mocha-webpack --webpack-config config/webpack.config.test.js \"app/**/*.test.ts\"",
+    "coverage": "nyc report --reporter=text-lcov",
     "start": "node tasks/debug",
     "prerelease": "rm -rf dist",
     "release": "node tasks/release"
@@ -35,6 +36,7 @@
     "mocha": "^3.2.0",
     "mocha-webpack": "^0.7.0",
     "null-loader": "^0.1.1",
+    "nyc": "^10.0.0",
     "raw-loader": "^0.5.1",
     "reflect-metadata": "^0.1.9",
     "style-loader": "^0.13.1",
