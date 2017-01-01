@@ -7,4 +7,4 @@ install:
 after_script:
   - npm install -g codeclimate-test-reporter
   - npm test
-  - codeclimate-test-reporter < npm run coverage
+  - npm run coverage > codeclimate-test-reporter 

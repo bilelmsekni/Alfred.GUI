@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
     providers: [MemberService],
-    templateUrl: './member/member.component.html'
+    templateUrl: './member.component.html'
 })
 export class MemberComponent implements OnInit {
     private model: MemberModel;

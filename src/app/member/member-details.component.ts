@@ -9,7 +9,7 @@ import { MemberService } from './member.service';
 import * as _ from 'lodash';
 
 @Component({
-    templateUrl: './member/member-details.component.html'
+    templateUrl: './member-details.component.html'
 })
 export class MemberDetailsComponent implements OnInit {
     private model: Member;
