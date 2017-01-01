@@ -4,10 +4,7 @@ node_js:
   - "6.9.1" 
 install:
   - cd src && npm install
-before_script:
-  - npm install -g gulp  
-script: gulp
 after_script:
   - npm install -g codeclimate-test-reporter
-  - gulp test
+  - npm test
   - codeclimate-test-reporter < dist/unit-test-coverage/lcov.info
