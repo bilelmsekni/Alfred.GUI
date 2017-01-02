@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggingService } from './../common/logging.service';
 import { ArtifactStatus } from './../artifact/artifact-status.enum';
 import { Artifact } from './../artifact/artifact.entity';
 import { ArtifactService } from './../artifact/artifact.service';
@@ -19,6 +20,7 @@ export class MemberDetailsComponent implements OnInit {
     private _id: string = 'id';
     constructor(private _memberService: MemberService,
         private _artifactService: ArtifactService,
+        private _loggingService: LoggingService,
         private _route: ActivatedRoute) {
         this.model = new Member();
         this.communityNames = [];
@@ -28,7 +30,7 @@ export class MemberDetailsComponent implements OnInit {
         this._route.params
             .switchMap((params: Params) => this._memberService.getMember(+params[this._id]))
             .do((member: Member) => this.communityNames = this.extractNames(member.communities))
-            .subscribe((member: Member) => this.model = member, error => console.log(<any>error));
+            .subscribe((member: Member) => this.model = member, error => this._loggingService.logError(error));
 
         this._route.params
             .switchMap((params: Params) => this._artifactService.getMemberArtifacts(+params[this._id]))

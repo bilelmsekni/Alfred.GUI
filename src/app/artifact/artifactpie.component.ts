@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggingService } from './../common/logging.service';
 import { ArtifactService } from './artifact.service';
 import { ArtifactPieModel } from './artifactpie.model';
 import { Artifact } from './artifact.entity';
@@ -15,7 +16,8 @@ export class ArtifactPieComponent implements OnInit {
 
     private options: any;
     private model: ArtifactPieModel;
-    constructor(private _artifactService: ArtifactService) {
+    constructor(private _artifactService: ArtifactService,
+    private _loggingService: LoggingService) {
         this.model = new ArtifactPieModel();
     }
 
@@ -23,11 +25,11 @@ export class ArtifactPieComponent implements OnInit {
         let observ = this._artifactService.getMemberArtifacts(1);
         observ.map(res => this.calculateStatusStats(res))
             .subscribe(res => this.initPieChart(res),
-            error => this.model.errorMessage = <any>error);
+            error => this._loggingService.logError(error));
 
         observ.map(res => this.calculateCommunityStats(res))
             .subscribe(res => this.model.communityStats = res,
-            error => this.model.errorMessage = <any>error);
+            error => this._loggingService.logError(error));
     }
 
     private calculateStatusStats(artifacts: Artifact[]): any[] {

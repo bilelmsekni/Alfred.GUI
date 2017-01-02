@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { LoggingService } from './common/logging.service';
 import { ArtifactService } from './artifact/artifact.service';
 // import { MemberModule } from "./member/member.module";
 import { BrowserModule } from '@angular/platform-browser';
@@ -72,7 +73,8 @@ import { APP_CONFIG_ENV, CONFIG_ENV } from './config/env.config';
         ConfigurationService,
         { provide: APP_CONFIG_ENV, useValue: CONFIG_ENV },
         CommunityService,
-        ArtifactService
+        ArtifactService,
+        LoggingService
     ]
 })
 export class AppModule { }
