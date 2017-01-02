@@ -21,7 +21,5 @@ export class ArtifactDetailsComponent implements OnInit {
         this._route.params
             .switchMap((params: Params) => this._artifactService.getArtifact(+params['id']))
             .subscribe(artifact => this.model.artifact = artifact);
-
-            console.log(this.model.artifact);
     }
 }

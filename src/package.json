@@ -21,6 +21,7 @@
     "@types/lodash": "^4.14.45",
     "@types/mocha": "^2.2.33",
     "@types/node": "^6.0.55",
+    "angular-router-loader": "^0.4.0",
     "angular2-template-loader": "^0.6.0",
     "awesome-typescript-loader": "^3.0.0-beta.17",
     "browser-sync": "^2.18.1",

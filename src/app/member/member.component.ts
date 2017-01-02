@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MemberService } from './member.service';
 import { MemberModel } from './member.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
     providers: [MemberService],
@@ -15,9 +15,9 @@ export class MemberComponent implements OnInit {
     }
 
     public ngOnInit() {
-        let queryParams = this._route.snapshot.queryParams;
-        this._memberService.getMembersWithQueryParams(queryParams)
-            .subscribe(members => this.model.members = members, error => this.model.errorMessage = <any>error);
+        this._route.queryParams
+        .switchMap((params: Params) => this._memberService.getMembersWithQueryParams(params))
+        .subscribe(members => this.model.members = members, error => this.model.errorMessage = <any>error);
     }
 
 }

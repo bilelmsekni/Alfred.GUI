@@ -27,7 +27,7 @@ import { ArtifactDetailsComponent } from './artifact/artifactdetails.component';
             },
             {
                 path: 'members',
-                loadChildren: './member/member-module#MemberModule'
+                loadChildren: './member/member.module#MemberModule'
                 // component: MemberComponent,
                 //  children: [
                 //      {
