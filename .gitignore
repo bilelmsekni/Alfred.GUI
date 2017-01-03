@@ -41,4 +41,5 @@ src/assets/pages
 src/dist
 src/node_modules
 src/.tmp
+src/aot
 .vscode/
