@@ -12,27 +12,27 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.ts', '.js']
+    extensions: ['.ts', '.js']
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.ts$/,
         loaders: ['awesome-typescript-loader', 'angular2-template-loader', 'angular-router-loader']
       },
       {
         test: /\.html$/,
-        loader: 'html'
+        loader: 'html-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'file?name=assets/img/[name].[ext]'
+        loader: 'file-loader?name=assets/img/[name].[ext]'
       },
       {
         test: /\.css$/,
         exclude: helpers.root('app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+        loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader' })
       },
       {
         test: /\.css$/,
