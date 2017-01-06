@@ -43,3 +43,4 @@ src/node_modules
 src/.tmp
 src/aot
 .vscode/
+*.ngFactory.ts
