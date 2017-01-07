@@ -42,6 +42,7 @@ src/dist
 src/node_modules
 src/.tmp
 src/aot
+src/compiled
+src/app/**/*.js
+src/app/**/*.js.map
 .vscode/
-*.ngFactory.ts
-*.ngsummary.json

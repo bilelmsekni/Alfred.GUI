@@ -23,7 +23,6 @@
   "license": "MIT",
   "devDependencies": {
     "@types/chai": "^3.4.34",
-    "@types/core-js": "^0.9.35",
     "@types/lodash": "^4.14.45",
     "@types/mocha": "^2.2.33",
     "@types/node": "^6.0.55",

@@ -10,7 +10,11 @@
         "declaration": false,
         "noImplicitAny": true,
         "removeComments": true,
-        "noLib": false,
+        //"noLib": false,
+        "lib": [
+            "es6",
+            "dom"
+        ],
         "preserveConstEnums": true,
         "suppressImplicitAnyIndexErrors": true,
         "skipLibCheck": true
