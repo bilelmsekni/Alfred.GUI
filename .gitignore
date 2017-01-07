@@ -44,3 +44,4 @@ src/.tmp
 src/aot
 .vscode/
 *.ngFactory.ts
+*.ngsummary.json
