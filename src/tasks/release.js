@@ -1,8 +1,7 @@
-var webpack              = require('webpack');
-var webpackConfig = require('../config/webpack.config.prd.js');
+var webpack   = require('webpack');
 var chalk = require('chalk');
+var webpackConfig = require('../config/webpack.config.prd.js')(process.argv[2]);
 
-console.log(chalk.blue('Generating minified bundle for production. This will take a moment...'));
 
 webpack(webpackConfig).run((err, stats) => {
   if (err) { // so a fatal error occurred. Stop here.
@@ -24,7 +23,7 @@ webpack(webpackConfig).run((err, stats) => {
   console.log(`Webpack stats: ${stats}`);
 
   // if we got this far, the build succeeded.
-  console.log(chalk.green('Your app has been built for production and written to /dist!'));
+  console.log(chalk.green(`Your app has been built successfully and written to /dist!`));
 
   return 0;
 });

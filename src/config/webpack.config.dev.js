@@ -3,8 +3,11 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
+var chalk = require('chalk');
 
-module.exports = function(configEnv) {
+module.exports = function(arg) {
+    var configEnv = (arg === undefined)? 'debug': arg;
+    console.log(chalk.blue(`Starting server using ${configEnv} settings. This will take a moment...`));
     var settings = require(`../app/common/settings/alfred.${configEnv}.json`);
     return webpackMerge(commonConfig, {
     devtool: 'inline-source-map',

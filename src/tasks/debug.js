@@ -6,11 +6,12 @@ var webpack = require('webpack');
 var webpackDevMiddleware = require('webpack-dev-middleware');
 var stripAnsi = require('strip-ansi');
 var historyApiFallback = require('connect-history-api-fallback');
+var chalk = require('chalk');
 
 /**
  * Require ./webpack.config.js and make a bundler from it
  */
-var webpackConfig = require('../config/webpack.config.dev.js')('debug');
+var webpackConfig = require('../config/webpack.config.dev.js')(process.argv[2]);
 var bundler = webpack(webpackConfig);
 
 /**
