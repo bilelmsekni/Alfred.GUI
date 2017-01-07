@@ -1,22 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import { LoggingService } from "./../common/logging.service";
 import { ArtifactService } from './artifact.service';
-import { ArtifactBoardModel } from './artifactboard.model';
+import { Artifact } from './index';
+import { Component, OnInit } from '@angular/core';
+import { LoggingService } from './../common/services';
 
 @Component({
     selector: 'al-artifactboard',
-    providers: [ArtifactService],
     templateUrl: './artifactboard.component.html'
 })
 export class ArtifactboardComponent implements OnInit {
-    private model: ArtifactBoardModel;
+    public artifacts: Artifact[]= [];
+    public icon: string = 'fa-artifacts';
+    public boardLink: string = '/artifacts';
+
     constructor(private _artifactService: ArtifactService,
-    private _loggingService: LoggingService) {
-        this.model = new ArtifactBoardModel();
+        private _loggingService: LoggingService) {
     }
     public ngOnInit() {
         this._artifactService.getMemberArtifacts(1)
-            .subscribe(artifacts => this.model.artifacts = artifacts,
+            .subscribe(artifacts => this.artifacts = artifacts,
             error => this._loggingService.logError(error));
     }
 }

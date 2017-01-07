@@ -1,7 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
-import { IAppSettings } from './app.settings';
-import { APP_CONFIG_ENV } from '../config/env.config';
-import { prdSettings, devSettings, fakeSettings } from '../config/alfred.settings';
+import { APP_CONFIG_ENV, IAppSettings } from '../settings';
+import { prdSettings, devSettings, fakeSettings } from '../settings/alfred.settings';
 
 @Injectable()
 export class ConfigurationService {

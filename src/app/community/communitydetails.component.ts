@@ -1,30 +1,30 @@
-import { Component, OnInit } from '@angular/core';
-import { CommunityDetailsModel } from './communitydetails.model';
 import { CommunityService } from './community.service';
-import { ArtifactService } from '../artifact/artifact.service';
+import { Community } from './index';
+import { Component, OnInit } from '@angular/core';
+import { Artifact, ArtifactService } from '../artifact';
 import { ActivatedRoute, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
-    templateUrl: './communitydetails.component.html',
-    providers: [CommunityService, ArtifactService]
+    templateUrl: './communitydetails.component.html'
 })
 export class CommunityDetailsComponent implements OnInit {
-    private model: CommunityDetailsModel;
+    public community: Community = new Community();
+    public artifacts: Artifact[] = [];
     private _id: string = 'id';
+
     constructor(private _communityService: CommunityService,
         private _artifactService: ArtifactService,
         private _route: ActivatedRoute) {
-        this.model = new CommunityDetailsModel();
     }
 
     public ngOnInit() {
         this._route.params
             .switchMap((params: Params) => this._communityService.getCommunity(+params[this._id]))
-            .subscribe(community => this.model.community = community);
+            .subscribe(community => this.community = community);
 
         this._route.params
             .switchMap((params: Params) => this._artifactService.getCommunityArtifacts(+params[this._id]))
-            .subscribe(artifacts => this.model.artifacts = artifacts);
+            .subscribe(artifacts => this.artifacts = artifacts);
     }
 }

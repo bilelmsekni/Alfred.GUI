@@ -1,6 +1,6 @@
 import { Http, Response } from '@angular/http';
 import { ConfigurationService } from './configuration.service';
-import { IAppSettings } from './app.settings';
+import { IAppSettings } from '../settings';
 import { Observable } from 'rxjs';
 
 export class BaseService {
@@ -22,7 +22,7 @@ export class BaseService {
     }
 
     public encodeQueryParams(queryParams: any): string {
-        let queryUrl = [];
+        let queryUrl: string[] = [];
         for (let qp in queryParams) {
             queryUrl.push(encodeURIComponent(qp) + '=' + encodeURIComponent(queryParams[qp]));
         }

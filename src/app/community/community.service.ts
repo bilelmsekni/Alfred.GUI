@@ -2,8 +2,7 @@ import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Community } from './community.entity';
-import { BaseService } from '../common/base.service';
-import { ConfigurationService } from '../common/configuration.service';
+import { BaseService, ConfigurationService } from '../common/services';
 
 @Injectable()
 export class CommunityService extends BaseService {

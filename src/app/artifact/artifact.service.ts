@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs';
-import { Artifact } from './artifact.entity';
-import { BaseService } from '../common/base.service';
-import { ConfigurationService } from '../common/configuration.service';
+import { Artifact } from './';
+import { ConfigurationService , BaseService } from '../common/services';
 
 @Injectable()
 export class ArtifactService extends BaseService {

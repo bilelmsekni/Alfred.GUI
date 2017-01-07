@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { LoggingService } from './../common/logging.service';
-import { ArtifactStatus } from './../artifact/artifact-status.enum';
-import { Artifact } from './../artifact/artifact.entity';
-import { ArtifactService } from './../artifact/artifact.service';
+import { LoggingService } from './../common/services';
+import { ArtifactService, Artifact, ArtifactStatus } from './../artifact';
 import { Community } from './../community/community.entity';
 import { Member } from './member.entity';
-import { ActivatedRoute, Params } from '@angular/router';
 import { MemberService } from './member.service';
+import { ActivatedRoute, Params } from '@angular/router';
 import * as _ from 'lodash';
 
 @Component({

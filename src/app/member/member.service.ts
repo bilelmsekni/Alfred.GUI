@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs';
 import { Member } from './member.entity';
-import { BaseService } from '../common/base.service';
-import { ConfigurationService } from '../common/configuration.service';
+import { ConfigurationService, BaseService } from '../common/services';
 
 @Injectable()
 export class MemberService extends BaseService {

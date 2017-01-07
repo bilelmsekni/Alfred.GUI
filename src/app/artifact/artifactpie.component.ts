@@ -1,24 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { LoggingService } from './../common/logging.service';
 import { ArtifactService } from './artifact.service';
-import { ArtifactPieModel } from './artifactpie.model';
-import { Artifact } from './artifact.entity';
-import { ArtifactStatus } from './artifact-status.enum';
+import { Component, OnInit } from '@angular/core';
+import { LoggingService } from './../common/services';
+import { Artifact, StatusColors, ArtifactStatus } from './index';
+
 import * as _ from 'lodash';
-import { statusColors } from './artifact-status.enum';
 
 @Component({
     selector: 'al-artifactpie',
-    templateUrl: './artifactpie.component.html',
-    providers: [ArtifactService]
+    templateUrl: './artifactpie.component.html'
 })
 export class ArtifactPieComponent implements OnInit {
 
-    private options: any;
-    private model: ArtifactPieModel;
+    public communityStats: any[] = [];
+    public options: any;
     constructor(private _artifactService: ArtifactService,
-    private _loggingService: LoggingService) {
-        this.model = new ArtifactPieModel();
+        private _loggingService: LoggingService) {
     }
 
     public ngOnInit() {
@@ -28,7 +24,7 @@ export class ArtifactPieComponent implements OnInit {
             error => this._loggingService.logError(error));
 
         observ.map(res => this.calculateCommunityStats(res))
-            .subscribe(res => this.model.communityStats = res,
+            .subscribe(res => this.communityStats = res,
             error => this._loggingService.logError(error));
     }
 
@@ -49,7 +45,7 @@ export class ArtifactPieComponent implements OnInit {
     private initPieChart(stats: any[]) {
         let colors: string[] = [];
         stats.forEach(element => {
-            colors.push(statusColors[element.name]);
+            colors.push(StatusColors[element.name]);
         });
 
         this.options = {
