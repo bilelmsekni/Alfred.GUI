@@ -8,7 +8,7 @@
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-sm-6">
-						<div id="dataTables-example_filter" class="dataTables_filter"><label>Search:<input type="search" [(ngModel)]='model.listFilter' class="form-control input-sm" placeholder="" aria-controls="dataTables-example"></label></div>
+						<div id="dataTables-example_filter" class="dataTables_filter"><label>Search:<input type="search" [(ngModel)]='listFilter' class="form-control input-sm" placeholder="" aria-controls="dataTables-example"></label></div>
 					</div>
 				</div>
 
@@ -21,7 +21,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr *ngFor='let community of (model.communities | communityFilter: model.listFilter)'>
+						<tr *ngFor='let community of (communities | communityFilter: listFilter)'>
 							<td>{{community.id}}</td>
 							<td>{{community.name}}</td>
 							<td>{{community.email}}</td>						

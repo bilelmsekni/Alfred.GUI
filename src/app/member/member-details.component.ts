@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoggingService } from './../common/logging.service';
+import { LoggingService } from './../common/services';
 import { ArtifactStatus } from './../artifact/artifact-status.enum';
 import { Artifact } from './../artifact/artifact.entity';
 import { ArtifactService } from './../artifact/artifact.service';

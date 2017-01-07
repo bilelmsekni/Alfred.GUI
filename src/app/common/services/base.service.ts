@@ -1,6 +1,6 @@
 import { Http, Response } from '@angular/http';
 import { ConfigurationService } from './configuration.service';
-import { IAppSettings } from './app.settings';
+import { IAppSettings } from '../settings';
 import { Observable } from 'rxjs';
 
 export class BaseService {

@@ -8,12 +8,12 @@
     <div class="row">
         <div class="col-xs-12">
             <h2 class="page-header">
-                <i class="fa fa-graduation-cap"></i> {{model.community.name}}
+                <i class="fa fa-graduation-cap"></i> {{community.name}}
                 <small class="pull-right">
                         <ol class="breadcrumb">
         <li><a [routerLink]="['/dashboard']"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li><a [routerLink]="['/communities']">Communities</a></li>
-        <li class="active"> {{model.community.name}}</li>
+        <li class="active"> {{community.name}}</li>
     </ol>
                     </small>
             </h2>
@@ -41,7 +41,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor='let artifact of model.artifacts'>
+                                <tr *ngFor='let artifact of artifacts'>
                                     <td><a [routerLink]="['/artifacts', artifact.id]">{{artifact.id}}</a></td>
                                     <td>{{artifact.title}}</td>
                                     <td>{{artifact.type | artifactType}}</td>

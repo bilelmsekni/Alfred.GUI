@@ -10,7 +10,7 @@
     </div>
     <!-- /.box-body -->
     <div class="box-footer no-padding">
-        <ul class="nav nav-pills nav-stacked" *ngFor='let community of model.communityStats'>
+        <ul class="nav nav-pills nav-stacked" *ngFor='let community of communityStats'>
             
             <li><a [routerLink]="['/communities', community.id]">{{community.id | communityLabel | async}}
                   <span class="pull-right text-red"><i class="fa fa-angle-down"></i> {{community.stats | percent }}</span></a></li>

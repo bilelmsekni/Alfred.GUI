@@ -6,12 +6,12 @@
     <div class="row">
         <div class="col-xs-12">
             <h2 class="page-header">
-                <i class="fa fa-globe"></i> {{model.artifact.title}}
+                <i class="fa fa-globe"></i> {{artifact.title}}
                 <small class="pull-right">
                         <ol class="breadcrumb">
         <li><a routerLink="/dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li><a routerLink="/artifacts">Artifacts</a></li>
-        <li class="active">{{model.artifact.id}}</li>
+        <li class="active">{{artifact.id}}</li>
     </ol>
                     </small>
             </h2>
@@ -22,24 +22,24 @@
     <div class="row invoice-info">
         <div class="col-sm-4 invoice-col">
             <address>
-                <strong>Type: </strong>{{model.artifact.type}}<br>
-                <strong>Status: </strong>{{model.artifact.status}}<br>
-                <strong>StartDate: </strong>{{model.artifact}}<br>
-                <strong>DueDate: </strong>{{model.artifact}}<br>
+                <strong>Type: </strong>{{artifact.type}}<br>
+                <strong>Status: </strong>{{artifact.status}}<br>
+                <strong>StartDate: </strong>{{artifact}}<br>
+                <strong>DueDate: </strong>{{artifact}}<br>
             </address>
         </div>
         <!-- /.col -->
         <div class="col-sm-4 invoice-col">
             <address>
-                <strong>Assignee: </strong>{{model.artifact.memberId}}<br>
-                <strong>Community: </strong>{{model.artifact.communityId}}<br>
+                <strong>Assignee: </strong>{{artifact.memberId}}<br>
+                <strong>Community: </strong>{{artifact.communityId}}<br>
             </address>
         </div>
         <!-- /.col -->
         <div class="col-sm-4 invoice-col">
             <address>
-            <strong>Reward: </strong> {{model.artifact.reward}}<br>
-            <strong>Bonnus: </strong> {{model.artifact.bonus}}<br>
+            <strong>Reward: </strong> {{artifact.reward}}<br>
+            <strong>Bonnus: </strong> {{artifact.bonus}}<br>
             </address>
         </div>
         <!-- /.col -->

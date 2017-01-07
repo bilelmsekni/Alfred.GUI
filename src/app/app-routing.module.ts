@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { CommunityComponent } from './community/community.component';
-import { ArtifactComponent } from './artifact/artifact.component';
-import { CommunityDetailsComponent} from './community/communitydetails.component';
-import { ArtifactDetailsComponent } from './artifact/artifactdetails.component';
+import { DashboardComponent } from './dashboard';
+import { CommunityDetailsComponent, CommunityComponent } from './community';
+import { ArtifactDetailsComponent, ArtifactComponent } from './artifact';
 //import { MemberComponent } from "./member/member.component";
 //import { MemberDetailsComponent } from "./member/member-details.component";
 //import { MemberDetailsHomeComponent } from "./member/member-details-home.component";

@@ -11,7 +11,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr *ngFor='let artifact of model.artifacts'>
+					<tr *ngFor='let artifact of artifacts'>
 						<td><a [routerLink]="['/artifacts', artifact.id]">{{artifact.id}}</a></td>
 						<td>{{artifact.title}}</td>
 						<td>{{artifact.type | artifactType}}</td>

@@ -1,4 +1,4 @@
-import { IAppSettings } from '../common/app.settings';
+import { IAppSettings } from './app.settings';
 
 export const devSettings: IAppSettings = {
     'apiUrl': 'http://localhost:50405/{resource}'

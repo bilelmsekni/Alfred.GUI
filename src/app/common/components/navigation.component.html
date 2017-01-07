@@ -7,7 +7,7 @@
               <i class="fa fa-angle-left pull-right"></i>
             </span>
         </a>
-        <ul class="treeview-menu" *ngFor='let community of (model.communities)'>
+        <ul class="treeview-menu" *ngFor='let community of (communities)'>
             <li><a [routerLink]="['/communities', community.id]"><i class="fa fa-circle-o"></i>{{community.name}}</a></li>
         </ul>
     </li>
@@ -18,7 +18,7 @@
               <i class="fa fa-angle-left pull-right"></i>
             </span>
         </a>
-        <ul class="treeview-menu" *ngFor='let artifactStatus of model.artifactStatuses'>
+        <ul class="treeview-menu" *ngFor='let artifactStatus of artifactStatuses'>
             <li><a [routerLink]="['/artifacts']" [queryParams] = "{status: artifactStatus.value}"><i class="fa fa-circle-o"></i>{{artifactStatus.name}}</a></li>
         </ul>
     </li>
@@ -29,7 +29,7 @@
               <i class="fa fa-angle-left pull-right"></i>
             </span>
         </a>
-        <ul class="treeview-menu" *ngFor='let communityRole of model.communityRoles'>
+        <ul class="treeview-menu" *ngFor='let communityRole of communityRoles'>
             <li><a [routerLink]="['/members']" [queryParams]="{role: communityRole.value}"><i class="fa fa-circle-o"></i>{{communityRole.name}}s</a></li>
         </ul>
     </li>
