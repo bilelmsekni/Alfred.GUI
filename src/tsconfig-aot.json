@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "es5",        
+        "target": "es5",
         "sourceMap": true,
         "module": "es2015",
         "moduleResolution": "node",
@@ -8,24 +8,30 @@
         "emitDecoratorMetadata": true,
         "noImplicitAny": true,
         "removeComments": true,
-        "lib": ["es2015","dom"],
+        "lib": [
+            "es2015",
+            "dom"
+        ],
         "suppressImplicitAnyIndexErrors": true,
-        "skipLibCheck": true        
+        "skipLibCheck": true
     },
-      "files": [
-    "app/app.module.ts",
-    "app/main-aot.ts"
-  ],
+    "files": [
+        "app/member/member.module.ts",
+        "app/app.module.ts",
+        "app/main-aot.ts"
+    ],
     "awesomeTypescriptLoaderOptions": {
         "forkChecker": true,
         "useWebpackText": true
     },
     "angularCompilerOptions": {
-        "genDir": "compiled",        
+        "genDir": "compiled",
         "skipMetadataEmit": true,
         "debug": true
     },
     "compileOnSave": false,
     "buildOnSave": false,
-    "atom": { "rewriteTsconfig": false }
+    "atom": {
+        "rewriteTsconfig": false
+    }
 }

@@ -9,12 +9,12 @@
     "start": "node tasks/debug",
     "prerelease": "rm -rf dist",
     "release": "node tasks/release",
-    "ngc": "./node_modules/.bin/ngc-w -p tsconfig-aot.json",
+    "ngc-w": "./node_modules/.bin/ngc-w -p tsconfig-aot.json",
     "prerelease:aot": "rm -rf aot",
     "release:aot": "node tasks/release",
     "compile:aot": "node_modules/.bin/ngc -p tsconfig-aot.json",
     "prebuild:aot": "rm -rf aot",
-    "build:aot": "npm run ngc -- --webpack config/webpack.config.prd.js && webpack --config config/webpack.config.prd.js  --progress --profile --bail"
+    "build:aot": "npm run ngc-w -- --webpack config/webpack.config.prd.js && webpack --config config/webpack.config.prd.js  --progress --profile --bail"
   },
   "keywords": [
     "npm"
@@ -23,6 +23,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/chai": "^3.4.34",
+    "@types/core-js": "^0.9.35",
     "@types/lodash": "^4.14.45",
     "@types/mocha": "^2.2.33",
     "@types/node": "^6.0.55",
@@ -41,6 +42,7 @@
     "html-webpack-plugin": "^2.25.0",
     "mocha": "^3.2.0",
     "mocha-webpack": "^0.7.0",
+    "ngc-webpack": "^1.0.6",
     "null-loader": "^0.1.1",
     "nyc": "^10.0.0",
     "raw-loader": "^0.5.1",
@@ -49,8 +51,7 @@
     "typescript": "2.0.3",
     "webpack": "^2.2.0-rc.3",
     "webpack-dev-middleware": "^1.9.0",
-    "webpack-merge": "^2.0.0",
-    "ngc-webpack": "^1.0.6"
+    "webpack-merge": "^2.0.0"
   },
   "dependencies": {
     "@angular/common": "^2.4.1",
