@@ -1,16 +1,10 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "types": [
-            "core-js",
-            "mocha",
-            "node"
-        ],
         "sourceMap": true,
         "module": "commonjs",
         "moduleResolution": "node",
         "isolatedModules": false,
-        "jsx": "react",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "declaration": false,
@@ -19,8 +13,18 @@
         "noLib": false,
         "preserveConstEnums": true,
         "suppressImplicitAnyIndexErrors": true,
-        "typeRoots": [
-            "../node_modules/@types"
-        ]
-    }
+        "skipLibCheck": true
+    },
+    "files": [
+        "app/app.module.ts",
+        "app/main.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ],
+    "awesomeTypescriptLoaderOptions": {
+        "useWebpackText": true
+    },
+    "compileOnSave": false,
+    "buildOnSave": false
 }

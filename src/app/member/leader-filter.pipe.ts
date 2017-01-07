@@ -8,7 +8,7 @@ import { CommunityRole } from './community-role.enum';
 export class LeaderFilterPipe implements PipeTransform {
 
     public transform(members: Member[]): string {
-        let leader = members.find((member: Member) => this.isMatch(member));
+        let leader = members.filter((member: Member) => this.isMatch(member))[0];
         return leader ? this.getLeaderFullName(leader) : 'no leader';
     }
 

@@ -22,7 +22,7 @@ export class BaseService {
     }
 
     public encodeQueryParams(queryParams: any): string {
-        let queryUrl = [];
+        let queryUrl: string[] = [];
         for (let qp in queryParams) {
             queryUrl.push(encodeURIComponent(qp) + '=' + encodeURIComponent(queryParams[qp]));
         }
