@@ -10,7 +10,6 @@
         "declaration": false,
         "noImplicitAny": true,
         "removeComments": true,
-        //"noLib": false,
         "lib": [
             "es6",
             "dom"
