@@ -1,6 +1,5 @@
 import { expect } from 'chai';
-import { Member } from '../member/member.entity';
-import { MemberFilterPipe } from '../member/member-filter.pipe';
+import { MemberFilterPipe, Member } from '../member';
 
 function createMember(id: number, firstName?: string, lastName?: string): Member {
     let member = new Member();

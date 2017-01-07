@@ -1,6 +1,5 @@
 import { expect } from 'chai';
-import { CommunityFilterPipe } from '../community/community-filter.pipe';
-import { Community } from '../community/community.entity';
+import { Community, CommunityFilterPipe } from '../community';
 
 function createCommunity(id: number, name?: string): Community {
     let community = new Community();

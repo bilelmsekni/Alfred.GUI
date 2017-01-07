@@ -1,6 +1,5 @@
 import { expect } from 'chai';
-import { ArtifactFilterPipe } from '../artifact/artifact-filter.pipe';
-import { Artifact } from '../artifact/artifact.entity';
+import { Artifact, ArtifactFilterPipe } from '../artifact';
 
 function createArtifact(id: number, title?: string): Artifact {
     let artifact = new Artifact();

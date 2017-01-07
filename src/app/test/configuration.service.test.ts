@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { ConfigurationService } from '../common/configuration.service';
+import { ConfigurationService } from '../common/services';
 
 describe('configuration settings loading tests', function () {
     let tests: any[] = [

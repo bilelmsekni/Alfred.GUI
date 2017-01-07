@@ -10,6 +10,7 @@ import '@angular/router';
 import 'rxjs';
 
 // lodash
+// tslint:disable-next-line:no-unused-variable
 import * as _ from 'lodash';
 
 // AdminLTE

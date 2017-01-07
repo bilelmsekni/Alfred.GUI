@@ -1,7 +1,5 @@
 import { expect } from 'chai';
-import { LeaderFilterPipe } from '../member/leader-filter.pipe';
-import { Member } from '../member/member.entity';
-import { CommunityRole } from '../member/community-role.enum';
+import { Member, LeaderFilterPipe, CommunityRole } from '../member';
 
 function createMember(id: number, firstName?: string, lastName?: string, role?: CommunityRole): Member {
     let member = new Member();
