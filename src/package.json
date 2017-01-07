@@ -10,11 +10,11 @@
     "prerelease": "rm -rf dist",
     "release": "node tasks/release",
     "ngc-w": "./node_modules/.bin/ngc-w -p tsconfig-aot.json",
-    "prerelease:aot": "rm -rf aot",
-    "release:aot": "node tasks/release",
     "compile:aot": "node_modules/.bin/ngc -p tsconfig-aot.json",
     "prebuild:aot": "rm -rf aot",
-    "build:aot": "npm run ngc-w -- --webpack config/webpack.config.prd.js && webpack --config config/webpack.config.prd.js  --progress --profile --bail"
+    "build:aot": "npm run ngc-w -- --webpack config/webpack.config.prd.js && webpack --config config/webpack.config.prd.js  --progress --profile --bail",
+    "prerelease:aot": "npm run build:aot",
+    "release:aot": "node_modules/.bin/browser-sync start --server aot --files aot"
   },
   "keywords": [
     "npm"
