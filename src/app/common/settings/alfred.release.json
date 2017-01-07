@@ -1,0 +1,5 @@
+{
+    "alfredApi": {
+        "apiUrl": "http://someServer:50405/{resource}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "alfredApi": {
+        "apiUrl": "./api/{resource}.fake.json"
+    }
+}

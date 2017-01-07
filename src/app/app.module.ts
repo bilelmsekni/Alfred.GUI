@@ -1,5 +1,5 @@
+import { APP_SETTINGS, SETTINGS } from './common/settings/index';
 import { NgModule } from '@angular/core';
-// import { MemberModule } from "./member/member.module";
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
@@ -25,6 +25,7 @@ import {
     ArtifactPieComponent,
     ArtifactComponent } from './artifact';
 import { NavigationComponent } from './common/components';
+// import { MemberModule } from "./member/member.module";
 // import { MemberComponent } from "./member/member.component";
 // import { MemberDetailsComponent } from "./member/member-details.component";
 // import { MemberDetailsHomeComponent } from "./member/member-details-home.component";
@@ -32,7 +33,6 @@ import { NavigationComponent } from './common/components';
 import { ConfigurationService, LoggingService } from './common/services';
 
 import { LeaderFilterPipe, MemberFilterPipe } from './member';
-import { APP_CONFIG_ENV, CONFIG_ENV } from './common/settings';
 
 @NgModule({
     bootstrap: [AppComponent],
@@ -70,7 +70,7 @@ import { APP_CONFIG_ENV, CONFIG_ENV } from './common/settings';
 
     providers: [
         ConfigurationService,
-        { provide: APP_CONFIG_ENV, useValue: CONFIG_ENV },
+        { provide: APP_SETTINGS, useValue: SETTINGS },
         CommunityService,
         ArtifactService,
         LoggingService

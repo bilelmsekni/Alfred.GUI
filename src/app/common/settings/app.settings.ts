@@ -1,3 +1,4 @@
-export interface IAppSettings {
-    apiUrl: string;
+import { ApiSettings } from './api.settings';
+export class AppSettings {
+    public alfredApi: ApiSettings;
 }

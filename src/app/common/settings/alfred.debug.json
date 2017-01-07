@@ -1,0 +1,6 @@
+{
+    "alfredApi": {
+        "apiUrl": "http://localhost:50405/{resource}"
+    }
+}
+

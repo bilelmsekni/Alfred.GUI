@@ -1,5 +1,4 @@
-export { IAppSettings } from './app.settings';
 import { OpaqueToken } from '@angular/core';
-
-export const CONFIG_ENV = 'DEV'; // FAKE, PRD
-export let APP_CONFIG_ENV = new OpaqueToken('env.config');
+export { AppSettings } from './app.settings';
+export const SETTINGS = process.env.SETTINGS;
+export let APP_SETTINGS = new OpaqueToken('env.config');
