@@ -9,7 +9,7 @@ export class MemberService extends BaseService {
     private _membersUrl: string = 'members';
 
     constructor(_http: Http, _configService: ConfigurationService) {
-        super(_http, _configService);
+        super(_http, _configService.getAlfredApiSettings());
     }
 
     public getMembers(): Observable<Member[]> {

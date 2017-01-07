@@ -9,7 +9,7 @@ export class CommunityService extends BaseService {
     private _communitiesUrl = 'communities';
 
     constructor(_http: Http, _configService: ConfigurationService) {
-        super(_http, _configService);
+        super(_http, _configService.getAlfredApiSettings());
     }
 
     public getCommunities(): Observable<Community[]> {

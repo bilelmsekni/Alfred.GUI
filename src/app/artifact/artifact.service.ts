@@ -9,7 +9,7 @@ export class ArtifactService extends BaseService {
     private _artifactsUrl = 'artifacts';
 
     constructor(_http: Http, _configService: ConfigurationService) {
-        super(_http, _configService);
+        super(_http, _configService.getAlfredApiSettings());
     }
 
     public getArtifacts(): Observable<Artifact[]> {

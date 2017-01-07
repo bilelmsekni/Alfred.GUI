@@ -1,12 +1,9 @@
 import { Http, Response } from '@angular/http';
-import { ConfigurationService } from './configuration.service';
-import { IAppSettings } from '../settings';
+import { ApiSettings } from '../settings';
 import { Observable } from 'rxjs';
 
 export class BaseService {
-    private _appSettings: IAppSettings;
-    constructor(public _http: Http, _configService: ConfigurationService) {
-        this._appSettings = _configService.appSettings;
+    constructor(public _http: Http, public _apiSettings: ApiSettings) {
     }
 
     public getData<T>(urlFragment: string): Observable<T[]> {
@@ -30,7 +27,7 @@ export class BaseService {
     }
 
     private createApiUrl(urlFragment: string): string {
-        return this._appSettings.apiUrl.replace('{resource}', urlFragment);
+        return this._apiSettings.apiUrl.replace('{resource}', urlFragment);
     }
 
     private handleError(error: Response) {

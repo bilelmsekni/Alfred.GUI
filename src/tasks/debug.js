@@ -10,7 +10,7 @@ var historyApiFallback = require('connect-history-api-fallback');
 /**
  * Require ./webpack.config.js and make a bundler from it
  */
-var webpackConfig = require('../config/webpack.config.dev.js');
+var webpackConfig = require('../config/webpack.config.dev.js')('debug');
 var bundler = webpack(webpackConfig);
 
 /**

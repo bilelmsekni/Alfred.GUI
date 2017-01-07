@@ -4,9 +4,9 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 
-const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
-
-module.exports = webpackMerge(commonConfig, {
+module.exports = function(configEnv){
+    var settings = require(`../app/common/settings/alfred.${configEnv}.json`);
+    webpackMerge(commonConfig, {
     devtool: 'source-map',
     output: {
         path: helpers.root('aot'),
@@ -21,10 +21,10 @@ module.exports = webpackMerge(commonConfig, {
         new ExtractTextPlugin('[name].[hash].css'),
         new webpack.DefinePlugin({
             'process.env': {
-                'ENV': JSON.stringify(ENV)
+                'ENV': JSON.stringify(configEnv),
+                'SETTINGS': JSON.stringify(settings)
             }
         })
     ]
 
-});
-
+})};
