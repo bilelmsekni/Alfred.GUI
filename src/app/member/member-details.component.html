@@ -2,19 +2,18 @@
   <div class="box box-widget widget-user-2">
     <div class="widget-user-header bg-yellow">
       <div class="widget-user-image">
-        <img class="img-circle" [src]="model.imageUrl" alt="User Avatar">
+        <img class="img-circle" alt="User Avatar">
       </div>
-      <h3 class="widget-user-username">{{model.firstName}} {{model.lastName}}</h3>
-      <h5 class="widget-user-desc">{{model.job}}</h5>
+      <h3 class="widget-user-username"></h3>
+      <h5 class="widget-user-desc"></h5>
       <div class="col-md-12">
         <div class="box-footer no-padding">
           <ul class="nav nav-stacked">
-            <li><a>Joined <span class="pull-right badge bg-blue">{{model.creationDate | date}}</span></a></li>
+            <li><a>Joined <span class="pull-right badge bg-blue"></span></a></li>
             <li><a>Communities               
-              <span *ngFor= 'let communityName of communityNames' class="pull-right badge bg-aqua">{{communityName}}</span></a></li>
+              <span class="pull-right badge bg-aqua"></span></a></li>
             <li><a>Artifacts 
-              <span *ngFor= 'let artifactStat of artifactStats' class="pull-right badge bg-green">{{artifactStat.name}} : {{artifactStat.count}}</span></a></li>
-            <li><a>Score <span class="pull-right badge bg-red">999</span></a></li>
+              <span class="pull-right badge bg-green"></span></a></li>            
           </ul>
         </div>
       </div>

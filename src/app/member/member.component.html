@@ -32,21 +32,12 @@
 						<th>Details</th>
 					</tr>
 				</thead>
-				<tbody>
-					<tr *ngFor='let member of members'>
-						<td>{{member.firstName}}</td>
-						<td>{{member.lastName}}</td>
-						<td>{{member.email}}</td>
-						<td>
-							<a [routerLink]="[member.id]" [queryParams]="{role: member.role}" routerLinkActive="active" class="fa fa-search-plus btn btn-flat pull-left"></a>
-						</td>
-					</tr>
+				<tbody>					
 				</tbody>
 			</table>
 			<div class="box-footer clearfix">
 				<a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Create New Member</a>
 			</div>
 		</div>
-	</div>
-	<router-outlet></router-outlet>
+	</div>	
 </section>
