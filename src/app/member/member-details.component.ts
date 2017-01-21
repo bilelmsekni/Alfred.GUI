@@ -11,9 +11,9 @@ import * as _ from 'lodash';
     templateUrl: './member-details.component.html'
 })
 export class MemberDetailsComponent implements OnInit {
-    private model: Member;
-    private communityNames: string[];
-    private artifactStats: any[];
+    public communityNames: string[];
+    public model: Member;
+    public artifactStats: any[];
 
     private _id: string = 'id';
     constructor(private _memberService: MemberService,
