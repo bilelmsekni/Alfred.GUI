@@ -27,11 +27,6 @@ import {
     ArtifactComponent
 } from './artifact';
 import { NavigationComponent } from './common/components';
-import {
-    MemberComponent,
-    MemberDetailsComponent,
-    MemberDetailsHomeComponent
-} from './member';
 import { ConfigurationService, LoggingService } from './common/services';
 import { LeaderFilterPipe, MemberFilterPipe } from './member';
 
@@ -46,9 +41,6 @@ import { LeaderFilterPipe, MemberFilterPipe } from './member';
         CommunityFilterPipe,
         LeaderFilterPipe,
         MemberFilterPipe,
-        MemberComponent,
-        MemberDetailsHomeComponent,
-        MemberDetailsComponent,
         ArtifactComponent,
         ArtifactFilterPipe,
         ArtifactStatusPipe,
