@@ -13,7 +13,8 @@ import {
     CommunityDetailsComponent,
     CommunityComponent,
     CommunityService,
-    CommunityLabelPipe } from './community';
+    CommunityLabelPipe
+} from './community';
 import {
     ArtifactLabelPipe,
     ArtifactFilterPipe,
@@ -23,15 +24,15 @@ import {
     ArtifactService,
     ArtifactboardComponent,
     ArtifactPieComponent,
-    ArtifactComponent } from './artifact';
+    ArtifactComponent
+} from './artifact';
 import { NavigationComponent } from './common/components';
-// import { MemberModule } from "./member/member.module";
-// import { MemberComponent } from "./member/member.component";
-// import { MemberDetailsComponent } from "./member/member-details.component";
-// import { MemberDetailsHomeComponent } from "./member/member-details-home.component";
-
+import {
+    MemberComponent,
+    MemberDetailsComponent,
+    MemberDetailsHomeComponent
+} from './member';
 import { ConfigurationService, LoggingService } from './common/services';
-
 import { LeaderFilterPipe, MemberFilterPipe } from './member';
 
 @NgModule({
@@ -45,9 +46,9 @@ import { LeaderFilterPipe, MemberFilterPipe } from './member';
         CommunityFilterPipe,
         LeaderFilterPipe,
         MemberFilterPipe,
-        // MemberComponent,
-        // MemberDetailsHomeComponent,
-        // MemberDetailsComponent,
+        MemberComponent,
+        MemberDetailsHomeComponent,
+        MemberDetailsComponent,
         ArtifactComponent,
         ArtifactFilterPipe,
         ArtifactStatusPipe,
@@ -58,13 +59,12 @@ import { LeaderFilterPipe, MemberFilterPipe } from './member';
         NavigationComponent,
         CommunityDetailsComponent,
         ArtifactDetailsComponent,
-        ],
+    ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
         AppRoutingModule,
-        // MemberModule,
         ChartModule
     ],
 

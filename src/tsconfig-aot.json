@@ -15,8 +15,7 @@
         "suppressImplicitAnyIndexErrors": true,
         "skipLibCheck": true
     },
-    "files": [
-        "app/member/member.module.ts",
+    "files": [        
         "app/app.module.ts",
         "app/main-aot.ts"
     ],

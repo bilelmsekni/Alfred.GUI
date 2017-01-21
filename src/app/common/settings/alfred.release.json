@@ -1,5 +1,5 @@
 {
     "alfredApi": {
-        "apiUrl": "http://someServer:50405/{resource}"
+        "apiUrl": "http://localhost:50405/{resource}"
     }
 }

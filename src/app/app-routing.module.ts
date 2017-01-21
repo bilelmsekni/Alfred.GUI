@@ -3,9 +3,9 @@ import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard';
 import { CommunityDetailsComponent, CommunityComponent } from './community';
 import { ArtifactDetailsComponent, ArtifactComponent } from './artifact';
-//import { MemberComponent } from "./member/member.component";
-//import { MemberDetailsComponent } from "./member/member-details.component";
-//import { MemberDetailsHomeComponent } from "./member/member-details-home.component";
+import { MemberComponent } from './member/member.component';
+import { MemberDetailsComponent } from './member/member-details.component';
+import { MemberDetailsHomeComponent } from './member/member-details-home.component';
 
 @NgModule({
     imports: [
@@ -25,18 +25,17 @@ import { ArtifactDetailsComponent, ArtifactComponent } from './artifact';
             },
             {
                 path: 'members',
-                loadChildren: './member/member.module#MemberModule'
-                // component: MemberComponent,
-                //  children: [
-                //      {
-                //          path: "",
-                //          component: MemberDetailsHomeComponent
-                //      },
-                //     {
-                //         path: ":id",
-                //         component: MemberDetailsComponent
-                //     }
-                // ]
+                component: MemberComponent,
+                 children: [
+                     {
+                         path: '',
+                         component: MemberDetailsHomeComponent
+                     },
+                    {
+                        path: ':id',
+                        component: MemberDetailsComponent
+                    }
+                ]
             },
             {
                 path: 'artifacts',
