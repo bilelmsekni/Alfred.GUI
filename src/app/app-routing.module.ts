@@ -1,3 +1,4 @@
+import { MemberComponent } from './member/member.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard';
@@ -15,6 +16,10 @@ import { ArtifactDetailsComponent, ArtifactComponent } from './artifact';
             {
                 path: 'dashboard',
                 component: DashboardComponent
+            },
+            {
+                path: 'members',
+                component: MemberComponent
             },
             {
                 path: 'communities',

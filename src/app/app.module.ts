@@ -1,3 +1,4 @@
+import { MemberComponent } from './member/member.component';
 import { APP_SETTINGS, SETTINGS } from './common/settings/index';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -51,6 +52,7 @@ import { LeaderFilterPipe, MemberFilterPipe } from './member';
         NavigationComponent,
         CommunityDetailsComponent,
         ArtifactDetailsComponent,
+        MemberComponent
     ],
     imports: [
         BrowserModule,
@@ -59,7 +61,6 @@ import { LeaderFilterPipe, MemberFilterPipe } from './member';
         AppRoutingModule,
         ChartModule
     ],
-
     providers: [
         ConfigurationService,
         { provide: APP_SETTINGS, useValue: SETTINGS },
