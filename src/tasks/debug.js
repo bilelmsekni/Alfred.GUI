@@ -19,7 +19,7 @@ var bundler = webpack(webpackConfig);
  * or send a fullscreen error message to the browser instead
  */
 bundler.plugin('done', function (stats) {
-    if (stats.hasErrors() || stats.hasWarnings()) {
+    if (stats.hasErrors()) {
         return browserSync.sockets.emit('fullscreen:message', {
             title: "Webpack Error:",
             body: stripAnsi(stats.toString()),
