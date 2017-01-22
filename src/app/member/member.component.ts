@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { MemberService } from './member.service';
 import { Member } from './member.entity';
@@ -9,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemberComponent implements OnInit {
     public members: Observable<Member[]>;
-    constructor(private memberService: MemberService) {
+    constructor(private memberService: MemberService,
+        private router: ActivatedRoute) {
     }
 
     public ngOnInit(): void {
-        this.members = this.memberService.getMembers();
+        this.members = this.router.queryParams
+            .switchMap(qp => this.memberService.getMembers(qp));
     }
 }

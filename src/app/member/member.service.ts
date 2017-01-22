@@ -12,7 +12,7 @@ export class MemberService extends BaseService {
         super(http, configService.getAlfredApiSettings());
     }
 
-    public getMembers(): Observable<Member[]> {
-        return super.getData<Member>('members');
+    public getMembers(args: any): Observable<Member[]> {
+        return super.getData<Member>('members', args);
     }
 }
