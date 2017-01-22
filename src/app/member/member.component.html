@@ -32,7 +32,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr *ngFor='let member of members'>
+					<tr *ngFor='let member of members | async'>
 						<td>{{member.firstName}}</td>
 						<td>{{member.lastName}}</td>
 						<td>{{member.email}}</td>
