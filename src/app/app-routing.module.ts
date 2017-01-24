@@ -1,3 +1,4 @@
+import { MemberCreateComponent } from './member/member-create.component';
 import { MemberDetailsComponent } from './member/member-details.component';
 import { MemberComponent } from './member/member.component';
 import { NgModule } from '@angular/core';
@@ -21,10 +22,15 @@ import { ArtifactDetailsComponent, ArtifactComponent } from './artifact';
             {
                 path: 'members',
                 component: MemberComponent,
-                children: [{
-                    path: ':id',
-                    component: MemberDetailsComponent
-                }]
+                children: [
+                    {
+                        path: 'create',
+                        component: MemberCreateComponent
+                    },
+                    {
+                        path: ':id',
+                        component: MemberDetailsComponent
+                    }]
             },
             {
                 path: 'communities',

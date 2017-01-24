@@ -1,10 +1,11 @@
+import { MemberCreateComponent } from './member/member-create.component';
 import { MemberDetailsComponent } from './member/member-details.component';
 import { MemberComponent } from './member/member.component';
 import { APP_SETTINGS, SETTINGS } from './common/settings/index';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ChartModule } from 'angular2-highcharts';
 
@@ -54,14 +55,16 @@ import { LeaderFilterPipe, MemberFilterPipe } from './member';
         CommunityDetailsComponent,
         ArtifactDetailsComponent,
         MemberComponent,
-        MemberDetailsComponent
+        MemberDetailsComponent,
+        MemberCreateComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
         AppRoutingModule,
-        ChartModule
+        ChartModule,
+        ReactiveFormsModule
     ],
     providers: [
         ConfigurationService,
