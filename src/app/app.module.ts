@@ -1,3 +1,4 @@
+import { MemberDetailsComponent } from './member/member-details.component';
 import { MemberComponent } from './member/member.component';
 import { APP_SETTINGS, SETTINGS } from './common/settings/index';
 import { NgModule } from '@angular/core';
@@ -52,7 +53,8 @@ import { LeaderFilterPipe, MemberFilterPipe } from './member';
         NavigationComponent,
         CommunityDetailsComponent,
         ArtifactDetailsComponent,
-        MemberComponent
+        MemberComponent,
+        MemberDetailsComponent
     ],
     imports: [
         BrowserModule,

@@ -15,4 +15,8 @@ export class MemberService extends BaseService {
     public getMembers(args: any): Observable<Member[]> {
         return super.getData<Member>('members', args);
     }
+
+    public getMember(id: number): Observable<Member> {
+        return super.getDataItem<Member>('members/' + id);
+    }
 }

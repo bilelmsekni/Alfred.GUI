@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="box box-widget widget-user-2">
+    <div class="widget-user-header bg-yellow">
+      <div class="widget-user-image">
+        <img class="img-circle" [src]="(member| async)?.imageUrl" alt="User Avatar">
+      </div>
+      <h3 class="widget-user-username">{{(member| async)?.firstName}}</h3>
+      <h5 class="widget-user-desc">{{(member| async)?.lastName}}</h5>
+      <div class="col-md-12">
+        <div class="box-footer no-padding">
+          <ul class="nav nav-stacked">
+            <li><a>Joined <span class="pull-right badge bg-blue">{{(member| async)?.creationDate | date}}</span></a></li>
+            <li><a>Communities               
+              <span *ngFor="let community of communityNames | async" class="pull-right badge bg-aqua">{{community}}</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

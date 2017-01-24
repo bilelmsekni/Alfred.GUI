@@ -16,6 +16,8 @@ export class MemberComponent implements OnInit {
 
     public ngOnInit(): void {
         this.members = this.router.queryParams
+            .do(qp => console.log(qp['role']))
+            .filter(qp => qp['role'] >= 0)
             .switchMap(qp => this.memberService.getMembers(qp));
     }
 }

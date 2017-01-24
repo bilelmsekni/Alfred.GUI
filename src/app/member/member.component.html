@@ -36,7 +36,7 @@
 						<td>{{member.firstName}}</td>
 						<td>{{member.lastName}}</td>
 						<td>{{member.email}}</td>
-						<td>details</td>
+						<td><a [routerLink]='[member.id]' skipLocationChange class="fa fa-search-plus btn btn-flat"></a></td>
 					</tr>
 				</tbody>
 			</table>
@@ -46,3 +46,4 @@
 		</div>
 	</div>
 </section>
+<router-outlet></router-outlet>
