@@ -1,6 +1,7 @@
-import { MemberCreateComponent } from './member/member-create.component';
-import { MemberDetailsComponent } from './member/member-details.component';
-import { MemberComponent } from './member/member.component';
+import { MemberModule } from './member/member.module';
+// import { MemberCreateComponent } from './member/member-create.component';
+// import { MemberDetailsComponent } from './member/member-details.component';
+// import { MemberComponent } from './member/member.component';
 import { APP_SETTINGS, SETTINGS } from './common/settings/index';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -32,7 +33,7 @@ import {
 import { NavigationComponent } from './common/components';
 import { ConfigurationService, LoggingService } from './common/services';
 import { LeaderFilterPipe, MemberFilterPipe } from './member';
-import  memberState from './member/member.state';
+import memberState from './member/member.state';
 
 @NgModule({
     bootstrap: [AppComponent],
@@ -54,10 +55,10 @@ import  memberState from './member/member.state';
         ArtifactPieComponent,
         NavigationComponent,
         CommunityDetailsComponent,
-        ArtifactDetailsComponent,
-        MemberComponent,
-        MemberDetailsComponent,
-        MemberCreateComponent
+        ArtifactDetailsComponent
+        // MemberComponent,
+        // MemberDetailsComponent,
+        // MemberCreateComponent
     ],
     imports: [
         BrowserModule,
@@ -66,7 +67,8 @@ import  memberState from './member/member.state';
         AppRoutingModule,
         ChartModule,
         ReactiveFormsModule,
-        StoreModule.provideStore(memberState)
+        MemberModule,
+        StoreModule.provideStore(memberState),
     ],
     providers: [
         ConfigurationService,
