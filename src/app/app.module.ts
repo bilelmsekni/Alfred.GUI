@@ -8,7 +8,7 @@ import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ChartModule } from 'angular2-highcharts';
-
+import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
 import { ScoreboardComponent, DashboardComponent } from './dashboard';
 import {
@@ -32,6 +32,7 @@ import {
 import { NavigationComponent } from './common/components';
 import { ConfigurationService, LoggingService } from './common/services';
 import { LeaderFilterPipe, MemberFilterPipe } from './member';
+import  memberState from './member/member.state';
 
 @NgModule({
     bootstrap: [AppComponent],
@@ -64,7 +65,8 @@ import { LeaderFilterPipe, MemberFilterPipe } from './member';
         HttpModule,
         AppRoutingModule,
         ChartModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        StoreModule.provideStore(memberState)
     ],
     providers: [
         ConfigurationService,
