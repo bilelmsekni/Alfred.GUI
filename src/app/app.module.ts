@@ -1,7 +1,3 @@
-import { MemberModule } from './member/member.module';
-// import { MemberCreateComponent } from './member/member-create.component';
-// import { MemberDetailsComponent } from './member/member-details.component';
-// import { MemberComponent } from './member/member.component';
 import { APP_SETTINGS, SETTINGS } from './common/settings/index';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -56,9 +52,6 @@ import memberState from './member/member.state';
         NavigationComponent,
         CommunityDetailsComponent,
         ArtifactDetailsComponent
-        // MemberComponent,
-        // MemberDetailsComponent,
-        // MemberCreateComponent
     ],
     imports: [
         BrowserModule,
@@ -67,8 +60,7 @@ import memberState from './member/member.state';
         AppRoutingModule,
         ChartModule,
         ReactiveFormsModule,
-        MemberModule,
-        StoreModule.provideStore(memberState),
+        StoreModule.provideStore(memberState)
     ],
     providers: [
         ConfigurationService,

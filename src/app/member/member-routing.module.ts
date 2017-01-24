@@ -7,7 +7,7 @@ import { MemberComponent } from './member.component';
 @NgModule({
     imports: [RouterModule.forChild(
         [{
-            path: 'members',
+            path: '',
             component: MemberComponent,
             children: [
                 {

@@ -1,6 +1,3 @@
-// import { MemberCreateComponent } from './member/member-create.component';
-// import { MemberDetailsComponent } from './member/member-details.component';
-// import { MemberComponent } from './member/member.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard';
@@ -19,19 +16,10 @@ import { ArtifactDetailsComponent, ArtifactComponent } from './artifact';
                 path: 'dashboard',
                 component: DashboardComponent
             },
-            //        {
-            //             path: 'members',
-            //             component: MemberComponent
-            // children: [
-            //     {
-            //         path: 'create',
-            //         component: MemberCreateComponent
-            //     },
-            //     {
-            //         path: ':id',
-            //         component: MemberDetailsComponent
-            //     }]
-            //       },
+            {
+                path: 'members',
+                loadChildren: './member/member.module#MemberModule'
+            },
             {
                 path: 'communities',
                 component: CommunityComponent
