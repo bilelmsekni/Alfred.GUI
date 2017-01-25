@@ -21,10 +21,6 @@
         "suppressImplicitAnyIndexErrors": true,
         "skipLibCheck": true
     },
-    // "files": [
-    //     "app/app.module.ts",
-    //     "app/main.ts"
-    // ],
     "exclude": [
         "node_modules"
     ],
