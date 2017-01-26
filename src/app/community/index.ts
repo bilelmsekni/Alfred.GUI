@@ -4,3 +4,4 @@ export { CommunityLabelPipe } from './community-label.pipe';
 export { CommunityFilterPipe } from './community-filter.pipe';
 export { CommunityService } from './community.service';
 export { Community } from './community.entity';
+export { CommunityRole } from './community-role.enum';

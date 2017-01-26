@@ -28,7 +28,6 @@ import {
 } from './artifact';
 import { NavigationComponent } from './common/components';
 import { ConfigurationService, LoggingService } from './common/services';
-import { LeaderFilterPipe, MemberFilterPipe } from './member';
 
 @NgModule({
     bootstrap: [AppComponent],
@@ -39,8 +38,6 @@ import { LeaderFilterPipe, MemberFilterPipe } from './member';
         ArtifactboardComponent,
         CommunityComponent,
         CommunityFilterPipe,
-        LeaderFilterPipe,
-        MemberFilterPipe,
         ArtifactComponent,
         ArtifactFilterPipe,
         ArtifactStatusPipe,
