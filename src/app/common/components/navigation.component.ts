@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LoggingService } from '../services';
-import { Community, CommunityService } from '../../community/';
+import { Community, CommunityService, CommunityRole } from '../../community';
 import { ArtifactStatus } from '../../artifact';
 import { EnumExtension } from '../extensions';
-import { CommunityRole } from '../../member';
 
 @Component({
     templateUrl: './navigation.component.html',
