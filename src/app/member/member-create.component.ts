@@ -20,7 +20,7 @@ export class MemberCreateComponent implements OnInit {
         this.communities = this.communityService.getCommunities();
         this.memberCreateForm = new FormGroup(
             {
-                firstName: new FormControl('Bilel'),
+                firstName: new FormControl(''),
                 lastName: new FormControl('', Validators.required),
                 email: new FormControl('', Validators.minLength(5)),
                 communityId: new FormControl()

@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var commonConfig = require('./webpack.common.js');
+var commonConfig = require('./webpack.common.config');
 var helpers = require('./helpers');
 var chalk = require('chalk');
 

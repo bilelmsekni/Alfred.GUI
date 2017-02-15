@@ -4,7 +4,9 @@
   "description": "This is alfred's ui using angular 2",
   "main": "./dist/main.js",
   "scripts": {
-    "test": "nyc mocha-webpack --webpack-config config/webpack.config.test.js \"app/**/*.test.ts\"",
+    "test:node": "mocha-webpack --watch --webpack-config config/webpack.test.node.js --require config/mocha-test-shim.node.js \"app/**/*.spec.ts\"",
+    "test:browser": "node tasks/test",
+    "report": "nyc mocha-webpack --webpack-config config/webpack.config.test.js \"app/**/*.spec.ts\"",
     "coverage": "nyc report --reporter=text-lcov",
     "start": "node tasks/debug",
     "prerelease": "rm -rf dist",
@@ -39,7 +41,9 @@
     "file-loader": "^0.9.0",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.25.0",
+    "jsdom": "^9.11.0",
     "mocha": "^3.2.0",
+    "mocha-loader": "^1.1.0",
     "mocha-webpack": "^0.7.0",
     "ngc-webpack": "^1.0.6",
     "null-loader": "^0.1.1",
@@ -50,7 +54,8 @@
     "typescript": "2.0.3",
     "webpack": "^2.2.0-rc.3",
     "webpack-dev-middleware": "^1.9.0",
-    "webpack-merge": "^2.0.0"
+    "webpack-merge": "^2.0.0",
+    "webpack-node-externals": "^1.5.4"
   },
   "dependencies": {
     "@angular/common": "^2.4.1",
