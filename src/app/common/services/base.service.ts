@@ -6,19 +6,19 @@ export class BaseService {
     constructor(public _http: Http, public _apiSettings: ApiSettings) {
     }
 
-    public getData<T>(urlFragment: string, queryParams?: any): Observable<T[]> {
+    protected getData<T>(urlFragment: string, queryParams?: any): Observable<T[]> {
         return this._http.get(this.createApiUrl(urlFragment, queryParams))
             .map((res: Response) => res.json().results as T[])
             .catch(this.handleError);
     }
 
-    public getDataItem<T>(urlFragment: string, queryParams?: any): Observable<T> {
+    protected getDataItem<T>(urlFragment: string, queryParams?: any): Observable<T> {
         return this._http.get(this.createApiUrl(urlFragment, queryParams))
             .map((res: Response) => res.json() as T)
             .catch(this.handleError);
     }
 
-    public encodeQueryParams(queryParams: any): string {
+    protected encodeQueryParams(queryParams: any): string {
         let queryUrl: string[] = [];
         for (let qp in queryParams) {
             queryUrl.push(encodeURIComponent(qp) + '=' + encodeURIComponent(queryParams[qp]));
