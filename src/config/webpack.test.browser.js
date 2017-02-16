@@ -2,6 +2,7 @@ var webpackMerge = require('webpack-merge');
 var commonConfig = require('./webpack.common.test');
 var helpers = require('./helpers');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = webpackMerge(commonConfig, {
     target: 'web',
@@ -19,6 +20,7 @@ module.exports = webpackMerge(commonConfig, {
     plugins: [
         new HtmlWebpackPlugin({
             template: helpers.root('test/mocha-index.html')
-        })
+        }),
+        new ExtractTextPlugin('mocha.css'),
     ]
 });

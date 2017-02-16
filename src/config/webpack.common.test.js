@@ -1,5 +1,6 @@
 var helpers = require('./helpers');
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 require('reflect-metadata');
 
 module.exports = {
@@ -25,7 +26,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 exclude: helpers.root('app'),
-                loader: 'null-loader'
+                loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
             },
             {
                 test: /\.css$/,
@@ -35,12 +36,12 @@ module.exports = {
         ]
     },
 
-     plugins: [
-      new webpack.ContextReplacementPlugin(
-        // The (\\|\/) piece accounts for path separators in *nix and Windows
-        /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
-        helpers.root('app'),
-        { }
-      )
-  ]
+    plugins: [
+        new webpack.ContextReplacementPlugin(
+            // The (\\|\/) piece accounts for path separators in *nix and Windows
+            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+            helpers.root('app'),
+            {}
+        )
+    ]
 }
