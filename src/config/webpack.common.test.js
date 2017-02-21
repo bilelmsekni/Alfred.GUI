@@ -12,7 +12,7 @@ module.exports = {
         rules: [
             {
                 test: /\.ts$/,
-                loaders: ['awesome-typescript-loader', 'angular2-template-loader']
+                loaders: ['awesome-typescript-loader?sourceMap=false,inlineSourceMap=true', 'angular2-template-loader']
             },
             {
                 test: /\.html$/,
@@ -32,8 +32,14 @@ module.exports = {
                 test: /\.css$/,
                 include: helpers.root('app'),
                 loader: 'raw-loader'
+            },
+            {
+                test: /\.ts$/,
+                exclude: /(node_modules|\.spec\.ts)/,
+                loader: "istanbul-instrumenter-loader",
+                enforce: 'post'
             }
-        ]
+        ],
     },
 
     plugins: [
