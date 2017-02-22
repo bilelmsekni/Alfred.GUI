@@ -8,7 +8,7 @@
     "test:browser": "node tasks/test",
     "report": "nyc mocha-webpack --webpack-config config/webpack.test.node.js --require config/mocha-test-shim.node.js \"app/**/*.spec.ts\"",
     "coverage": "nyc report --reporter=html",
-    "remap": "remap-istanbul -i coverage/coverage.json -o config/coverage/html-report -t html -e node_modules",
+    "remap": "remap-istanbul -i .nyc_output/71ff96c6c4d270697bd14dfd4d543734.json -o coverage/remap-report -t html -e node_modules",
     "start": "node tasks/debug",
     "prerelease": "rm -rf dist",
     "release": "node tasks/release",
