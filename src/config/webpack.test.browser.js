@@ -6,7 +6,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = webpackMerge(commonConfig, {
     target: 'web',
-
+    devtool: 'inline-source-map',
     entry: {
         'test': 'mocha-loader!./config/mocha-test-shim.browser.js'
     },

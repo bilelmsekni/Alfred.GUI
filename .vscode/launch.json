@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Debug with Chrome",
+            "url": "http://localhost:3000",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}/src",
+            "userDataDir": "${workspaceRoot}/.vscode/chrome"
+            // "sourceMapPathOverrides": {
+            //     "webpack:///./*":   "${webRoot}/*"
+            // }            
+        },
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceRoot}/src"
+        }
+    ]
+}

@@ -45,4 +45,3 @@ src/aot
 src/compiled
 src/app/**/*.js
 src/app/**/*.js.map
-.vscode/
