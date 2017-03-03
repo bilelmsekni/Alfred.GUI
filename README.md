@@ -26,6 +26,24 @@ Alfred is a community managing application. Its purpose is to facilitate the tas
 Solution Details
 -----------------
 
-> This repo contains the front end part of the solution. If you are looking for the backend, you can find it here https://github.com/mseknibilel/Alfred
+> This repo contains the front end part of Alfred. If you are looking for the backend, you can find it here https://github.com/mseknibilel/Alfred
 
+### Quick start
+**Make sure you have Node version >= 6.0 and NPM >= 4
+
+```bash
+# clone our repo
+git clone https://github.com/mseknibilel/Alfred.GUI.git
+
+# change directory to src repo
+cd Alfred.GUI\src
+
+# install the repo with npm
+npm install
+
+# start the server
+npm start
+
+```
+go to [http://localhost:3000](http://localhost:3000) in your browser
 
