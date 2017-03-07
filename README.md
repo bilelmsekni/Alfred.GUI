@@ -47,3 +47,53 @@ npm start
 ```
 go to [http://localhost:3000](http://localhost:3000) in your browser
 
+## File Structure
+I use the feature approach in my project. It helps keep related code at the same place and help new comers understand the logic of the application. A feature is group of components and services working together to fulfill a certain part of the application. Here's how it looks:
+```
+Alfred.GUI/src
+ ├──config/                        * our configuration
+ |   ├──helpers.js                 * helper functions for our configuration files
+ |   ├──mocha-test-shim.browser.js * mocha testing shim for browser environment
+ |   ├──mocha-test-shim.node.js    * mocha testing shim for node environment
+ |   ├──webpack.common.config.js   * webpack common for debug and release environment
+ │   ├──webpack.common.test.js     * webpack common for test environment
+ │   ├──webpack.config.dev.js      * webpack specific config for dev environment
+ │   ├──webpack.config.prd.js      * webpack specific config for production environment
+ │   ├──webpack.test.browser.js    * webpack specific config for browser testing environment
+ │   └──webpack.test.node.js       * webpack specific config for node testing environment
+ │
+ ├──tasks/                         * our browser sync tasks
+ |   ├──debug.js                   * start app in dev mode
+ |   ├──release.js                 * start app in release mode
+ │   └──test.js                    * start testing in browser mode
+ │
+ ├──app/                           * our source files that will be compiled to javascript
+ |   ├──main.ts                    * our entry file
+ |   ├──main-aot.ts                * our entry file in AOT mode
+ │   │
+ |   ├──index.html                 * Index.html: where we generate our index page
+ │   │
+ |   ├──polyfills.ts               * our polyfills file
+ |   ├──vendor.ts                  * our vendor file
+ │   │
+ |   ├──app.module.ts              * our app module file
+ |   ├──app.component.ts           * our main component file
+ |   ├──app.component.html         * our main component's template file
+ |   ├──app-routing.module.ts      * our routing module file
+ │   │
+ │   ├──artifact/                  * artifact features folder
+ │   ├──common/                    * common features folder
+ │   ├──community/                 * community features folder
+ │   ├──member/                    * member features folder
+ │   ├──dashboard/                 * dashboard features folder
+ │   │
+ │   └──assets/                    * static assets are served here
+ │       └──img/                   * our list of member img
+ │
+ │
+ ├──tslint.json                    * typescript lint config
+ ├──tsconfig.json                  * typescript config used with webpack
+ ├──tsconfig-aot.json              * typescript config used in AOT mode
+ └──package.json                   * what npm uses to manage it's dependencies
+
+```
