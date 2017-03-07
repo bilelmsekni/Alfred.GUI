@@ -47,7 +47,7 @@ npm start
 ```
 go to [http://localhost:3000](http://localhost:3000) in your browser
 
-## File Structure
+### File Structure
 I use the feature approach in my project. It helps keep related code at the same place and help new comers understand the logic of the application. A feature is group of components and services working together to fulfill a certain part of the application. Here's how it looks:
 ```
 Alfred.GUI/src
@@ -97,3 +97,5 @@ Alfred.GUI/src
  └──package.json                   * what npm uses to manage it's dependencies
 
 ```
+### Npm scripts
+tbd
