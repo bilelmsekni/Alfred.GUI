@@ -98,4 +98,31 @@ Alfred.GUI/src
 
 ```
 ### Npm scripts
-tbd
+```bash
+# development
+npm start
+
+# test in node
+npm test:node
+
+# test in browser
+npm test:browser
+
+# report test coverage
+npm run report
+
+# generate coverage report in html
+npm run coverage
+
+# production (jit)
+npm release
+
+# compile in AoT mode
+npm run compile:aot
+
+# Build AoT
+npm run build:aot
+
+# build then run AoT bundle locally
+npm run release:aot
+```
