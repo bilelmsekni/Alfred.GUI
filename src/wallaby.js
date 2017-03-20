@@ -5,7 +5,7 @@ var wallabyWebpack = require('wallaby-webpack');
 var wallabyPostprocessor = wallabyWebpack({
     entryPatterns: [
         'config/mocha-test-shim.node.js',
-        'src/**/*spec.js'
+        'app/**/*spec.js'
     ],
 
     module: {
