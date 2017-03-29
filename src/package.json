@@ -1,7 +1,7 @@
 {
   "name": "alfred.gui",
   "version": "1.0.0",
-  "description": "This is alfred's ui using angular 2",
+  "description": "This is alfred's ui using angular",
   "main": "./dist/main.js",
   "scripts": {
     "test:node": "mocha-webpack --watch --webpack-config config/webpack.test.node.js --require config/mocha-test-shim.node.js \"app/**/*.spec.ts\"",
