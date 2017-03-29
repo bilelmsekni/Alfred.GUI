@@ -24,7 +24,6 @@ module.exports = function (arg) {
         },
 
         plugins: [
-            new webpack.NoErrorsPlugin(),
             new webpack.optimize.UglifyJsPlugin(),
             new ExtractTextPlugin('[name].[hash].css'),
             new webpack.DefinePlugin({
