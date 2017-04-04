@@ -20,7 +20,7 @@ export class MemberCreateComponent implements OnInit {
         this.communities = this.communityService.getCommunities();
         this.memberCreateForm = new FormGroup(
             {
-                firstName: new FormControl(''),
+                firstName: new FormControl('', Validators.required),
                 lastName: new FormControl('', Validators.required),
                 email: new FormControl('', Validators.minLength(5)),
                 communityId: new FormControl()
@@ -29,17 +29,9 @@ export class MemberCreateComponent implements OnInit {
     }
 
     public onCreate() {
-        console.log(this.memberCreateForm.value);
         this.store.dispatch({
             type: 'CREATE_MEMBER',
             payload: this.memberCreateForm.value
         });
     }
-}
-
-export class MemberCreateModel {
-    public firstName: string;
-    public lastName: string;
-    public email: string;
-    public communityId: number;
 }

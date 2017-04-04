@@ -87,7 +87,7 @@
     "drmonty-datatables-responsive": "^2.1.0",
     "flot": "^0.8.0-alpha",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.1.1",
+    "jquery": "2.2.4",
     "lodash": "^4.17.4",
     "metismenu": "^2.6.2",
     "moment": "^2.17.1",
