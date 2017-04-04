@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Member } from './member.entity';
+import { Member } from '../common';
 
 const initialState: Member[] = [];
 

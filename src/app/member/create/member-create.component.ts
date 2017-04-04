@@ -1,7 +1,6 @@
-import { MemberState } from './member.state';
-import { CommunityService } from './../community/community.service';
+import { MemberState } from '../state';
+import { Community, CommunityService } from './../../community';
 import { Observable } from 'rxjs';
-import { Community } from './../community/community.entity';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
@@ -22,7 +21,7 @@ export class MemberCreateComponent implements OnInit {
             {
                 firstName: new FormControl('', Validators.required),
                 lastName: new FormControl('', Validators.required),
-                email: new FormControl('', Validators.minLength(5)),
+                email: new FormControl('', Validators.email),
                 communityId: new FormControl()
             }
         );

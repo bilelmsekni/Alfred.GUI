@@ -1,14 +1,13 @@
-import { MemberState } from './member.state';
+import { MemberService, Member } from './common';
 import { Store } from '@ngrx/store';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { MemberService } from './member.service';
-import { Member } from './member.entity';
+
+import { MemberState } from './state';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    templateUrl: './member.component.html',
-    providers: [MemberService]
+    templateUrl: './member.component.html'
 })
 export class MemberComponent implements OnInit {
     public members: Observable<Member[]>;

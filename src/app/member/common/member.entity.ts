@@ -1,4 +1,4 @@
-import { CommunityRole, Community } from './../community';
+import { CommunityRole, Community } from './../../community';
 
 export class Member {
     public id: number;

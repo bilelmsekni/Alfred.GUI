@@ -28,7 +28,7 @@ import {
 } from './artifact';
 import { NavigationComponent } from './common/components';
 import { ConfigurationService, LoggingService } from './common/services';
-import memberState from './member/member.state';
+import memberState from './member/state/member.state';
 
 @NgModule({
     bootstrap: [AppComponent],

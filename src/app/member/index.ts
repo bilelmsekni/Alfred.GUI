@@ -1,2 +1,3 @@
-export { MemberCreateModel } from './member-create.model';
-export { Member } from './member.entity';
+export { MemberComponent } from './member.component';
+export { MemberModule } from './member.module';
+export { MemberRoutingModule } from './member-routing.module';

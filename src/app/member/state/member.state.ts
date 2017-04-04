@@ -1,4 +1,4 @@
-import { Member } from './member.entity';
+import { Member } from '../common';
 import { memberListReducer } from './member-list.reducer';
 import { compose } from '@ngrx/core/compose';
 import { combineReducers } from '@ngrx/store';

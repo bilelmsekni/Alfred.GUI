@@ -1,6 +1,5 @@
-import { Member } from './member.entity';
+import { Member, MemberService } from '../common';
 import { Observable } from 'rxjs/Observable';
-import { MemberService } from './member.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -15,7 +14,7 @@ export class MemberDetailsComponent implements OnInit {
 
     public ngOnInit(): void {
         this.member = this.route.params
-        .switchMap(p => this.memberService.getMember(+p['id'])).share();
+            .switchMap(p => this.memberService.getMember(+p['id'])).share();
         this.communityNames = this.member.map(m => m.communities.map(com => com.name));
     }
 }
