@@ -1,7 +1,6 @@
 {
     "files.autoSave": "off",
     "window.zoomLevel": 0,
-    "terminal.external.windowsExec": "C:\\Program Files\\cmder\\Cmder.exe",
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
