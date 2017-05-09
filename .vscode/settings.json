@@ -1,0 +1,16 @@
+{
+    "files.autoSave": "off",
+    "window.zoomLevel": 0,
+    "terminal.external.windowsExec": "C:\\Program Files\\cmder\\Cmder.exe",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/*.js.map": true,
+        "**/*.js": {
+            "when": "$(basename).ts"
+        }
+    },
+    "workbench.iconTheme": "vs-seti"
+}
